@@ -1,0 +1,18 @@
+<h1>新しい企業の登録</h1>
+
+<br>
+
+<%		@kigyo_daichos = KigyoDaicho.find(:first, 
+                           :order => 'kigyo_bango DESC' ) %>
+	<参考>登録済みの最後の企業番号は:<%= last=@kigyo_daichos.kigyo_bango %>です。<br>
+	<% str=last.to_s %>
+	<% if str[0,4].to_i < @nendo.to_i then last=@nendo.to_i*10000 end %>
+		<%= @nendo %><br>		<%= last %>
+<% form_tag :action => 'create' do %>
+	<% @kigyo_daicho.kigyo_bango = parmas[:id] %>
+
+	<%= render :partial => 'form' %>
+  <%= submit_tag "登録する" %>
+<% end %>
+
+<%= link_to '検索に戻る', :action => 'search', :q => @kigyo_daicho.kigyo_bango %>

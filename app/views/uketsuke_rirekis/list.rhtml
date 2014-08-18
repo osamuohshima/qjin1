@@ -1,0 +1,52 @@
+<h1>求人票受付の履歴の一覧</h1>
+
+特定企業の受付履歴を見る：企業番号を入力して[検索]を押す
+<form action="<%= url_for(:action => 'search_from_kigyo_bango') %>">
+      <input name="q" value="<%= h(@query)%>" size="40" />
+      <input type="submit" value="検索" />
+    </form>
+    </td>
+	</tr>
+<% for page in @uketsuke_rireki_pages %>
+    <%= link_to_unless(params[:page].to_i == page.number, page.number, 
+            {:params => params.merge('page' => page)}) %>&nbsp;
+<% end -%>
+<br>
+<%= link_to '前のページへ', { :page => @uketsuke_rireki_pages.current.previous } if @uketsuke_rireki_pages.current.previous %>
+<%= link_to '次のページへ', { :page => @uketsuke_rireki_pages.current.next } if @uketsuke_rireki_pages.current.next %> 
+<br>
+
+<table>
+	<tr>
+		<th width="100">企業番号</th>
+		<th width="80">求人票受付年</th>
+		<th width="80">求人票受付番号</th>
+		<th width="50">企業台帳ID</th>
+		<th width="50">求人票枚数</th>
+	</tr>
+
+  </tr>
+	<% odd_or_even=1
+     for uketsuke_rireki in @uketsuke_rirekis
+        odd_or_even=1-odd_or_even %>
+ <tr Class="ListLine<%= odd_or_even %>">  
+  <%# for column in UketsukeRireki.content_columns %>
+    <td><%=h uketsuke_rireki.kigyo_bango %></td>
+    <td><%=h uketsuke_rireki.uketsuke_nen %></td>
+     <td><%=h uketsuke_rireki.uketsuke_bango %></td>
+     <td><%=h uketsuke_rireki.kigyo_daicho_id %></td>
+     <td><%=h uketsuke_rireki.kyujinhyo_maisu %></td>
+   <%# end %>
+    <td><%= link_to '編集', :action => 'edit', :id => uketsuke_rireki %></td>
+		<td><%= link_to '削除', { :action => 'destroy', :id => uketsuke_rireki },
+			         :confirm => '本当に削除しますか', :method => :post %></td>
+  </tr>
+<% end %>
+</table>
+
+<%= link_to '前のページへ戻る', { :page => @uketsuke_rireki_pages.current.previous } if @uketsuke_rireki_pages.current.previous %>
+<%= link_to '次のページへ進む', { :page => @uketsuke_rireki_pages.current.next } if @uketsuke_rireki_pages.current.next %> 
+
+<br />
+
+<%= link_to '新規の受付', :action => 'new' %>

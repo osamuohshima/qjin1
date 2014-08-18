@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+first:
+  id: 1
+  uketsuke_bango: 1 
+  pdf_name: 20070827180408_00001.pdf
+  uketsuke_nen: 2007
+  input_date: 2007-08-28 12:00:00 
+two:
+  id: 2
+  uketsuke_bango: 2
+  pdf_name: 20070827180408_00002.pdf
+  uketsuke_nen: 2007
+  input_date: 2007-08-28 12:00:10

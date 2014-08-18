@@ -1,0 +1,37 @@
+<head>
+  <%#= javascript_include_tag :defaults %>
+</head>
+<%= error_messages_for 'kyujin_uketsuke' %>
+<% t=Time.now; year=t.year; year=year-1 if t.month<=6  %>
+<!--[form:kyujin_uketsuke]-->
+<% @kyujin_uketsuke.uketsuke_nen=year %>
+
+<h1><%= "#{year}年度　求人受付処理(開始画面)" %></h1>
+
+数字の入力はすべて半角で<br>
+<table Class="TableStyl0">
+
+<% form_for :kyujin_uketsuke, :url =>{ :action => :next_index} do |f| %> 
+		
+	<tr><td><label for="kyujin_uketsuke_uketsuke_nen">　受　　付　　年</label>
+<%= text_field 'kyujin_uketsuke', 'uketsuke_nen', :size=>"3"  %></td>
+<td><label for="kyujin_uketsuke_uketsuke_date">　受　付　日付</label>
+	<%= text_field 'kyujin_uketsuke', 'uketsuke_date', :size=>4  %>
+(例:7/12形式でよい)</td></tr>
+<tr>
+<td><label for="uketsuke_bango">受付番号</label>
+	<%= f.text_field  'uketsuke_bango',:size=>4,:maxlength=>4  %></td>
+<td><label for="kigyo_bango">企業番号（8桁）</label>
+	<%= f.text_field  'kigyo_bango', :size=>8, :maxlength=>8  %></td>
+<td><label for="shokushu_bango">職種別番号</label>
+	<%= f.select  'shokushu_bango',[["0",0],["1",1],["2",2],["3",3],["4",4],["5",5],["6",6],["7",7],["8",8],["9",9],["10",10],["11",11],["12",12],["13",13],["14",14],["15",15],["16",16],["17",17],["18",18],["19",19],["20",20]] %><br></td>
+<tr>
+
+</table>
+<%= submit_tag '次へ進む' %>
+<% end %>	
+<!--[eoform:kyujin_uketsuke]-->
+
+<Img Src="/attached/pdf/etc/uketsuke_bango.gif" align="center" width="400" hight="250">
+
+

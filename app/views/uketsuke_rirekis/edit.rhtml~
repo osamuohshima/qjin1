@@ -1,0 +1,9 @@
+<h1>Editing uketsuke_rireki</h1>
+
+<% form_tag :action => 'update', :id => @uketsuke_rireki do %>
+  <%= render :partial => 'form' %>
+  <%= submit_tag 'Edit' %>
+<% end %>
+
+<%= link_to 'Show', :action => 'show', :id => @uketsuke_rireki %> |
+<%= link_to 'Back', :action => 'list' %>

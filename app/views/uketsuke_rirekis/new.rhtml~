@@ -1,0 +1,14 @@
+<h1>新規求人票の受付登録</h1>
+
+
+!!![参考]<%= @nendo %>年の登録済みの最後の求人受付番号は <%= @last_number %>です。
+<% form_tag :action => 'create' do %>
+	<%# @uketsuke_rireki.kigyo_bango =  %>
+	<% @uketsuke_rireki.uketsuke_nen = Time.now.year %>
+	<% @uketsuke_rireki.uketsuke_bango = @last_number + 1 %>
+  <% @uketsuke_rireki.kyujinhyo_maisu = 1 %>	
+  <%= render :partial => 'form' %>
+  <%= submit_tag "新規登録" %>
+<% end %>
+
+<%= link_to '戻る', :action => 'list' %>

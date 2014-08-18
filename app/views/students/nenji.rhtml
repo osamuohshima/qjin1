@@ -1,0 +1,44 @@
+<h1>生徒の一覧</h1>
+
+<table class="TableStyl0" width="100%" >
+  <tr>
+    <th width="6">入学ID</th>
+    <th width="10">姓</th>
+		<th width="10">名</th>
+     <th width="4">性</th>
+     <th width="4">科</th>
+     <th width="8">年度1</th>	 
+		 <th width="4">学年1</th>
+     <th width="4">組1</th>
+     <th width="4">番号1</th>
+     <th width="8">年度2</th>	 
+		 <th width="4">学年2</th>
+     <th width="4">組2</th>
+     <th width="4">番号2</th>
+     <th width="8">年度3</th>	 
+		 <th width="4">学年3</th>
+     <th width="4">組3</th>
+     <th width="4">番号3</th>   
+  </tr>
+
+	<tr>
+		<td><%= @student.nyugakuid %></td>
+		<td><%= @student.name_sei %></td>	  
+		<td><%= @student.name_mei %></td>	  
+		<td><%= @student.sex %></td>
+		<td><%= @student.ka %></td>
+		<td><%= @nenji.nendo %></td>
+		<td><%= @nenji.gakunen %></td>
+		<td><%= @nenji.kumi %></td>
+		<td><%= @nenji.bango %></td>
+    <td><%= link_to '詳細', :action => 'show', :id => @student %></td>
+		<td><%= link_to '編集', :action => 'edit', :id => @student %></td>
+		<td><%= link_to '年次データ入力',:action => 'new', :id => @student.id %></td>
+    <td><%= link_to '削除', { :action => 'destroy', :id => @student }, :confirm => 'Are you sure?', :method => :post %></td>
+  </tr>
+</table>
+
+
+<br />
+
+<%= link_to '新規生徒の登録', :action => 'new' %>

@@ -1,0 +1,47 @@
+<%= error_messages_for 'kigyo_daicho' %>
+
+<!--[form:kigyo_daicho]-->
+<p><label for="kigyo_daicho_kigyo_bango">企業番号</label>
+<%= text_field 'kigyo_daicho', 'kigyo_bango'  %>(例)20050005 西暦＋4桁(受付番号)
+</p>
+
+<p><label for="kigyo_daicho_jigyosho_mei1">事業所名1</label>
+<%= text_field 'kigyo_daicho', 'jigyosho_mei1'  %>(例)三菱電機株式会社</p>
+
+<p><label for="kigyo_daicho_jigyosho_mei2">事業所名2</label>
+<%= text_field 'kigyo_daicho', 'jigyosho_mei2'  %>(例)姫路製作所</p>
+
+<p><label for="kigyo_daicho_furikana">ふりかな</label>
+<%= text_field 'kigyo_daicho', 'furikana'  %>(全角ひらかな)みつびしでんきひめじせいさくしょ</p>
+
+<p><label for="kigyo_daicho_shozaichi">所在地</label>
+<%= text_field 'kigyo_daicho', 'shozaichi'  %>(例)兵庫　　岡山県以外の所在地は府県名のみ </p>
+
+<p><label for="kigyo_daicho_yubin_zip">郵便番号</label>
+<%= text_field 'kigyo_daicho', 'yubin_zip'  %>(半角数字、区切り”ｰ”は不要)6708124</p>
+
+<p><label for="kigyo_daicho_shozaichi1">所在地1</label>
+<%= text_field 'kigyo_daicho', 'shozaichi1'  %>(例)兵庫県姫路市千代田町840番地</p>
+
+<p><label for="kigyo_daicho_shozaichi2">所在地2</label>
+<%= text_field 'kigyo_daicho', 'shozaichi2'  %>(例)千代田ビル3F</p>
+
+<p><label for="kigyo_daicho_tantou_yaku">担当者の役職</label>
+<%= text_field 'kigyo_daicho', 'tantou_yaku'  %>(例)総務部人事課</p>
+
+<p><label for="kigyo_daicho_tantou_mei">担当者の名前</label>
+<%= text_field 'kigyo_daicho', 'tantou_mei'  %>(例)田中　研吾</p>
+
+<p><label for="kigyo_daicho_tele_number">電話番号</label>
+<%= text_field 'kigyo_daicho', 'tele_number'  %>(例)079-298-8919</p>
+
+<p><label for="kigyo_daicho_sangyo_code">産業コード</label>
+<%= text_field 'kigyo_daicho', 'sangyo_code'  %>（半角　例)27　　　　　3桁のものは、頭の2桁だけを入力</p>
+
+<p><label for="kigyo_daicho_seisan_hinmoku">生産品目</label>
+<%= text_field 'kigyo_daicho', 'seisan_hinmoku', :size => 80  %></p>
+
+<p><label for="kigyo_daicho_input_date">入力日付</label>
+<%= datetime_select 'kigyo_daicho', 'input_date'  %>この行は触らないでよい</p>
+<!--[eoform:kigyo_daicho]-->
+

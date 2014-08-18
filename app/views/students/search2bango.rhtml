@@ -1,0 +1,91 @@
+<% @page_title = '企業名から：「'+@query + '」 の検索結果' if @query -%>
+<%# tudents/search2bango.rhtml %>
+<h1><%= h(@page_title) %></h1>
+<hr>
+<table width="100%" cellpadding="3" class="command-box">
+  <tr>
+    <td width="130">
+    <% if params[:action] == 'search' -%>
+			<%= link_to '最初に戻る', :action => 'index' %><br>
+    <% end %></td>
+	　<td align="left">
+		検索：企業名の一部を入力して[検索]ボタンを押す。
+    <form action="<%= url_for(:action => 'search2bango') %>">
+      <input name="q" value="<%= h(@query)%>" size="40" />
+      <input type="submit" value="検索" />
+    </form>
+	</td>
+	    検索のコツ：　　会社名の特徴的な一部をひらかなで入力すると早い。<br>
+	　　　例1　「三菱自動車工業」の場合は、「びし」と入力。<br>　　　   
+		  例2　「ＪＦＥ物流」の場合は、「JFE」よりも「ぶつりゅう」と入力する方が早い。
+	</tr>
+
+	<% if @page_title == '企業名からの検索' %>
+
+  <% else %>
+
+<%= link_to '検索をやり直す', :action => 'search2bango' %><br>
+<%	 t=Time.now %>
+<%	 nen = t.year %>
+<% if @kigyo_daichos.size > 0 %>
+	<%= @kigyo_daichos.size %>
+  <table Class="TableStyl0"　width="100%" class="listing" cellpadding="4" cellspacing="2">
+	<tr>
+		<th width="60">企業番号</th>
+		<th width="200">事業所名1</th>
+		<th width="100">事業所名2</th>
+		<th width="30">受付年</th>
+		<th width="30">受付番号</th>
+		<th width="10">職種番号</th>
+    <th width="80">求人票</th>
+		<th width="60">企業訪問情報</th>
+		<th width="60">受検報告書</th>
+	</tr>
+
+	<% odd_or_even=1 %>
+	<% @kigyo_daichos.each do |kigyo| -%>
+	<%   @rireki = kigyo.uketsuke_rirekis %>
+	<%   if @rireki.size >0 %>
+	<%      @rireki.each do |rireki| %>	
+	<%      if rireki.uketsuke_nen == @uketsuke_nen %>
+	<%       nSameKigyo = rireki.kyujinhyo_maisu %>
+	<%       for i in 0..(nSameKigyo-1) %>      
+  <%         odd_or_even=1-odd_or_even %>
+	<tr Class="ListLine<%= odd_or_even %>" >
+		<td style="text-align: right"><%= kigyo.kigyo_bango %></td>
+		<td><%= kigyo.jigyosho_mei1 %></td>
+		<td><%= kigyo.jigyosho_mei2 %></td>
+		<%      uketsukeNen = rireki.uketsuke_nen %>
+		<%      uketsukeBango = rireki.uketsuke_bango %>
+		<td style="text-align: right"><%= uketsukeNen %></td>
+		<td style="text-align: right"><%= uketsukeBango %></td>
+		<td style="text-align: right"><%= i %></td>
+		<%  conditions = [ 'uketsuke_nen= ? and uketsuke_bango= ? and shokushu_bango= ?', uketsukeNen, uketsukeBango, i]%>
+		<%  @pdf_name = UketsukePdf.find(:first,:conditions => conditions )%>
+		<%  unless @pdf_name.nil? %>
+		<%    @pdf_name = @pdf_name.pdf_name    %>
+		<td><FONT color="blue">
+				<%= link_to '求人票を表示', "/attached/pdf/"+ uketsukeNen.to_s + "/kyujin_hyo/" +  @pdf_name , :popup => true  %>
+		</FONT></td>
+		<%  end %>
+	</tr>
+<%           end %>	
+<%         end %>	
+<%       end %>	
+<%     end %> 
+<%  end %>
+
+  </table>
+<% else %>
+
+	<p>企業の情報がありません</P>
+<% end %>
+
+<% end %>
+
+
+
+
+
+
+

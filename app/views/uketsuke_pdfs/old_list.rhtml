@@ -1,0 +1,42 @@
+<h1>登録済求人票PDFの一覧</h1>
+<table>
+<tr  Class="ListLine2">
+    <th>受付番号</th>
+    <th>職種番号</th>
+    <th>受付コード</th>
+    <th>PDFファイル名</th>
+    <th>受付年度</th>
+    <th>入力日付</th>
+
+    <th>機能</th>  
+</tr><br>
+
+
+  <% odd_or_even=1
+     for uketsuke_pdf in @uketsuke_pdfs
+        odd_or_even=1-odd_or_even %>
+ <tr Class="ListLine<%= odd_or_even %>">  
+  
+    <td width=40 align="center"><%=h uketsuke_pdf.send('uketsuke_bango') %></td>
+    <td width=30 align="center"><%=h uketsuke_pdf.send('shokushu_bango') %></td>
+    <td width=80 align="center"><%=h uketsuke_pdf.send('kyujin_uketsuke_uketsuke_code') %></td>
+		<td width=200 align="center"><%= link_to( params[:pdf_name].delete("\""),
+				"/attached/"+(uketsuke_pdf.send('uketsuke_nen').to_s << "/") + uketsuke_pdf.send('pdf_name').delete("\""),
+					:popup => true ) %></td>
+    <td width=80 align="center"><%=h uketsuke_pdf.send('uketsuke_nen') %></td>
+   <td width=150 align="center"><%=h uketsuke_pdf.send('input_date').to_date if  uketsuke_pdf.send('input_date').to_date!='nil'  %></td>
+
+
+   <td width=80 align="center">
+<%= link_to '編集', :action => 'edit', :id => uketsuke_pdf %>
+<%= link_to '削除', { :action => 'destroy', :id => uketsuke_pdf }, :confirm => '本当に削除しますか？', :method => :post %></td>
+  </tr>
+　<% end %>
+</table>
+
+<%= link_to '前のページに戻る', { :page => @uketsuke_pdfs_pages.current.previous } if @uketsuke_pdfs_pages.current.previous %>
+<%= link_to '次のページへ進む', { :page => @uketsuke_pdfs_pages.current.next } if @uketsuke_pdfs_pages.current.next %> 
+
+<br>
+
+<%= link_to '新しいPDFファイルを追加登録する', :action => 'new' %>

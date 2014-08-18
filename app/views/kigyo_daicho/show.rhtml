@@ -1,0 +1,8 @@
+<% for column in KigyoDaicho.content_columns %>
+<p>
+  <b><%= column.human_name %>:</b> <%=h @kigyo_daicho.send(column.name) -%>
+</p>
+<% end %>
+
+<%= link_to '編集する', :action => 'edit', :id => @kigyo_daicho %> |
+<%= link_to '戻る', :action => 'search', :q =>  @kigyo_daicho.jigyosho_mei1%>

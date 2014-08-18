@@ -1,0 +1,8 @@
+<% for column in KigyoHomon.content_columns %>
+<p>
+  <b><%= column.human_name %>:</b> <%=h @kigyo_homon.send(column.name) %>
+</p>
+<% end %>
+
+
+<%= link_to '戻る', :action => 'list' %>

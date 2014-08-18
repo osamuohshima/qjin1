@@ -1,0 +1,225 @@
+@charset "utf-8";
+
+/* ****************************************************************** 
+
+	@This stylesheet Information{
+		CSS File Name: header.css
+
+		Setting of: Header area
+			1: header setting
+			2: headUserNav setting
+			3: headNav setting
+	}
+
+****************************************************************** */
+
+
+/*===================================================================
+	1: header setting
+===================================================================*/
+
+div#header{
+	padding:0px 10px;
+	margin:0;
+	border-top:2px solid #971A20;
+}
+
+div#header div#headLogo{
+	width:100%;
+	padding:3px 0 5px;
+}
+
+/*clearfix*/
+div#header div#headLogo:after{
+	content: "";
+	display: block;
+	clear: both;
+	height: 0.1px;
+}
+
+* html div#header div#headLogo{ display: inline-block; }
+
+/* no ie mac \*/
+* html div#header div#headLogo{ height: 1%; }
+div#header div#headLogo{ display: block; }
+/* */
+
+
+div#header div#headLogo h1{
+	position:absolute;
+	top:-.55em;
+	width:500px;
+	margin-left:310px;
+	margin-top:28px;
+	font-size:1em;
+	line-height:1.3em;
+	font-weight:normal;
+}
+
+
+div#header div#headLogo div span{
+	float:right;
+	position:relative;
+	top:-42px;
+	margin-bottom:-1.4em;
+	margin-right:4px;
+}
+
+/* for Safari Opera \*/
+html:\66irst-childdiv#header div#headLogo div span{
+	top:35px;
+}
+/* end */
+
+div#header div#headLogo div img{
+	vertical-align:middle;
+}
+
+
+/*===================================================================
+	2: headUserNav setting
+===================================================================*/
+
+div#headUserNav{
+	width: 100%; 
+	padding:6px 0px 7px;
+	_padding-bottom:0;
+	background:#FFF url(../../images/active_record_browser/head_usernav_bg.gif) repeat-x left top;
+}
+
+/*clearfix*/
+
+div#headUserNav:after{
+	content: "";
+	display: block;
+	clear: both;
+	height: 0.1px;
+}
+
+* html div#headUserNav{ display: inline-block; }
+
+/* no ie mac \*/
+* html div#headUserNav{ height: 1%; }
+div#headUserNav{ display: block; }
+/* */
+
+div#headUserNav p{
+	float:left;
+	width:400px;
+	margin-right:10px;
+}
+
+div#headUserNav p span{
+	padding-left:12px;
+}
+
+div#headUserNav ul{
+	float:right;
+	text-align:right;
+
+}
+
+div#headUserNav ul li{
+	display:inline;
+	padding:0 12px 0 0;
+}
+
+div#headUserNav ul li a{
+	padding:3px 0 3px 20px;
+	zoom:1;
+}
+
+div#headUserNav ul li.home a{
+	background:url(../../images/active_record_browser/ico_home.gif) no-repeat left center;
+}
+
+div#headUserNav ul li.login a{
+	background:url(../../images/active_record_browser/ico_login.gif) no-repeat left center;
+}
+
+div#headUserNav ul li.mypage a{
+	background:url(../../images/active_record_browser/ico_mypage.gif) no-repeat left center;
+}
+
+div#headUserNav ul li.help a{
+	background:url(../../images/active_record_browser/ico_help.gif) no-repeat left center;
+}
+
+
+
+/*===================================================================
+	3: headNav setting
+===================================================================*/
+
+div#headNav{
+	padding:0 10px 10px;
+}
+
+div#headNav ul{
+	width:100%;
+}
+
+/*clearfix*/
+
+div#headNav ul:after{
+	content: "";
+	display: block;
+	clear: both;
+	height: 0.1px;
+}
+
+* html div#headNav ul{ display: inline-block; }
+
+/* no ie mac \*/
+* html div#headNav ul{ height: 1%; }
+div#headNav ul{ display: block; }
+/* */
+
+
+div#headNav ul li{
+	float:left;
+	font-size:1em;
+	margin-right:4px;
+}
+
+div#headNav ul li span{
+	display:block;
+	float:left;
+	background:url(../../images/active_record_browser/headnav_bg_r.gif) no-repeat right bottom;
+}
+
+div#headNav ul li a{
+	display:block;
+	float:left;
+	background:url(../../images/active_record_browser/headnav_bg_l.gif) no-repeat left bottom;
+	padding:4px 25px;
+	text-align:center;
+}
+
+/*home*/
+body#home div#headNav ul li.home span{
+	background:url(../../images/active_record_browser/headnav_bg_r_on.gif) no-repeat right bottom;
+	font-weight:bold;
+}
+
+body#home div#headNav ul li.home a{
+	background:url(../../images/active_record_browser/headnav_bg_l_on.gif) no-repeat left bottom;
+	color:#fff;
+	text-decoration:none!important;
+}
+
+/*special*/
+body.special div#headNav ul li.special span{
+	background:url(../../images/active_record_browser/headnav_bg_r_on.gif) no-repeat right bottom;
+	font-weight:bold;
+}
+
+body.special div#headNav ul li.special a{
+	background:url(../../images/active_record_browser/headnav_bg_l_on.gif) no-repeat left bottom;
+	color:#fff;
+	text-decoration:none!important;
+}
+
+
+
+

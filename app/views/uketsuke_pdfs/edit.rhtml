@@ -1,0 +1,28 @@
+<h1>求人票PDF受付の編集</h1>
+
+<Img Src="/attached/pdf/etc/uketsuke_bango.gif" align="right" width="400" hight="250">
+
+編集の仕方：<br>
+(1)下に表示される求人票の「受付番号」と「職種番号」を入力する。<br>
+　　(右図の例では「170」←スタンプ印の中の手書き文字）<br>
+(2)「職種番号」は、企業番号のハイフンの後の番号を入力する。無記入時は「0」を入力<br>
+　（右図の例：「19850449-1」なら職種番号は「1」）<br>
+(3)「入力日付」はスタンプの日付に合わせる<br>
+(4)以上で良ければ、「この内容で登録する」ボタンを押す<br>
+＜注＞下記の「求人受付ID」は、触らない。受付番号が正しければ自動で「求人受付ID」が入る。
+　
+<% form_tag :action => 'update', :id => @uketsuke_pdfs.id do %>
+  <%= render :partial => 'form' %>
+  <%= submit_tag 'この内容で登録する' %>
+<% end %>
+
+<%= link_to '戻る', :action => 'list' %>
+<br>
+以下に実際の求人票が表示されない時は、Acrobat Readerの設定を行う。<br>
+スタート→プログラムからAcrobat Readerを立ち上げ、メニューの編集→環境設定→インターネット→「PDFをブラウザに表示」にチェックを付ける<br>
+<iframe src=
+	<%= "#{"/attached/pdf/"+@uketsuke_pdfs.uketsuke_nen.to_s << "/kyujin_hyo/" << @uketsuke_pdfs.pdf_name.delete("\"")}" %> 
+	width="1000" height="250" >
+
+</iframe>
+

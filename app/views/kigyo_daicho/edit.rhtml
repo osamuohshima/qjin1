@@ -1,0 +1,9 @@
+<h1>企業台帳の編集</h1>
+
+<% form_tag :action => 'update', :id => @kigyo_daicho do %>
+  <%= render :partial => 'form' %>
+  <%= submit_tag '情報を更新する' %>
+<% end %>
+
+<%= link_to '個別表示モード', :action => 'show', :id => @kigyo_daicho %> |
+<%= link_to '最初に戻る', :action => 'index' %>

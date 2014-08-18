@@ -1,0 +1,10 @@
+<h1>新規生徒の登録</h1>
+
+<% form_tag :action => 'create' do %>
+	<%= render :partial => 'form' %>
+  <%= submit_tag "新規登録" %>
+<% end %>
+
+
+
+<%= link_to 'Back', :action => 'list' %>

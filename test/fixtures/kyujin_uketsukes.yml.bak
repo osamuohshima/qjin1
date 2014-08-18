@@ -1,0 +1,55 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+one:
+  id: 1
+  uketsuke_nen: 2007
+  uketsuke_date: 08/27
+  uketsuke_code: 999-0
+  uketuke_bango: 999
+  kigyo_bango: 20079999
+  shokushu_bango: 0
+  shokushu_mei:  技術職
+  shokugyo_code: 78
+  tenkin: 2
+  koutai: 1
+  kihonkyu: 190000
+  kijunnai_tingin: 210000
+  kikai: 0
+  denki: 0
+  joho: 0
+  kouka: 0
+  kenchiku: 0
+  kei: 1
+  kyujin_sosu: 16
+  sintai: 1
+  kengaku: 1
+  heigan: 1
+  bikou: "なし"
+  irai_jikou: "ぜひ水工から1名欲しい"
+  input_date:　2007-12-31 23:59
+two:
+  id: 2
+  uketsuke_nen: 2007
+  uketsuke_date: 08/27
+  uketsuke_code: 2007999
+  uketuke_bango: 999
+  kigyo_bango: 20079999
+  shokushu_bango: 1
+  shokushu_mei:   オペレータ職
+  shokugyo_code: 79
+  tenkin: 2
+  koutai: 1
+  kihonkyu: 190000
+  kijunnai_tingin: 210000
+  kikai: 0
+  denki: 0
+  joho: 0
+  kouka: 0
+  kenchiku: 0
+  kei: 1
+  kyujin_sosu: 16
+  sintai: 1
+  kengaku: 1
+  heigan: 1
+  bikou: "なし"
+  irai_jikou: "ぜひ水工から1名欲しい"
+  input_date:　2007-12-31 23:58

@@ -1,0 +1,465 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: qjin 1.0.0\n"
+"POT-Creation-Date: 2007-08-22 17:39+0900\n"
+"PO-Revision-Date: 2007-08-22 17:39+0900\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#: app/models/qjin.rb:-
+msgid "qjin"
+msgstr "求人"
+
+#: app/models/kyujin_uketsuke.rb:-
+msgid "kyujin uketsuke"
+msgstr "求人票受付処理"
+
+#: app/models/kyujin_uketsuke.rb:-
+msgid "KyujinUketsuke|Uketsuke nen"
+msgstr "受付年"
+
+#: app/models/kyujin_uketsuke.rb:-
+msgid "KyujinUketsuke|Uketuke date"
+msgstr "受付日付"
+
+#: app/models/kyujin_uketsuke.rb:-
+msgid "KyujinUketsuke|Uketsuke code"
+msgstr "受付コード"
+
+#: app/models/kyujin_uketsuke.rb:-
+msgid "KyujinUketsuke|Uketuke bango"
+msgstr "受付番号"
+
+#: app/models/kyujin_uketsuke.rb:-
+msgid "KyujinUketsuke|Kigyo bango"
+msgstr "企業番号"
+
+#: app/models/kyujin_uketsuke.rb:-
+msgid "KyujinUketsuke|Shokushu bango"
+msgstr "職種番号"
+
+#: app/models/kyujin_uketsuke.rb:-
+msgid "KyujinUketsuke|Shokushu mei"
+msgstr "職種名"
+
+#: app/models/kyujin_uketsuke.rb:-
+msgid "KyujinUketsuke|Shokugyo code"
+msgstr "職業コード"
+
+#: app/models/kyujin_uketsuke.rb:-
+msgid "KyujinUketsuke|Tenkin"
+msgstr "転勤内外"
+
+#: app/models/kyujin_uketsuke.rb:-
+msgid "KyujinUketsuke|Koutai"
+msgstr "交替制"
+
+#: app/models/kyujin_uketsuke.rb:-
+msgid "KyujinUketsuke|Kihonkyu"
+msgstr "基本給"
+
+#: app/models/kyujin_uketsuke.rb:-
+msgid "KyujinUketsuke|Kijunnai tingin"
+msgstr "基準内賃金"
+
+#: app/models/kyujin_uketsuke.rb:-
+msgid "KyujinUketsuke|Kikai"
+msgstr "M"
+
+#: app/models/kyujin_uketsuke.rb:-
+msgid "KyujinUketsuke|Denki"
+msgstr "E"
+
+#: app/models/kyujin_uketsuke.rb:-
+msgid "KyujinUketsuke|Joho"
+msgstr "I"
+
+#: app/models/kyujin_uketsuke.rb:-
+msgid "KyujinUketsuke|Kouka"
+msgstr "C"
+
+#: app/models/kyujin_uketsuke.rb:-
+msgid "KyujinUketsuke|Kenchiku"
+msgstr "A"
+
+#: app/models/kyujin_uketsuke.rb:-
+msgid "KyujinUketsuke|Kei"
+msgstr "計"
+
+#: app/models/kyujin_uketsuke.rb:-
+msgid "KyujinUketsuke|Kyujin sosu"
+msgstr "求人総数"
+
+#: app/models/kyujin_uketsuke.rb:-
+msgid "KyujinUketsuke|Sintai"
+msgstr "身体条件"
+
+#: app/models/kyujin_uketsuke.rb:-
+msgid "KyujinUketsuke|Kengaku"
+msgstr "応募前見学"
+
+#: app/models/kyujin_uketsuke.rb:-
+msgid "KyujinUketsuke|Heigan"
+msgstr "併願"
+
+#: app/models/kyujin_uketsuke.rb:-
+msgid "KyujinUketsuke|Bikou"
+msgstr "備考"
+
+#: app/models/kyujin_uketsuke.rb:-
+msgid "KyujinUketsuke|Irai jikou"
+msgstr "依頼事項"
+
+#: app/models/kyujin_uketsuke.rb:-
+msgid "KyujinUketsuke|Input date"
+msgstr "入力日付"
+
+#: app/models/uketsuke_pdf.rb:-
+msgid "uketsuke pdf"
+msgstr "PDF受付処理"
+
+#: app/models/uketsuke_pdf.rb:-
+msgid "UketsukePdf|Kigyo bango"
+msgstr "企業番号"
+
+#: app/models/uketsuke_pdf.rb:-
+msgid "UketsukePdf|Uketuke code"
+msgstr "受付コード"
+
+#: app/models/uketsuke_pdf.rb:-
+msgid "UketsukePdf|Pdf file name"
+msgstr "PDFファイル名"
+
+#: app/models/uketsuke_pdf.rb:-
+msgid "UketsukePdf|Input date"
+msgstr "入力日付"
+
+#: app/models/kigyo.rb:-
+msgid "kigyo"
+msgstr "企業処理"
+
+#: app/models/kigyo.rb:-
+msgid "Kigyo|Kigyo name"
+msgstr "企業名"
+
+#: app/models/kigyo.rb:-
+msgid "Kigyo|Kigyo name2"
+msgstr "企業名2"
+
+#: app/models/kigyo.rb:-
+msgid "Kigyo|Kigyo bango"
+msgstr "企業番号"
+
+#: app/models/kigyo.rb:-
+msgid "Kigyo|Kana"
+msgstr "フリカナ"
+
+#: app/models/kigyo.rb:-
+msgid "Kigyo|Site"
+msgstr "所在地"
+
+#: app/models/kigyo.rb:-
+msgid "Kigyo|Zip code"
+msgstr "郵便番号"
+
+#: app/models/kigyo.rb:-
+msgid "Kigyo|Address1"
+msgstr "住所1"
+
+#: app/models/kigyo.rb:-
+msgid "Kigyo|Address2"
+msgstr "住所2"
+
+#: app/models/kigyo.rb:-
+msgid "Kigyo|Yakushoku"
+msgstr "担当者役職"
+
+#: app/models/kigyo.rb:-
+msgid "Kigyo|Tantou name"
+msgstr "担当者名"
+
+#: app/models/kigyo.rb:-
+msgid "Kigyo|Tele no"
+msgstr "電話番号"
+
+#: app/models/kigyo.rb:-
+msgid "Kigyo|Sangyo betu"
+msgstr "産業コード"
+
+#: app/models/kigyo.rb:-
+msgid "Kigyo|Shokugyo betu"
+msgstr "職業コード"
+
+#: app/models/kigyo.rb:-
+msgid "Kigyo|Seisan hinmoku"
+msgstr "生産品目"
+
+#: app/models/kigyo.rb:-
+msgid "Kigyo|Remark"
+msgstr "備考"
+
+#: app/models/kigyo.rb:-
+msgid "Kigyo|Input date"
+msgstr "入力日付"
+
+#: app/models/kigyo_info.rb:-
+msgid "kigyo info"
+msgstr "企業情報"
+
+#: app/models/kigyo_info.rb:-
+msgid "KigyoInfo|Kigyo bango"
+msgstr "企業番号"
+
+#: app/models/kigyo_info.rb:-
+msgid "KigyoInfo|Sangyo code"
+msgstr "産業コード"
+
+#: app/models/kigyo_info.rb:-
+msgid "KigyoInfo|Jugyoinsu"
+msgstr "従業員数"
+
+#: app/models/kigyo_info.rb:-
+msgid "KigyoInfo|Sihon oku"
+msgstr "資本(億)"
+
+#: app/models/kigyo_info.rb:-
+msgid "KigyoInfo|Sihon senman"
+msgstr "資本(千万)"
+
+#: app/models/kigyo_info.rb:-
+msgid "KigyoInfo|Input date"
+msgstr "入力日付"
+
+#: app/models/kyujin_daicho.rb:-
+msgid "kyujin daicho"
+msgstr "求人台帳"
+
+#: app/models/kyujin_daicho.rb:-
+msgid "KyujinDaicho|Uketuke date"
+msgstr "受付日付"
+
+#: app/models/kyujin_daicho.rb:-
+msgid "KyujinDaicho|Uketuke bango"
+msgstr "受付番号"
+
+#: app/models/kyujin_daicho.rb:-
+msgid "KyujinDaicho|Kigyo bango"
+msgstr "記号番号"
+
+#: app/models/kyujin_daicho.rb:-
+msgid "KyujinDaicho|Shokushu bango"
+msgstr "職種番号"
+
+#: app/models/kyujin_daicho.rb:-
+msgid "KyujinDaicho|Shokushu mei"
+msgstr "職種名"
+
+#: app/models/kyujin_daicho.rb:-
+msgid "KyujinDaicho|Shokugyo code"
+msgstr "職業コード"
+
+#: app/models/kyujin_daicho.rb:-
+msgid "KyujinDaicho|Tenkin"
+msgstr "転勤内外"
+
+#: app/models/kyujin_daicho.rb:-
+msgid "KyujinDaicho|Koutai"
+msgstr "交替制"
+
+#: app/models/kyujin_daicho.rb:-
+msgid "KyujinDaicho|Kihonkyu"
+msgstr "基本給"
+
+#: app/models/kyujin_daicho.rb:-
+msgid "KyujinDaicho|Kijunnai tingin"
+msgstr "基準内賃金"
+
+#: app/models/kyujin_daicho.rb:-
+msgid "KyujinDaicho|Kikai"
+msgstr "M"
+
+#: app/models/kyujin_daicho.rb:-
+msgid "KyujinDaicho|Denki"
+msgstr "E"
+
+#: app/models/kyujin_daicho.rb:-
+msgid "KyujinDaicho|Joho"
+msgstr "I"
+
+#: app/models/kyujin_daicho.rb:-
+msgid "KyujinDaicho|Kouka"
+msgstr "C"
+
+#: app/models/kyujin_daicho.rb:-
+msgid "KyujinDaicho|Kenchiku"
+msgstr "A"
+
+#: app/models/kyujin_daicho.rb:-
+msgid "KyujinDaicho|Kei"
+msgstr "計"
+
+#: app/models/kyujin_daicho.rb:-
+msgid "KyujinDaicho|Kyujin sosu"
+msgstr "求人総数"
+
+#: app/models/kyujin_daicho.rb:-
+msgid "KyujinDaicho|Sintai"
+msgstr "身体条件"
+
+#: app/models/kyujin_daicho.rb:-
+msgid "KyujinDaicho|Kengaku"
+msgstr "前見学"
+
+#: app/models/kyujin_daicho.rb:-
+msgid "KyujinDaicho|Bikou"
+msgstr "備考"
+
+#: app/models/kyujin_daicho.rb:-
+msgid "KyujinDaicho|Sangyo code"
+msgstr "産業コード"
+
+#: app/models/kyujin_daicho.rb:-
+msgid "KyujinDaicho|Jugyoinsu"
+msgstr "従業員数"
+
+#: app/models/kyujin_daicho.rb:-
+msgid "KyujinDaicho|Sihon oku"
+msgstr "資本(億)"
+
+#: app/models/kyujin_daicho.rb:-
+msgid "KyujinDaicho|Sihon senman"
+msgstr "資本(千万)"
+
+#: app/models/kyujin_daicho.rb:-
+msgid "KyujinDaicho|Jigyosho mei1"
+msgstr "事業所名1"
+
+#: app/models/kyujin_daicho.rb:-
+msgid "KyujinDaicho|Jigyosho mei2"
+msgstr "事業所名2"
+
+#: app/models/kyujin_daicho.rb:-
+msgid "KyujinDaicho|Shozaichi"
+msgstr "所在地"
+
+#: app/models/kyujin_daicho.rb:-
+msgid "KyujinDaicho|Seisan hinmoku"
+msgstr "生産品目"
+
+#: app/models/kyujin_daicho.rb:-
+msgid "KyujinDaicho|Pdf file name"
+msgstr "PDFファイル名"
+
+#: app/models/uketsuke_rireki_moto.rb:-
+msgid "uketsuke rireki moto"
+msgstr "受付履歴元"
+
+#: app/models/uketsuke_rireki_moto.rb:-
+msgid "UketsukeRirekiMoto|Kigyo bango"
+msgstr "受付履歴元の企業番号"
+
+#: app/models/uketsuke_rireki_moto.rb:-
+msgid "UketsukeRirekiMoto|Uke1999"
+msgstr "受付履歴元の受1999"
+
+#: app/models/uketsuke_rireki_moto.rb:-
+msgid "UketsukeRirekiMoto|Uke2000"
+msgstr ""
+
+#: app/models/uketsuke_rireki_moto.rb:-
+msgid "UketsukeRirekiMoto|Uke2001"
+msgstr ""
+
+#: app/models/uketsuke_rireki_moto.rb:-
+msgid "UketsukeRirekiMoto|Uke2002"
+msgstr ""
+
+#: app/models/uketsuke_rireki_moto.rb:-
+msgid "UketsukeRirekiMoto|Uke2003"
+msgstr ""
+
+#: app/models/uketsuke_rireki_moto.rb:-
+msgid "UketsukeRirekiMoto|Uke2004"
+msgstr ""
+
+#: app/models/uketsuke_rireki_moto.rb:-
+msgid "UketsukeRirekiMoto|Uke2005"
+msgstr ""
+
+#: app/models/uketsuke_rireki_moto.rb:-
+msgid "UketsukeRirekiMoto|Uke2006"
+msgstr ""
+
+#: app/models/uketsuke_rireki_moto.rb:-
+msgid "UketsukeRirekiMoto|Uke2007"
+msgstr ""
+
+#: app/models/kigyo_daicho.rb:-
+msgid "kigyo daicho"
+msgstr "企業台帳"
+
+#: app/models/kigyo_daicho.rb:-
+msgid "KigyoDaicho|Kigyo bango"
+msgstr "企業番号"
+
+#: app/models/kigyo_daicho.rb:-
+msgid "KigyoDaicho|Jigyosho mei1"
+msgstr "事業所名1"
+
+#: app/models/kigyo_daicho.rb:-
+msgid "KigyoDaicho|Jigyosho mei2"
+msgstr "事業者名2"
+
+#: app/models/kigyo_daicho.rb:-
+msgid "KigyoDaicho|Furikana"
+msgstr "フリカナ"
+
+#: app/models/kigyo_daicho.rb:-
+msgid "KigyoDaicho|Shozaichi"
+msgstr "所在地"
+
+#: app/models/kigyo_daicho.rb:-
+msgid "KigyoDaicho|Yubin zip"
+msgstr "郵便番号"
+
+#: app/models/kigyo_daicho.rb:-
+msgid "KigyoDaicho|Shozaichi1"
+msgstr "所在地1"
+
+#: app/models/kigyo_daicho.rb:-
+msgid "KigyoDaicho|Shozaichi2"
+msgstr "所在地2"
+
+#: app/models/kigyo_daicho.rb:-
+msgid "KigyoDaicho|Tantou yaku"
+msgstr "担当者役職"
+
+#: app/models/kigyo_daicho.rb:-
+msgid "KigyoDaicho|Tantou mei"
+msgstr "担当者名"
+
+#: app/models/kigyo_daicho.rb:-
+msgid "KigyoDaicho|Tele number"
+msgstr "電話番号"
+
+#: app/models/kigyo_daicho.rb:-
+msgid "KigyoDaicho|Sangyo code"
+msgstr "産業コード"
+
+#: app/models/kigyo_daicho.rb:-
+msgid "KigyoDaicho|Seisan hinmoku"
+msgstr "生産品目"
+
+#: app/models/kigyo_daicho.rb:-
+msgid "KigyoDaicho|Input date"
+msgstr "入力日付"

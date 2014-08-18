@@ -1,0 +1,48 @@
+<h2>企業一覧</h2>
+
+<% for page in @kigyos %>
+    <%= link_to_unless(params[:page].to_i == page.number, page.number,
+            {:params => params.merge('page' => page)}) %>&nbsp;
+<% end -%><br />
+<%= link_to '前のページへ', { :page => @kigyos_pages.current.previous } if @kigyos_pages.current.previous %>
+<%= link_to '次のページへ', { :page => @kigyos_pages.current.next } if @kigyos_pages.current.next %> <br />
+<%= link_to '新しい企業を入力', :action => 'new' %>
+<table>
+  <tr valing="top" Class="ListLine2" >
+    <th>企業名</th>
+    <th>企業名２</th>
+    <th>企業番号</th>
+    <th>フリカナ</th>
+    <th>所在地</th>
+    <th>郵便番号</th>
+    <th>住所１</th> 
+    <th>住所２</th> 
+    <th>担当役職</th> 
+    <th>担当氏名</th> 
+    <th>電話</th> 
+    <th>産業別</th> 
+    <th>職業別</th>
+    <th>製作品目</th>
+    <th>備考</th>
+    <th>入力日付</th>
+  </tr>
+  
+
+
+  <tr>
+  <% for column in Kigyo.content_columns %>
+    <td><%=h kigyo.send(column.name) %></td>
+  <% end %>
+  <td><%= link_to '表示', :action => 'show', :id => kigyo %></td>
+  <td><%= link_to '編集', :action => 'edit', :id => kigyo %></td>
+  <td><%= link_to '削除', { :action => 'destroy', :id => kigyo }, :confirm => 'Are you sure?', :method => :post %></td>
+  </tr>
+<% end %>
+</table>
+
+<%= link_to 'Previous page', { :page => @kigyo_pages.current.previous } if @kigyo_pages.current.previous %>
+<%= link_to 'Next page', { :page => @kigyo_pages.current.next } if @kigyo_pages.current.next %> 
+
+<br />
+
+<%= link_to 'New kigyo', :action => 'new' %>

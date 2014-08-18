@@ -1,0 +1,9 @@
+<h1>生徒の年次データの編集</h1>
+
+<% form_tag :action => 'update', :id => @student_nenjis do %>
+  <%= render :partial => 'form' %>
+  <%= submit_tag 'データを更新する' %>
+<% end %>
+
+<%= link_to '詳細', :action => 'show', :id => @student_nenjis %> |
+<%= link_to '戻る', :action => 'list' %>

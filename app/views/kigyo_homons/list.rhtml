@@ -1,0 +1,46 @@
+<h2>企業訪問で得た情報の一覧(新しい訪問日順で表示)</h2>
+
+<% for page in @kigyo_homon_pages %>
+    <%= link_to_unless(params[:page].to_i == page.number, page.number, 
+            {:params => params.merge('page' => page)}) %>&nbsp;
+<% end -%>
+<%= link_to '前のページへ', { :page => @kigyo_homon_pages.current.previous } if @kigyo_homon_pages.current.previous %>
+<%= link_to '次のページへ', { :page => @kigyo_homon_pages.current.next } if @kigyo_homon_pages.current.next %> 
+<br>
+<%= link_to '新規の企業訪問のデータを入力する(企業番号と事業所名を企業名から自動入力＝お勧め)', :controller=>'teachers',:action => 'kigyo_search' %>
+<br>
+<%= link_to '新規の企業訪問のデータを入力する(企業番号と事業所名を手で入力)', :action => 'new' %>
+<table>
+	<tr valing="top" Class="ListLine2">
+		<th width="60">企業番号</th>
+		<th>科</th>
+		<th width="100">事業所名1</th>
+		<th width="60">事業所名2</th>
+		<th width="300">今年の求人状況</th>
+		<th width="250">卒業生の様子</th>
+		<th>訪問月日</th>
+		<th>編集</th>
+		<th width="40">削除(要注意)</th>
+  </tr>
+<% odd_or_even=1
+     @kigyo_homons.each do |kigyo_homon|
+			 odd_or_even=1-odd_or_even %>
+
+			 <tr Class="ListLine<%= odd_or_even %>">  
+    <% for column in KigyoHomon.content_columns %>
+      <td><%=h kigyo_homon.send(column.name) %></td>
+    <% end %>
+    <td><%= link_to '編集', :action => 'edit', :id => kigyo_homon %></td>
+    <td><%= link_to '削除', { :action => 'destroy', :id => kigyo_homon }, :confirm => 'Are you sure?', :method => :post %></td>
+  </tr>
+<% end %>
+</table>
+<% for page in @kigyo_homon_pages %>
+    <%= link_to_unless(params[:page].to_i == page.number, page.number, 
+            {:params => params.merge('page' => page)}) %>&nbsp;
+<% end -%>
+<%= link_to '前のページへ', { :page => @kigyo_homon_pages.current.previous } if @kigyo_homon_pages.current.previous %>
+<%= link_to '次のページへ', { :page => @kigyo_homon_pages.current.next } if @kigyo_homon_pages.current.next %> 
+<br />
+<%= link_to '新規の企業訪問のデータを入力する(企業番号と事業所名を企業名から自動入力)', :controller=>'teachers',:action => 'search2bango' %>
+

@@ -1,0 +1,8 @@
+<% for column in KyujinDaicho.content_columns %>
+<p>
+  <b><%= column.human_name %>:</b> <%=h @kyujin_daicho.send(column.name) %>
+</p>
+<% end %>
+
+<%= link_to 'Edit', :action => 'edit', :id => @kyujin_daicho %> |
+<%= link_to 'Back', :action => 'list' %>

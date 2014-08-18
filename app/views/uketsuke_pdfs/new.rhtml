@@ -1,0 +1,31 @@
+<h1>新しい求人票PDFファイルの登録</h1>
+
+
+<%= start_form_tag({:action=>'attach_file'}, :multipart => true) %>
+  <label>PDFファイル名</label><br/>
+  <%= hidden_field "attached", "uketsuke_nen", :value => @uketsuke_pdfs.uketsuke_nen %>
+	<%= file_field "attached", "file" %><br>
+  <%= submit_tag 'このファイルをアップロードする' %>
+<%= end_form_tag %>
+
+
+<% @uketsuke_pdfs.uketsuke_nen = Time.now.year %>
+<% form_tag :action => 'create' do %>
+	<!--[form:uketsuke_pdfs]-->
+  <p><label for="uketsuke_pdfs_pdf_name">Pdfファイル名</label><br/>
+  <%= text_field 'uketsuke_pdfs', 'pdf_name'  %></p>
+  <p><label for="uketsuke_pdfs_uketsuke_bango">受付番号</label><br/>
+  <%= text_field 'uketsuke_pdfs', 'uketsuke_bango'  %></p>
+  <p><label for="uketsuke_pdfs_kigyo_bango">職種番号</label><br/>
+  <%= text_field 'uketsuke_pdfs', 'shokushu_bango'  %></p>
+	<p><label for="uketsuke_pdfs_kigyo_bango">求人受付ID</label><br/>
+  <%= text_field 'uketsuke_pdfs', 'kyujin_uketsuke_id'  %></p>
+  <p><label for="uketsuke_pdfs_uketsuke_nen">求人受付年</label><br/>
+  <%= text_field 'uketsuke_pdfs','uketsuke_nen'   %></p>
+  <p><label for="uketsuke_pdfs_input_date">入力日付</label><br/>
+  <%= datetime_select 'uketsuke_pdfs', 'input_date'  %></p>
+  <!--[eoform:uketsuke_pdfs]--> 
+
+	<%= submit_tag "この内容をデータベースに登録" %>
+<% end %>
+<%= link_to '戻る', :action => 'list' %>

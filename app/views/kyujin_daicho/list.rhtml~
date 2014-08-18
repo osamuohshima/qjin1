@@ -1,0 +1,27 @@
+<h1>求人台帳　一覧</h1>
+
+<table>
+  <tr>
+    <td>PDFファイル名</td>
+  <tr>
+  
+<% for kyujin_daicho in @kyujin_daichos %>
+  <tr>
+  <% for column in KyujinDaicho %>
+
+    <td><%=h uketsuke_pdfs_pdf_file_name %></td>
+  <% end %>
+
+    <td><%= link_to 'Show', :action => 'show', :id => kyujin_daicho_t1s %></td>
+    <td><%= link_to 'Edit', :action => 'edit', :id => kyujin_daicho_t1s %></td>
+    <td><%= link_to 'Destroy', { :action => 'destroy', :id => kyujin_daicho_t1s }, :confirm => 'Are you sure?', :method => :post %></td>
+  </tr>
+<% end %>
+</table>
+
+<%= link_to 'Previous page', { :page => @kyujin_daicho_t1s_pages.current.previous } if @kyujin_daicho_t1s_pages.current.previous %>
+<%= link_to 'Next page', { :page => @kyujin_daicho_t1s_pages.current.next } if @kyujin_daicho_t1s_pages.current.next %> 
+
+<br />
+
+<%= link_to 'New kyujin_daicho_t1s', :action => 'new' %>

@@ -1,0 +1,25 @@
+@charset "utf-8";
+
+/* ****************************************************************** 
+
+	@This stylesheet Information{
+		CSS File Name: import.css
+
+		Setting of: Import styles
+			1: Import stylesheets
+	}
+
+****************************************************************** */
+
+
+/*==================================================================
+	1: Import stylesheets
+===================================================================*/
+
+
+@import "common.css";
+@import "header.css";
+@import "sub.css";
+@import "footer.css";
+@import "contents.css";
+@import "print.css";

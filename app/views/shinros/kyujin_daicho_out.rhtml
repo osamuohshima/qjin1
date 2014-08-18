@@ -1,0 +1,10 @@
+<h1>水工進路システム 管理用画面</h1>
+<hr>
+<h2>求人台帳をExcel(CSVファイル)へ出力<br></h2>
+
+<% form_tag  :controller => 'kyujin_uketsukes', :action => 'export_csv' do %>
+                          	出力する範囲を指定してください。<br>
+	<tr><td>受付番号	<%= text_field_tag  :frm_num,'', :size=>"6"  %>
+				</td>番から最後まで
+<%= submit_tag '出力する' %>
+<% end %>

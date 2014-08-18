@@ -1,0 +1,2 @@
+module KyujinDaichoT1sHelper
+end

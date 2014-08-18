@@ -1,0 +1,18 @@
+<% @content_for_title = "#{ActiveRecordBrowser.application_name}管理メニュー" %>
+<h3 class="sttl">このサイト内のサービス（コーナー）の一覧です。</h3>
+<table cellpadding="0" cellspacing="0" border="0" class="normalList">
+  <tr>
+    <th class="ID" width="50%">サービス名(テーブル名)</th>
+    <th>サービス名</th>
+  </tr>
+  <tbody>
+  <% for model_name in @model_names do %>
+    <tr>
+      <td class="ID">
+        <%= link_to(h(model_name[:name]), :controller=>"active_record_browser/contents", :action=>"list", :model=>model_name[:name].tableize) %>
+      </td>
+      <td><%= h(model_name[:human_name]) %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>

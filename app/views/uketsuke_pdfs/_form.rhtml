@@ -1,0 +1,19 @@
+<%= error_messages_for 'uketsuke_pdfs' %>
+
+<!--[form:uketsuke_pdfs]-->
+<p><table>
+<tr>
+ <td>受付番号<%= text_field 'uketsuke_pdfs', 'uketsuke_bango', :size => 5 -%></td>
+ <td>職種番号<%= text_field 'uketsuke_pdfs', 'shokushu_bango', :size => 2 %></td>
+</tr>
+<tr>
+ <td>求人受付ID<%= text_field 'uketsuke_pdfs', 'kyujin_uketsuke_id', :size =>8  %></td>
+ <td>Pdfファイル名<%= text_field 'uketsuke_pdfs', 'pdf_name'  %></td>
+</tr>
+<tr>
+ <td>受付年<%= text_field 'uketsuke_pdfs', 'uketsuke_nen', :size=>4  %></td>
+ <td>入力日付<%= datetime_select 'uketsuke_pdfs', 'input_date'  %></td>
+</tr>
+</table>
+<!--[eoform:uketsuke_pdfs]-->
+

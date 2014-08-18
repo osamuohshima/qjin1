@@ -1,0 +1,37 @@
+<h1>企業台帳　一覧</h1>
+
+<%= link_to '前のページに戻る', { :page => @kigyo_daicho_pages.current.previous } if @kigyo_daicho_pages.current.previous %>
+<%= link_to '次のページに進む', { :page => @kigyo_daicho_pages.current.next } if @kigyo_daicho_pages.current.next %> 
+
+<br />
+
+<%= link_to '新しい企業を登録する', :action => 'new' %>
+<table>
+  <tr>
+  <% for column in KigyoDaicho.content_columns %>
+    <th><%= column.human_name %></th>
+  <% end %>
+  </tr>
+	<% odd_or_even=1 
+ for kigyo_daicho in @kigyo_daichos 
+        odd_or_even=1-odd_or_even %>
+		<tr Class="ListLine<%= odd_or_even %>" >
+ 
+  
+  <tr>
+  <% for column in KigyoDaicho.content_columns %>
+    <td><%=h kigyo_daicho.send(column.name) %></td>
+  <% end %>
+    <td><%= link_to '詳細表示', :action => 'show', :id => kigyo_daicho %></td>
+    <td><%= link_to '編集', :action => 'edit', :id => kigyo_daicho %></td>
+    <td><%= link_to '削除', { :action => 'destroy', :id => kigyo_daicho }, :confirm => 'Are you sure?', :method => :post %></td>
+  </tr>
+<% end %>
+</table>
+
+<%= link_to '前のページに戻る', { :page => @kigyo_daicho_pages.current.previous } if @kigyo_daicho_pages.current.previous %>
+<%= link_to '次のページに進む', { :page => @kigyo_daicho_pages.current.next } if @kigyo_daicho_pages.current.next %> 
+
+<br />
+
+<%= link_to '新しい企業を登録する', :action => 'new' %>

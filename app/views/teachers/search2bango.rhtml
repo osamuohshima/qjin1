@@ -1,0 +1,124 @@
+<% @page_title = '企業名から：「'+@query + '」 の検索結果 ' if @query -%>
+
+<h1><%= h(@page_title) %></h1>
+<hr>
+<table width="100%" cellpadding="3" class="command-box">
+  <tr>
+    <td width="130">
+    <% if params[:action] == 'search' -%>
+			<%= link_to '最初に戻る', :action => 'index' %><br>
+    <% end %></td>
+	　<td align="left">
+		検索：企業名の一部を入力して[検索]ボタンを押す。
+    <form action="<%= url_for(:action => 'search2bango') %>">
+      <input name="q" value="<%= h(@query)%>" size="40" />
+      <input type="submit" value="検索" /><br>
+      <%= check_box 'kako', @kako_data, {}, true, false %>過去の求人も含める
+   </form>
+	</td>
+	検索のコツ：会社名の一部をひらかなで入力すると早い。<br>
+	例1　「三菱自動車工業」の場合は、「びし」で検索。<br>
+	例2　「ＪＦＥ炉材」の場合は、「ろざい」で検索。
+	</tr>
+
+	<% if@page_title == '企業名からの検索' %>
+  <% else %>
+
+<br>
+<%= link_to '↓下の件数が25件より大きい時は、キーワードの文字を増やして検索をやり直す', :action => 'search2bango' %><br>
+<%#= link_to '一覧にない場合→新規の企業を登録する', :controller => 'kigyo_daicho', :action => 'new' %>
+<%	 t=Time.now %>
+<%#	 nen = t.year %>
+<% if @kigyo_daichos.size > 0 %>
+<%=   @kigyo_daichos.size %>
+  <table Class="TableStyl0"　width="100%" class="listing" cellpadding="4" cellspacing="2">
+  <tr  Class="ListLine2">
+		<th width="60">企業番号</th>
+		<th width="200">事業所名1</th>
+		<th width="100">事業所名2</th>
+		<th width="30">受付年</th>
+		<th width="30">受付番号</th>
+		<th width="10">職種番号</th>
+		<th width="80">求人票</th>
+		<th width="80">依頼事項</th>
+		<th width="90">企業訪問情報</th>
+		<th width="80">受検報告書</th>
+  </tr>
+
+<%   odd_or_even=1 %>
+<%   @kigyo_daichos.each do |kigyo| -%>
+<%     @rireki = kigyo.uketsuke_rirekis  %>
+<%     if @rireki.size >0 %>
+<%        max_uketsuke_nen=1000 %>
+<%        @rireki.each do |rireki| %>	
+<%#         if rireki.uketsuke_nen == @uketsuke_nen %>
+<%          if max_uketsuke_nen<rireki.uketsuke_nen %>
+<%             max_uketsuke_nen=rireki.uketsuke_nen%>
+<%          end%>
+<%#         end%>
+<%      end%>
+<%    @rireki.each do |rireki|%>
+<%    if rireki.uketsuke_nen==max_uketsuke_nen %>
+<%       nSameKigyo = rireki.kyujinhyo_maisu.to_i if rireki.kyujinhyo_maisu %> 
+<%#       nSameKigyo.times do |i| %>      
+<%        rireki.kyujinhyo_maisu.to_i.times do |i| %>      
+<%          odd_or_even=1-odd_or_even %>
+  <tr Class="ListLine<%= odd_or_even %>" >
+    <td style="text-align: right"><%= kigyo.kigyo_bango %></td>
+    <td><%= kigyo.jigyosho_mei1 %></td>
+    <td><%= kigyo.jigyosho_mei2 %></td>
+<%          uketsukeNen = rireki.uketsuke_nen %>
+<%          uketsukeBango = rireki.uketsuke_bango %>
+    <td style="text-align: right"><%= uketsukeNen %></td>
+    <td style="text-align: right"><%= uketsukeBango %></td>
+    <td style="text-align: right"><%= i %>			</td>
+<%          conditions = [ 'uketsuke_nen= ? and uketsuke_bango= ? and shokushu_bango= ?', uketsukeNen, uketsukeBango, i]%>
+<%          @pdf_name = UketsukePdf.find(:first,:conditions => conditions )%>
+<%          unless @pdf_name.nil? %>
+<%              @pdf_name = @pdf_name.pdf_name    %>
+    <td><!--求人票 --><FONT color="blue">
+<%=            link_to '求人票を表示', "/attached/pdf/"+ uketsukeNen.to_s + "/kyujin_hyo/" +  @pdf_name , :popup => true  %>
+<%           else %>
+    <td><FONT color="blue">   <%=  '求人票なし'%> 		</FONT></td>
+<%          end %>
+
+<td><!--依頼事項-->
+<%       conditions = ['kigyo_bango like ?', kigyo.kigyo_bango] %>
+<%       @kyujin_data=KyujinUketsuke.find(:first,:conditions => conditions, :order => "uketsuke_nen DESC") %>
+<%       unless @kyujin_data.nil? %>
+<%=      link_to 'あり→見る', :controller => 'kyujin_uketsukes', :action => 'shoow',
+	               :id => @kyujin_data.id %>
+<%       else %>
+		  <FONT color="blue"><%=  'なし' %></FONT>
+<%       end %>
+</td>
+<td><!--企業訪問情報--><FONT color="blue"> 
+<%#      conditions = ["jigyosho_mei1 like ? or visit_date like ?",kigyo.jigyosho_mei1, nen.to_s] %>
+<%#     conditions = ['jigyosho_mei1 like ? ',kigyo.jigyosho_mei1] %>
+<%      conditions = ['kigyo_bango like ? ',kigyo.kigyo_bango] %>
+<%      @homon_data=KigyoHomon.find(:first,					                                    :conditions => conditions,
+                                    :order => "visit_date DESC",
+                                    :limit => 10)%>
+<%        unless @homon_data.nil? %>
+<%#   if @homon_data.visit_date >= nen %>
+<%=       link_to 'あり→見る', :controller => 'kigyo_homons',:action => 'show',
+                                :id => @homon_data.id %>
+<%#     else %>
+<%#=      link_to '古い情報あり', :controller => 'kigyo_homons',:action => 'show',
+                                :id => @homon_data.id%>
+<%#    end %>
+<%       else%>
+		 <FONT color="blue"> 	  <%=  'なし'%>    </FONT>
+<%       end %>
+		</FONT></td>
+	</tr>
+<%           end %>	
+<%         end %>	
+<%       end %>	
+<%     end %> 
+<%  end %>
+  </table>
+<% else %>
+	<p>企業の情報がありません</P>
+<% end %>
+<% end %>

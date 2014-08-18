@@ -1,0 +1,74 @@
+<% @page_title = '求人票PDFの一覧' -%>
+<% @page_title = '求人票：'+@query + ' の検索結果 ' if @query -%>
+
+<h1><%= h(@page_title) %></h1>
+<hr>
+
+<table width="100%" cellpadding="3" class="command-box">
+  <tr>
+    <td width="130">
+    <% if params[:action] == 'search' -%>
+			<%= link_to '最初に戻る', :action => 'index' %><br>
+    <% end %></td>
+	　<td align="left">
+検索：受付番号を入力して[検索]を押す
+    <form action="<%= url_for(:action => 'search') %>">
+      <input name="q" value="<%= h(@query)%>" size="40" />
+      <input type="submit" value="検索" />
+    </form>
+    </td>
+	</tr>
+
+	<%# if@page_title == '求人票PDFの一覧' %>
+    <h2>求人票の検索をどうぞ</h2>
+  <%# else %>
+
+
+<% if @uketsuke_pdfs.size > 0 %>
+
+  <table Class="TableStyl0"　width="100%" class="listing" cellpadding="4" cellspacing="2">
+	<tr>
+		<th width="40">受付番号</th>
+		<th width="20">職種番号</th>
+		<th width="200">PDFファイル名</th>
+		<th width="80">受付年</th>
+		<th width="80">入力日付</th>
+		<th width="30">操作</th>
+	</tr>
+
+	<% odd_or_even=1 %>
+	<% @uketsuke_pdfs.each do |uketsukepdf| -%>
+    <%  odd_or_even=1-odd_or_even %>
+	<tr Class="ListLine<%= odd_or_even %>" >
+		<td style="text-align: right"><%= uketsukepdf.uketsuke_bango %></td>
+		<td><%= uketsukepdf.shokushu_bango %></td>
+		<td><%= link_to( uketsukepdf.send('pdf_name').delete("\""),
+				"/attached/pdf/"+(uketsukepdf.send('uketsuke_nen').to_s << "/") +
+				uketsukepdf.send('pdf_name').delete("\""),
+					:popup => true ) %></td>
+		
+		<td><%= uketsukepdf.uketsuke_nen %></td>
+		<td><%= uketsukepdf.input_date.strftime("%Y-%m-%d") %></td>
+		<td><%= link_to '受付履歴', {:action => 'edit_uketsuke_rireki', 
+		                            	:id => uketsukepdf }%></td>
+	<td><%= link_to '削除', { :action => 'destroy', :id => uketsukepdf },
+		                        	:confirm => '本当に削除しますか?', 
+                        			:method => :post %></td>
+ 
+  </tr>
+  <% end %> 
+
+  </table>
+<% else %>
+
+	<p>企業の情報がありません</P>
+<%# end %>
+
+<% end %>
+
+
+
+
+
+
+

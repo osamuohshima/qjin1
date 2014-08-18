@@ -1,0 +1,631 @@
+@charset "utf-8";
+
+/* ****************************************************************** 
+
+	@This stylesheet Information{
+		CSS File Name: contents.css
+
+		Setting of: Contents area
+			1: pgTtl setting
+			2: contents setting
+			3: mainContents setting
+			4: contentsBtm setting
+	}
+
+****************************************************************** */
+
+
+/*===================================================================
+	1: pgTtl setting
+===================================================================*/
+
+div#container div#pgTtl{
+	background:#B93409 url(../../images/active_record_browser/pgttl_bg.gif) repeat-x left top;
+	margin:0 0 26px;
+	padding:0;
+}
+
+div#container div#pgTtl h2{
+	background:url(../../images/active_record_browser/pgttl_bgl.gif) no-repeat left top;
+	padding:10px 10px 10px 34px;
+	margin:0!important;
+	font-weight:bold;
+	font-size:1.28em;
+	color:#fff;
+}
+
+
+
+/*===================================================================
+	2: contents setting
+===================================================================*/
+
+div#contents{
+	padding:0px 15px;
+}
+
+div#contents div#contentsInner{
+	width:100%;
+}
+
+/*clearfix*/
+
+div#contents div#contentsInner:after{
+	content: "";
+	display: block;
+	clear: both;
+	height: 0.1px;
+}
+
+* html div#contents div#contentsInner{ display: inline-block; }
+
+/* no ie mac \*/
+* html div#contents div#contentsInner{ height: 1%; }
+div#contents div#contentsInner{ display: block; }
+/* */
+
+
+/*===================================================================
+	3: mainContents setting
+===================================================================*/
+
+/*-------------------------------------------------------------------
+	Setting of Common.
+-------------------------------------------------------------------*/
+
+div#mainContents{
+	float:left;
+	width:100%;
+	padding:0;
+	margin-right:-300px;
+}
+
+div#mainContents div#mainContentsInner{
+	/*margin-right:315px;*/
+	overflow:hidden;
+}
+
+div#mainContents h2{
+	margin:0 0 15px;
+	padding:4px 10px 3px;
+	font-size:1.16em;
+	background:#729CB6;
+	color:#fff;
+	border:1px solid #729CB6;
+}
+
+div#mainContents h2 a{
+	color:#fff;
+}
+
+div#mainContents div.module{
+	padding:0 10px 25px;
+}
+
+div#mainContents div.module h3.sttl{
+	margin:0 0 20px;
+	font-size:1.1em;
+	border-left:5px solid #666;
+	padding-left:7px;
+}
+
+div#mainContents p.more,
+div#mainContents ul.more{
+	text-align:right;
+}
+
+div#mainContents p.more{
+	margin:0 5px 0 0;
+}
+
+div#mainContents ul.more li{
+	display:inline;
+	padding:0 5px 0 3px;
+}
+
+div#mainContents p.more a,
+div#mainContents ul.more li a{
+	padding:0 0 0 14px;
+	background:url(../../images/active_record_browser/arrow_r.gif) no-repeat left center;
+	zoom:1;
+}
+
+/*normalList table*/
+
+div#mainContents table.list{
+	font-size:1.1em;
+	margin:5px 0;
+	width:100%;
+	*width:98%;
+}
+
+div#mainContents table.list th{
+	text-align:left;
+}
+
+
+div#mainContents table.normalList{
+	border-collapse: collapse;
+	border-top:1px solid #B2B2B2;
+	width:100%;
+	*width:98%;
+	margin:5px 0 8px;
+	background:#fff;
+}
+
+div#mainContents table.normalList th{
+	font-size:1.1em;
+}
+
+div#mainContents table.normalList th,
+div#mainContents table.normalList td{
+	padding:8px 9px;
+	vertical-align:top;
+	text-align:left;
+	border: 1px solid #B2B2B2;
+}
+
+div#mainContents table.normalList th{
+	background:#E0E0E0!important;
+	letter-spacing:-0.02em;
+}
+
+div#mainContents table.normalList th.ID,
+div#mainContents table.normalList td.ID{
+	text-align:center;
+	background:#EBECE6;
+}
+
+
+div#mainContents table.normalList td.btn{
+	text-align:center;
+	padding:5px;
+}
+
+/*/normalList table*/
+
+/*/csv import/export and search box*/
+div#itemContents {
+  background-color: #f0f0f0;
+  margin: 0px 10px 10px 0px;
+  padding: 3px 4px 1px;
+}
+
+div#itemContentsInner {
+  border: 1px dashed #aaa;
+  color: #333333;
+  margin: 2px 1px;
+  padding: 13px 16px 5px;
+}
+
+/*/submit button*/
+div.btnL {
+  text-align:center;
+  margin: 2px 1px;
+}
+
+div.btnL a:hover {
+  background:#bbf no-repeat scroll 0pt -479px;
+  color:#0B3370;
+}
+
+div.btnL a {
+  background:#cfcfcf no-repeat scroll 0pt;
+  display:block;
+  height:18px;
+  margin:0pt auto;
+  width:201px;
+  border: 1px solid #aaa;
+  padding: 3px 5px 5px 0px
+}
+
+
+/*Paging*/
+
+div#mainContents div.paging{
+	margin:0 0 6px;
+	width:100%;
+	font-size:0.86em;
+	font-family: Arial , 'MS PGothic',Verdana, 'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro', Osaka, sans-serif;
+	line-height:1.25em;
+}
+
+div#mainContents div#pagingBtm{
+	margin:0 0 20px;
+}
+
+/* clearfix */
+
+div#mainContents div.paging:after{
+	content: "";
+	display: block;
+	clear: both;
+	height: 0.1px;
+}
+
+* html div#mainContents div.paging{ display: inline-block; }
+
+/* no ie mac \*/
+* html div#mainContents div.paging{ height: 1%; }
+div#mainContents div.paging{ display: block; }
+/* */
+
+
+
+div#mainContents div.paging p.viewNo{
+	margin:0 5px 0 0;
+	float:left;
+	width:40%;
+}
+
+div#mainContents div.paging p.viewNo span{
+	padding-left:5px;
+}
+
+div#mainContents div.paging p.pageNo{
+	float:right;
+	width:58%;
+	text-align:right;
+}
+
+
+div#mainContents div.paging p.pageNo span{
+	color:#999;
+}
+
+div#mainContents div.paging p.pageNo span{
+	padding:0 0px 2px;
+	zoom:1;
+}
+
+div#mainContents div.paging p.pageNo .current,
+div#mainContents div.paging p.pageNo b,
+div#mainContents div.paging p.pageNo a{
+	border:1px solid #CCCCCC;
+	padding:1px 4px;
+	margin:0 -0.18em;
+	zoom:1;
+	font-weight:normal;
+}
+
+div#mainContents div.paging p.pageNo .current,
+div#mainContents div.paging p.pageNo b{
+	background:#006699;
+	color:#FFF;
+}
+
+div#mainContents div.paging p.pageNo a{
+	background:#FFF;
+	text-decoration:none;
+}
+
+div#mainContents div.paging p.pageNo a:hover{
+	background:#F9F9F9;
+	text-decoration:none;
+}
+
+
+div#mainContents div.paging p.pageNo span a,
+div#mainContents div.paging p.pageNo span a:hover{
+	border:none;
+	padding:0 1px;
+	margin:0;
+	background:#FFF;
+}
+
+div#mainContents div.paging p.pageNo span a{
+	text-decoration:underline;
+}
+
+
+
+/*/Paging*/
+
+
+/*btnModule*/
+
+div#mainContents div.btnModuleM a{
+	width:170px;
+	display:block;
+	padding-bottom:5px;
+	color:#666;
+	text-decoration:none;
+	background:url(../../images/active_record_browser/btn_m_bgbtm.gif) no-repeat left bottom;
+}
+
+div#mainContents div.btnModuleM a:hover{
+	background:url(../../images/active_record_browser/btn_m_bgbtm_o.gif) no-repeat left bottom;
+}
+
+div#mainContents div.btnModuleM a span{
+	padding:9px 24px 4px 8px;
+	_padding:8px 24px 3px 8px;
+	display:block;
+	text-align:center;
+	font-weight:bold;
+}
+
+div#mainContents div.btnModuleM a.up span{
+	background:url(../../images/active_record_browser/btn_up_bgtop.gif) no-repeat left top;
+}
+
+div#mainContents div.btnModuleM a.up:hover span{
+	background:url(../../images/active_record_browser/btn_up_bgtop_o.gif) no-repeat left top;
+}
+
+div#mainContents div.btnModuleM a.down span{
+	background:url(../../images/active_record_browser/btn_down_bgtop.gif) no-repeat left top;
+}
+
+div#mainContents div.btnModuleM a.down:hover span{
+	background:url(../../images/active_record_browser/btn_down_bgtop_o.gif) no-repeat left top;
+}
+
+div#mainContents div.btnModuleM a.create span{
+	background:url(../../images/active_record_browser/btn_create_bgtop.gif) no-repeat left top;
+}
+
+div#mainContents div.btnModuleM a.create:hover span{
+	background:url(../../images/active_record_browser/btn_create_bgtop_o.gif) no-repeat left top;
+}
+
+
+div#mainContents div.btnModuleL a{
+	width:255px;
+	display:block;
+	padding-bottom:5px;
+	color:#666;
+	text-decoration:none;
+	background:url(../../images/active_record_browser/btn_l_bgbtm.gif) no-repeat left bottom;
+}
+
+div#mainContents div.btnModuleL a:hover{
+	background:url(../../images/active_record_browser/btn_l_bgbtm_o.gif) no-repeat left bottom;
+}
+
+div#mainContents div.btnModuleL a span{
+	padding:9px 24px 4px 8px;
+	_padding:8px 24px 3px 8px;
+	display:block;
+	text-align:center;
+	font-weight:bold;
+}
+
+div#mainContents div.btnModuleL a.del span{
+	background:url(../../images/active_record_browser/btn_del_bgtop.gif) no-repeat left top;
+}
+
+
+div#mainContents div.btnModuleL a.del:hover span{
+	background:url(../../images/active_record_browser/btn_del_bgtop_o.gif) no-repeat left top;
+}
+
+div#mainContents div.btnModuleMCenter{
+	text-align:center;
+	margin:0 auto;
+	width:170px;
+	_margin:0;
+	_width:auto;
+}
+
+div#mainContents div.btnModuleLCenter{
+	text-align:center;
+	margin:0 auto;
+	width:240px;
+	_margin:0;
+	_width:auto;
+}
+
+
+/* /btnModule*/
+
+/* searchModule */
+
+div#mainContents div.searchModule{
+	background:url(../../images/active_record_browser/search_bgrb.gif) no-repeat right bottom;
+	margin:0 0 20px;
+}
+
+div#mainContents div.searchModule div.moduleInner{
+	background:url(../../images/active_record_browser/search_bglb.gif) no-repeat left bottom;
+}
+
+div#mainContents div.searchModule form{
+	display:block;
+	background:url(../../images/active_record_browser/search_bgrt.gif) no-repeat right top;
+}
+
+div#mainContents div.searchModule form dl{
+	background:url(../../images/active_record_browser/search_bglt.gif) no-repeat left top;
+	padding:14px 15px 16px;
+}
+
+div#mainContents div.searchModule form dl dt,
+div#mainContents div.searchModule form dl dd{
+	display:inline;
+	margin-right:5px;
+}
+
+div#mainContents div.searchModule form dl dt{
+	font-weight:bold;
+}
+
+div#mainContents div.searchModule form dl input#searchTxt{
+	width:200px;
+}
+
+div#mainContents div.searchModule form dl input,
+div#mainContents div.searchModule form dl select{
+	vertical-align:middle;
+}
+
+/* /searchModule */
+
+
+/* slideModule */
+
+div#mainContents div.slideModule{
+	margin:0 0 15px;
+	padding:0 0 15px;
+	background:url(../../images/active_record_browser/line_dash.gif) repeat-x left bottom;
+}
+
+div#mainContents div.slideModule h4{
+	font-size:1.1em;
+	margin:0 5px 8px;
+}
+
+div#mainContents div.slideModule h4 .slideModuleOpen a{
+	background:url(../../images/active_record_browser/ico_close.gif) no-repeat 0px 1px;
+	padding:0 0 0 16px;
+	text-decoration:none;
+}
+
+div#mainContents div.slideModule h4 .slideModuleClose a{
+	background:url(../../images/active_record_browser/ico_open.gif) no-repeat 0px 1px;
+	padding:0 0 0 16px;
+	text-decoration:none;
+}
+
+div#mainContents div.slideModule div.slideModuleInner{
+	margin:0 18px 8px;
+	padding:12px 15px 15px;
+	background:#ECECE6;
+}
+
+div#mainContents div.slideModule div.slideModuleInner h5{
+	font-size:1em;
+	margin:0 0 8px;
+}
+
+div#mainContents div.slideModule div.slideModuleInner form,
+div#mainContents div.slideModule div.slideModuleInner div.in{
+	padding:0 10px;
+}
+
+div#mainContents div.slideModule div.slideModuleInner table{
+	margin:0 0 5px;
+}
+
+div#mainContents div.slideModule div.slideModuleInner th,
+div#mainContents div.slideModule div.slideModuleInner td{
+	font-weight:normal;
+	padding:0 5px 2px 0;
+	vertical-align:top;
+	text-align:left;
+}
+
+
+/* /slideModule */
+
+
+
+/*-------------------------------------------------------------------
+	Setting of loginArea.
+-------------------------------------------------------------------*/
+
+div#mainContents div.moduleInner div#loginArea {
+	width:383px;
+	margin:70px auto 80px;
+	padding:7px 0;
+	background:url(../../images/active_record_browser/login_bgtop.gif) no-repeat left top;
+}
+
+div#mainContents div.moduleInner div#loginArea form{
+	background:url(../../images/active_record_browser/login_bgbtm.gif) no-repeat left bottom;
+	display:block;
+	padding:20px 20px 27px;
+	text-align:left;
+}
+
+div#mainContents div#loginArea dl{
+	width:343px;
+	margin:0 0 5px;
+}
+
+div#mainContents div#loginArea dt{
+	width:113px;
+	float:left;
+	text-align:right;
+	font-weight:bold;
+	margin:0 0 5px;
+}
+
+div#mainContents div#loginArea dd{
+	margin:0 0 5px 125px;
+}
+
+div#mainContents div#loginArea dd input{
+	width:185px;
+	color:#666;
+	padding:0;
+}
+
+div#mainContents div#loginArea p{
+	text-align:center;
+}
+
+/*===================================================================
+	4: contentsBtm setting
+===================================================================*/
+
+div#contentsBtm{
+	padding:0px 15px;
+	margin:0;
+}
+
+div#contentsBtm p.pgTopLink{
+	margin:0 0 15px;
+	text-align:right;
+}
+
+div#contentsBtm div#btmNav{
+	width:100%;
+	padding:0 0 10px;
+}
+
+/* clearfix */
+
+div#contentsBtm div#btmNav:after{
+	content: "";
+	display: block;
+	clear: both;
+	height: 0.1px;
+}
+
+* html div#contentsBtm div#btmNav{ display: inline-block; }
+
+/* no ie mac \*/
+* html div#contentsBtm div#btmNav{ height: 1%; }
+div#contentsBtm div#btmNav{ display: block; }
+/* */
+
+
+div#contentsBtm p.pgTopLink a{
+	padding:1px 0 3px 20px;
+	/* Hides from IE5-Mac \*/ 
+	background:url(../../images/active_record_browser/ico_pgtop.gif) no-repeat 0px 0px;
+	/* */	
+}
+
+div#contentsBtm div#btmNav ul{
+	float:left;
+	width:560px;
+	margin-right:10px;
+}
+
+div#contentsBtm div#btmNav ul li{
+	display:inline;
+	margin:0 5px 0 0;
+}
+
+div#contentsBtm div#btmNav ul li a{
+	background:url(../../images/active_record_browser/arrow_r.gif) no-repeat left center;
+	padding:0 0 0 13px;
+}
+
+div#contentsBtm div#btmNav p{
+	float:right;
+	width:300px;
+	text-align:right;
+}

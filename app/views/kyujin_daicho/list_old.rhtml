@@ -1,0 +1,64 @@
+<h1>求人台帳　一覧</h1>
+
+<table>
+  <tr>
+    <td>受付年度</td><td>受付コード</td><td>受付日付</td><td>受付番号</td>
+    <td>企業番号</td><td>職種番号</td><td>職種名</td><td>職業コード</td>
+    <td>転勤</td><td>交替制</td><td>基本給</td><td>基準内賃金</td>
+    <td>M</td><td>E</td><td>I</td><td>C</td><td>A</td><td>計</td>
+    <td>求人総数</td><td>身体条件</td><td>前見学</td><td>備考</td>
+    <td>産業コード</td><td>従業員数</td><td>資本億</td><td>資本千万</td>
+    <td>事業所名1</td><td>事業所名2</td><td>所在地</td><td>生産品目</td>
+    <td>PDFファイル名</td>
+  <tr>
+  
+<% for kyujin_daicho in @kyujin_daichos %>
+  <tr>
+  <% for column in KyujinDaicho %>
+    <td><%=h kujin_uketuke.id %></td>
+    <td><%=h kujin_uketuke.uketsuke_nen %></td>
+    <td><%=h kujin_uketuke.uketsuke_code %></td>
+    <td><%=h kujin_uketuke.uketsuke_date %></td>
+    <td><%=h kujin_uketuke.uketsuke_bango %></td>
+    <td><%=h kujin_uketuke.kigyo_bango %></td>
+    <td><%=h kujin_uketuke.shokushu_bango %></td>
+    <td><%=h kujin_uketuke.shokushu_mei %></td>
+    <td><%=h kujin_uketuke.shokyugyo_code %></td>
+    <td><%=h kujin_uketuke.tenkin %></td>
+    <td><%=h kujin_uketuke.koutai %></td>
+    <td><%=h kujin_uketuke.kihonkyu %></td>
+    <td><%=h kujin_uketuke.kijunnai_tingin %></td>
+    <td><%=h kujin_uketuke.kikai %></td>
+    <td><%=h kujin_uketuke.denki %></td>
+    <td><%=h kujin_uketuke.joho %></td>
+    <td><%=h kujin_uketuke.kouka %></td>
+    <td><%=h kujin_uketuke.kenchiku %></td>
+    <td><%=h kujin_uketuke.kei %></td>
+    <td><%=h kujin_uketuke.kyujin_sosu %></td>
+    <td><%=h kujin_uketuke.shintai %></td>
+    <td><%=h kujin_uketuke.kengaku %></td>
+    <td><%=h kujin_uketuke.bikou %></td>
+    <td><%=h kigyo_info_sangyo_coder %></td>
+    <td><%=h kigyo_info_jugyoinsu %></td>
+    <td><%=h kigyo_info_sihon_oku %></td>
+    <td><%=h kigyo_info_sihon_senman %></td>
+    <td><%=h kigyo_daicho_jigyosho_mei1 %></td>
+    <td><%=h kigyo_daicho_jigyosho_mei2 %></td>
+    <td><%=h kigyo_daicho_shozaichi %></td>
+    <td><%=h kigyo_daicho_seisan_hinmoku %></td>
+    <td><%=h uketsuke_pdfs_pdf_file_name %></td>
+  <% end %>
+
+    <td><%= link_to 'Show', :action => 'show', :id => kyujin_daicho_t1s %></td>
+    <td><%= link_to 'Edit', :action => 'edit', :id => kyujin_daicho_t1s %></td>
+    <td><%= link_to 'Destroy', { :action => 'destroy', :id => kyujin_daicho_t1s }, :confirm => 'Are you sure?', :method => :post %></td>
+  </tr>
+<% end %>
+</table>
+
+<%= link_to 'Previous page', { :page => @kyujin_daicho_t1s_pages.current.previous } if @kyujin_daicho_t1s_pages.current.previous %>
+<%= link_to 'Next page', { :page => @kyujin_daicho_t1s_pages.current.next } if @kyujin_daicho_t1s_pages.current.next %> 
+
+<br />
+
+<%= link_to 'New kyujin_daicho_t1s', :action => 'new' %>

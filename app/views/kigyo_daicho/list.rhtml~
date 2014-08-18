@@ -1,0 +1,27 @@
+<h1>Listing kigyo_daichos</h1>
+
+<table>
+  <tr>
+  <% for column in KigyoDaicho.content_columns %>
+    <th><%= column.human_name %></th>
+  <% end %>
+  </tr>
+  
+<% for kigyo_daicho in @kigyo_daichos %>
+  <tr>
+  <% for column in KigyoDaicho.content_columns %>
+    <td><%=h kigyo_daicho.send(column.name) %></td>
+  <% end %>
+    <td><%= link_to 'Show', :action => 'show', :id => kigyo_daicho %></td>
+    <td><%= link_to 'Edit', :action => 'edit', :id => kigyo_daicho %></td>
+    <td><%= link_to 'Destroy', { :action => 'destroy', :id => kigyo_daicho }, :confirm => 'Are you sure?', :method => :post %></td>
+  </tr>
+<% end %>
+</table>
+
+<%= link_to 'Previous page', { :page => @kigyo_daicho_pages.current.previous } if @kigyo_daicho_pages.current.previous %>
+<%= link_to 'Next page', { :page => @kigyo_daicho_pages.current.next } if @kigyo_daicho_pages.current.next %> 
+
+<br />
+
+<%= link_to 'New kigyo_daicho', :action => 'new' %>

@@ -1,0 +1,9 @@
+<h1>受付履歴の編集</h1>
+
+<% form_tag :action => 'update', :id => @uketsuke_rireki do %>
+  <%= render :partial => 'form' %>
+  <%= submit_tag 'このデータで更新する' %>
+<% end %>
+
+<%= link_to 'Show', :action => 'show', :id => @uketsuke_rireki %> |
+<%= link_to 'Back', :action => 'list' %>

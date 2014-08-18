@@ -1,0 +1,28 @@
+<%= error_messages_for 'kigyo_homon' %>
+
+<!--[form:kigyo_homon]-->
+<table Class="TableStyl0">
+	<p><label for="kigyo_homon_kigyo_bango">企業番号(必須項目：半角で)</label><br/>
+<%= text_field 'kigyo_homon', 'kigyo_bango', :size=>"12"   %></p>
+
+<p><label for="kigyo_homon_senmon_kamei">訪問を担当した専門科名（必須項目）</label><br/>
+<%= select 'kigyo_homon', 'senmon_kamei',
+ {"機械科"=>'M',"電気科"=>'E',"工化科"=>'C',"建築科"=>'A',"情報科"=>'I'} ,{:prompt =>'--科を選択--'}  %></p>
+
+<p><label for="kigyo_homon_jigyosho_mei1">事業所名1（必須項目）</label><br/>
+<%= text_field 'kigyo_homon', 'jigyosho_mei1' , :size=>"40"  %></p>
+
+<p><label for="kigyo_homon_jigyosho_mei2">事業所名2</label><br/>
+<%= text_field 'kigyo_homon', 'jigyosho_mei2', :size=>"20"   %></p>
+
+<p><label for="kigyo_homon_kyujin_jokyo">今年の求人状況（必須項目）</label><br/>
+<!--%= text_field 'kigyo_homon', 'kyujin_jokyo', :size=>"80"   %-->
+<%= text_area 'kigyo_homon', 'kyujin_jokyo', :cols=>"60", :rows=>"4"  %></p>
+
+<p><label for="kigyo_homon_ob_yosu">卒業生の様子</label><br/>
+<%= text_area 'kigyo_homon', 'ob_yosu', :cols=>"60", :rows=>"4"   %></p>
+
+<p><label for="kigyo_homon_visit_date">訪問月日（必須項目）</label><br/>
+<%= date_select 'kigyo_homon', 'visit_date'   %></p>
+<!--[eoform:kigyo_homon]-->
+

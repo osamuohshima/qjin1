@@ -1,0 +1,70 @@
+<%# 企業訪問の結果入力のための検索画面   %>
+<% @page_title = '企業訪問の結果入力のための企業名の検索' -%>
+<% @page_title = '企業訪問の結果入力のための企業名「'+@query + '」 の検索結果 ' if @query -%>
+
+<h1><%= h(@page_title) %></h1>
+<hr>
+<table width="100%" cellpadding="3" class="command-box">
+  <tr>
+    <td width="130">
+    <% if params[:action] == 'search' -%>
+			<%= link_to '最初に戻る', :action => 'index' %><br>
+    <% end %></td>
+	　<td align="left">
+		検索：企業名の一部を入力して[検索]ボタンを押す。「ＪＦＥ」などアルファベットは全角で。
+    <form action="<%= url_for(:action => 'kigyo_search') %>">
+      <input name="q" value="<%= h(@query)%>" size="40" />
+      <input type="submit" value="検索" />
+    </form>
+	</td>
+	  検索のコツ：会社名の一部をひらかなで入力すると早い。<br>
+	  例1　「三菱自動車工業」の場合は、「びし」で検索。<br>
+	  例2　「ＪＦＥ炉材」の場合は、「ろざい」で検索。
+	</tr>
+
+	<% if@page_title == '企業訪問の結果入力のための企業名の検索' %>
+  <% else %>
+
+<br>
+<%= link_to '検索をやり直す', :action => 'kigyo_search' %><br>
+<%= link_to '一覧にない場合→新規の企業を登録する', :controller => 'kigyo_daicho', :action => 'new' %><br>
+
+<% if @kigyo_daichos.size > 0 %>
+	<%#= @kigyo_daichos.size %>
+  <table Class="TableStyl0"　width="100%" class="listing" cellpadding="4" cellspacing="2">
+	<tr  Class="ListLine2">
+		<th width="60">企業番号</th>
+		<th width="300">事業所名1</th>
+		<th width="200">事業所名2</th>
+		<th width="90">企業訪問</th>
+
+	</tr>
+	<% odd_or_even=1 %>
+	<% @kigyo_daichos.each do |kigyo| -%>
+    <%  odd_or_even=1-odd_or_even %>
+	<tr Class="ListLine<%= odd_or_even %>" >
+		<td style="text-align: right"><%= kigyo.kigyo_bango %></td>
+		<td><%= link_to(h(kigyo.jigyosho_mei1),
+			        :action => 'show', :id => kigyo) %></td>
+		<td><%= kigyo.jigyosho_mei2 %></td>
+
+		<td><FONT color="blue">
+       <%= link_to('報告を入力', {:controller => "kigyo_homons",:action => "new",
+                   :bango => kigyo.kigyo_bango, 
+                   :mei1 => kigyo.jigyosho_mei1,
+                   :mei2 => kigyo.jigyosho_mei2 } )%>
+		</FONT></td>
+ 
+  </tr>
+  <% end %> 
+
+  </table>
+<% else %>
+
+	<p>企業の情報がありません</P>
+<% end %>
+<h3><%= link_to '新規に企業を登録する', :action => 'new' %></h3>
+
+<% end %>
+
+

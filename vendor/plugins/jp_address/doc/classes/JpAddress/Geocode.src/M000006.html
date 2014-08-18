@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>geocode (JpAddress::Geocode)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <link rel="stylesheet" href="../../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File lib/jp_address.rb, line 54</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">geocode</span>(<span class="ruby-identifier">address</span>)
+      <span class="ruby-identifier">open</span>(<span class="ruby-constant">GOOGLE_MAPS_URL</span> <span class="ruby-operator">+</span> <span class="ruby-node">&quot;q=#{ERB::Util.url_encode(address)}&quot;</span>) <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">response</span><span class="ruby-operator">|</span>
+        <span class="ruby-identifier">xml</span> = <span class="ruby-constant">REXML</span><span class="ruby-operator">::</span><span class="ruby-constant">Document</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">response</span>.<span class="ruby-identifier">read</span>)
+        <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">xml</span>.<span class="ruby-identifier">elements</span>[<span class="ruby-value str">'/kml/Response/Status/code'</span>].<span class="ruby-identifier">text</span> <span class="ruby-operator">==</span> <span class="ruby-value str">'200'</span>
+          <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">country_code</span> = <span class="ruby-identifier">xml</span>.<span class="ruby-identifier">elements</span>[<span class="ruby-value str">'/kml/Response/Placemark/AddressDetails/Country/CountryNameCode'</span>].<span class="ruby-identifier">text</span>
+          <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">address_line</span> = <span class="ruby-identifier">xml</span>.<span class="ruby-identifier">elements</span>[<span class="ruby-value str">'/kml/Response/Placemark/AddressDetails/Country/AddressLine'</span>].<span class="ruby-identifier">text</span>
+          <span class="ruby-identifier">geocode_array</span>     = <span class="ruby-identifier">xml</span>.<span class="ruby-identifier">elements</span>[<span class="ruby-value str">'/kml/Response/Placemark/Point/coordinates'</span>].<span class="ruby-identifier">text</span>.<span class="ruby-identifier">split</span>(<span class="ruby-regexp re">/,/</span>)
+          <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">latitude</span>     = <span class="ruby-identifier">geocode_array</span>[<span class="ruby-value">0</span>]
+          <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">longitude</span>    = <span class="ruby-identifier">geocode_array</span>[<span class="ruby-value">1</span>]
+        <span class="ruby-keyword kw">end</span>
+      <span class="ruby-keyword kw">end</span>
+    <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

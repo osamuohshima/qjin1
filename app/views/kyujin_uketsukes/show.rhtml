@@ -1,0 +1,7 @@
+<% for column in KyujinUketsuke.content_columns %>
+	<b><%= column.human_name %>:</b>
+	<%=h @kyujin_uketsuke.send(column.name) %><br />
+<% end %>
+
+<%= link_to '編集', :action => 'edit', :id => @kyujin_uketsuke %> |
+<%= link_to '進む', :action => 'list' %>

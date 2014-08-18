@@ -1,0 +1,35 @@
+<h1>求人台帳_t1s</h1>
+
+<table>
+  <tr>
+  <% for column in KyujinDaichoT1.content_columns %>
+    <th><%= column.human_name %></th>
+  <% end %>
+  </tr>
+  
+<% [1..5].eache do |i| %>
+  <tr>
+  <%= uketsuke_kyujin_pdf_id=i %>
+    <td>uketsuke_bango</td>
+    <td>
+   <%= collection_select(:uketsuke_daicho , :kyujin_uketsuke_id, :@kyujin_uketsukes, :id, :kigyo_bango) %></td>
+    <td>kyujin_PDF_name</td>
+    <td>
+   <%= collection_select(:uketsuke_daicho , :uketsuke_pdf_id, :@uketsuke_pdfs, :id, :pdf_name) %></td>
+
+
+
+    <td><%= link_to 'Show', :action => 'show', :id => kyujin_daicho_t1 %></td>
+    <td><%= link_to '編集', :action => 'edit', :id => kyujin_daicho_t1 %></td>
+    <td><%= link_to '削除', { :action => 'destroy', :id => kyujin_daicho_t1 }, :confirm => '本当に削除しますか？', :method => :post %></td>
+  </tr>
+
+<% end %>
+</table>
+
+<%= link_to '前のページに戻る', { :page => @kyujin_daicho_t1_pages.current.previous } if @kyujin_daicho_t1_pages.current.previous %>
+<%= link_to '次のページに進む', { :page => @kyujin_daicho_t1_pages.current.next } if @kyujin_daicho_t1_pages.current.next %> 
+
+<br />
+
+<%= link_to '新しい求人を？？？？_t1', :action => 'new' %>

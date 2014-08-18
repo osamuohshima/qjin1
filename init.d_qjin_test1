@@ -1,0 +1,3 @@
+#!/bin/sh
+cd /home/shinro/qjin
+script/server

@@ -1,0 +1,51 @@
+<h2>求人企業の情報一覧</h2>
+<% for page in @kigyo_info_pages -%>
+    <%= link_to_unless(params[:page].to_i == page.number, page.number, 
+            {:params => params.merge('page' => page)}) %>&nbsp;
+<% end -%><br />
+<%= link_to '前のページへ', { :page => @kigyo_info_pages.current.previous } if @kigyo_info_pages.current.previous %>
+<%= link_to '次のページへ', { :page => @kigyo_info_pages.current.next } if @kigyo_info_pages.current.next %> <br />
+<%= link_to '新しい企業を入力', :action => 'new' %><table  >
+  <tr valing="top" Class="ListLine2">
+<table>
+    <tr valing="top" Class="ListLine2" >
+    <th>企業番号</th>
+    <th>従業員人数</th>
+		<th>資本億</th>
+		<th>資本万</th>
+		<th>産業別</th>
+		<th>企業台帳id</th>
+		<th>入力日付</th>
+      <th>機能</th>
+	</tr>
+  <% for column in KigyoInfo.content_columns %>
+     <th><%#= column.human_name %></th>
+  <% end %>
+ </tr> 
+  
+  <% odd_or_even=1
+     @kigyo_infos.each do |ki|
+	   odd_or_even=1-odd_or_even %>
+ <tr Class="ListLine<%= odd_or_even %>">  
+	<tr>
+		<td><%= ki.kigyo_number %></td>
+		<td><%= ki.jugyoinsu %></td>
+		<td><%= ki.sihon_oku %></td>
+		<td><%= ki.sihon_senman %></td>
+		<td><%= ki.sangyo_code %></td>
+		<td><%= ki.kigyo_daicho_id %></td>
+    <td><%= ki.input_date %></td>
+  <td><%= link_to '表示', :action => 'show', :id => ki %></td>
+  <td><%= link_to '編集', :action => 'edit', :id => ki %></td>
+	<td><%= link_to '削除', { :action => 'destroy', :id => ki },
+		                :confirm => '本当に削除しますか?', :method => :post %></td>
+</tr>
+<% end %>
+</table>
+
+<br />
+<%= link_to '前のページへ', { :page => @kigyo_info_pages.current.previous } if @kigyo_info_pages.current.previous %>
+<%= link_to '次のページへ', { :page => @kigyo_info_pages.current.next } if @kigyo_info_pages.current.next %> <br />
+<%= link_to '新しい求人を入力', :action => 'index' %>
+
+<%= link_to 'New kigyo', :action => 'new' %>

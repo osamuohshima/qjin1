@@ -1,0 +1,74 @@
+<h1>求人票の受付（データ入力画面）</h1>
+<%= error_messages_for 'kyujin_uketsuke' %>
+<% form_for :kyujin_uketsuke , :url => {:action=> 'create'}do |ku| %>
+
+数字の入力はすべて半角で。
+既入力データも、求人票と異なっていたら更新してください<br>
+<table Class="TableStyl0">
+<tr>
+<td>受付年<%= ku.text_field  'uketsuke_nen', :size=>3, :readonly => true %></td>
+<td>　受付日付　<%= ku.text_field 'uketsuke_date', :size=>4, :readonly=> true  %></td>
+</tr><tr>
+<td>受付番号<%= ku.text_field  'uketsuke_bango',:size=>4, :readonly=>true  %></td>
+<td>企業番号<%= ku.text_field  'kigyo_bango', :size=>10, :readonly=> true  %></td>
+<td>職種別番号<%= ku.text_field 'shokushu_bango', :size=>2, :readonly=> true %></td>
+<td>受付コード<%= ku.text_field 'uketsuke_code', :size=>8, :readonly=> true %></td>
+
+</tr></table>
+<table>
+<%= error_messages_for :kigyo_daicho %>
+<% fields_for :kigyo_daicho do |daicho| %>
+<tr>1.   事業所名1<%= daicho.text_field 'jigyosho_mei1',:size=>'60' %><br></tr>
+<tr>　ふりかな<%= daicho.text_field 'furikana', :size=>'60' %><br></tr>
+<tr>　事業所名2	<%= daicho.text_field 'jigyosho_mei2',:size=>'60' %>
+	<br></tr>
+<tr>　郵便番号<%= daicho.text_field 'yubin_zip', :size=>10 %>所在地
+	<%= daicho.text_field  'shozaichi',:size=>'10' %><br></tr>
+<tr>　所在地1	<%= daicho.text_field 'shozaichi1',:size=>'60' %><br></tr>
+<tr>　所在地2	<%= daicho.text_field 'shozaichi2',:size=>'60' %><br></tr>
+<tr>　事業内容（数字だけのものは文字記述に変更してください）<br>
+	<%= daicho.text_area  'seisan_hinmoku',:size=>'60' %></tr>
+<% end %>
+<%= error_messages_for :kigyo_info %>
+<% fields_for :kigyo_info do |info| %>
+<tr><td>当事業所の従業員数
+		<%= info.text_field 'jugyoinsu',:size=>'5'%></td></tr>
+	<tr><td>資本金(億)
+		<%= info.text_field 'sihon_oku',:size=>'10'%></td>
+	<td>資本金(万)
+		<%= info.text_field 'sihon_senman',:size=>'10'%></td></tr>
+<% end %>
+
+<table>2. 職種<%= ku.text_field  'shokushu_mei',:size=>"40" %></tr></table>
+<table>　転勤内外<%= ku.select :tenkin, [["県内",1],["県外",2],["内外両方",3]] %>
+　　交替制<%= ku.select  :koutai, [["無",1],["有",2]] %>
+<br>3. 基本給<%= ku.text_field 'kihonkyu', :size=>"10" %>例：130000 (注)桁区切りのカンマは不要
+<td>(1)合計　通勤
+		<%= ku.text_field  'kijunnai_tingin', :size=>"10"  %>例：135000 (注)基本給と同一金額の時は空白のままでよい</td>
+<br><tr></table>
+
+<table><td>4.　　11月以降の併願<%= ku.select  :heigan, [["否",1],["可",2]] %></td><td>　　応募前見学<%= ku.select  :kengaku, [["可",2],["否",1]] %></td></tr></table>
+　身体条件<%= ku.select  :sintai, [["無",1],["有",2]] %><br>
+<table>
+
+<table><% fields_for :kigyo_daicho do |kd| %><tr>　採用事務担当者 役職<%= kd.text_field 'tantou_yaku',:size=>'32' %></tr><br><tr>　　担当者氏名	<%= kd.text_field 'tantou_mei',:size=>'12' %></tr><tr>電話番号<%= kd.text_field 'tele_number',:size=>'12' %><br></tr><!% end %>
+<tr><td align="right"> 6.校内求人　M <%= ku.select  :kikai, [["あり○","0"],["ぜひ◎","◎"],["1名","1"],["2名","2"],["3名","3"],["４名",4],["５名",5],["６名",6],["７名",7],["８名",8],["９名",9],["10名",10],["11名",11],["12名",12]],{:include_blank =>""}%></td>
+<td align="right">,E	<%= ku.select  :denki, [["あり○","0"],["ぜひ◎","◎"],["1名","1"],["2名","2"],["3名","3"],["４名",4],["５名",5],["６名",6],["７名",7],["８名",8],["９名",9],["10名",10],["11名",11],["12名",12]],{:include_blank =>""}%></td>
+<td align="right">,C	<%= ku.select  :kouka,[["あり○","0"],["ぜひ◎","◎"],["1名","1"],["2名","2"],["3名","3"],["４名",4],["５名",5],["６名",6],["７名",7],["８名",8],["９名",9],["10名",10],["11名",11],["12名",12]],{:include_blank =>""}%></td>
+<td align="right">,A	<%= ku.select  :kenchiku,[["あり○","0"],["ぜひ◎","◎"],["1名","1"],["2名","2"],["3名","3"],["４名",4],["５名",5],["６名",6],["７名",7],["８名",8],["９名",9],["10名",10],["11名",11],["12名",12]],{:include_blank =>""}%></td>
+<td align="right">,I	<%= ku.select  :joho,[["あり○","0"],["ぜひ◎","◎"],["1名","1"],["2名","2"],["3名","3"],["４名",4],["５名",5],["６名",6],["７名",7],["８名",8],["９名",9],["10名",10],["11名",11],["12名",12]],{:include_blank =>""}%></td>
+<td align="right">計 <%= ku.select  'kei',[["１名",1],["２名",2],["３名",3],["４名",4],["５名",5],["６名",6],["７名",7],["８名",8],["９名",9],["10名",10],["11名",11],["12名",12],["16名",16]] %></p></td>
+<td align="right">5．求人数	<%= ku.text_field  'kyujin_sosu',:size=>"2"  %></td>
+　　　　　　　　↓　求人対象の科ごとの人数を、面談票を見て入力する。全科対象の場合は、５科とも「あり○」。<br>
+</table>
+　　備考（生徒に表示。仕事の内容や勤務場所などを記入）<br>
+　　<%= ku.text_field  'bikou',:size=>"160"  %><br>
+　　依頼された事項（教員専用表示。面談票を見て、求める生徒像などを入力）<br>
+	＜なければ無記入のまま＞<br><%= ku.text_area  'irai_jikou', :cols=>"50", :rows=>"5"  %><br>
+
+<tr>産業分類(最上位2桁のみ)	<%= kd.text_field 'sangyo_code',:size=>'4' %></tr><% end %>
+
+<tr>職業分類(最上位2桁のみ)　<%= ku.text_field  'shokugyo_code',:size=>"4"  %><br>
+入力日付<%= ku.date_select  'input_date', :use_month_numbers => true %></tr></table><br>
+<%= submit_tag '以上のデータを登録する' %>
+<% end %>

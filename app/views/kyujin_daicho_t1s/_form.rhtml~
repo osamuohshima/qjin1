@@ -1,0 +1,12 @@
+<%= error_messages_for 'kyujin_daicho_t1' %>
+
+<!--[form:kyujin_daicho_t1]-->
+
+<p><label for ="uketsuke_kyujin_pdf_id">kigyo_bango</label><br />
+<%= collection_select(:uketsuke_pdf , :kyujin_uketsuke_id, :@kyujin_uketsukes, :id, :kigyo_bango) %></P>
+<p><label
+
+
+
+<!--[eoform:kyujin_daicho_t1]-->
+

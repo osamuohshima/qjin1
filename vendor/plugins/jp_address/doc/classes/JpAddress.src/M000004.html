@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>insert_from_csv (JpAddress)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <link rel="stylesheet" href="../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File lib/jp_address.rb, line 70</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">insert_from_csv</span>
+    <span class="ruby-identifier">require</span> <span class="ruby-value str">'fastercsv'</span>
+    <span class="ruby-identifier">require</span> <span class="ruby-value str">'ar-extensions'</span>
+    <span class="ruby-identifier">require</span> <span class="ruby-value str">'kconv'</span>
+    <span class="ruby-identifier">$KCODE</span>=<span class="ruby-value str">'j'</span>
+    
+    <span class="ruby-identifier">csv_file</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">expand_path</span>(<span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-constant">RAILS_ROOT</span>, <span class="ruby-value str">'vendor'</span>, <span class="ruby-value str">'plugins'</span>, <span class="ruby-value str">'jp_address'</span>, <span class="ruby-value str">'ken_all.csv'</span>))
+    
+    <span class="ruby-identifier">puts</span> <span class="ruby-value str">&quot;Reading &quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">csv_file</span>
+    <span class="ruby-identifier">puts</span> <span class="ruby-value str">&quot;This file is over 12MB, please wait ...&quot;</span>
+    <span class="ruby-identifier">address_list</span> = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>
+    <span class="ruby-constant">FasterCSV</span>.<span class="ruby-identifier">foreach</span>(<span class="ruby-identifier">csv_file</span>) <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">data</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">address_list</span> <span class="ruby-operator">&lt;&lt;</span> [ 
+      <span class="ruby-identifier">data</span>[<span class="ruby-value">0</span>], <span class="ruby-comment cmt"># JISCODE(5)</span>
+      <span class="ruby-identifier">data</span>[<span class="ruby-value">1</span>], <span class="ruby-comment cmt"># ZIPCODE_OLD(3)</span>
+      <span class="ruby-identifier">data</span>[<span class="ruby-value">2</span>], <span class="ruby-comment cmt"># ZIPCODE(7)</span>
+      <span class="ruby-identifier">data</span>[<span class="ruby-value">6</span>].<span class="ruby-identifier">toutf8</span>, <span class="ruby-comment cmt"># PREFECTURE</span>
+      <span class="ruby-identifier">data</span>[<span class="ruby-value">7</span>].<span class="ruby-identifier">toutf8</span>, <span class="ruby-comment cmt"># CITY</span>
+      <span class="ruby-identifier">data</span>[<span class="ruby-value">8</span>].<span class="ruby-identifier">toutf8</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp re">/^[０-９].*$|（.*$/</span><span class="ruby-identifier">u</span>,<span class="ruby-value str">&quot;&quot;</span>) <span class="ruby-comment cmt"># ADDRESS</span>
+      ] <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">data</span>[<span class="ruby-value">2</span>]<span class="ruby-operator">=~</span><span class="ruby-regexp re">/^[0-9]{6}0$/</span>
+    <span class="ruby-keyword kw">end</span>
+    
+    <span class="ruby-identifier">puts</span> <span class="ruby-value str">&quot;Store all data into static_addresses table.&quot;</span>
+    <span class="ruby-identifier">puts</span> <span class="ruby-value str">&quot;There are over 120,000 rows, please wait ...&quot;</span>
+    <span class="ruby-identifier">column</span> = [<span class="ruby-identifier">:jiscode</span>, <span class="ruby-identifier">:zipcode_old</span>, <span class="ruby-identifier">:zipcode</span>, <span class="ruby-identifier">:prefecture</span>, <span class="ruby-identifier">:city</span>, <span class="ruby-identifier">:address</span>]
+    <span class="ruby-constant">JpAddress</span>.<span class="ruby-identifier">import</span>(<span class="ruby-identifier">column</span>, <span class="ruby-identifier">address_list</span>, <span class="ruby-identifier">:optimize</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">true</span>)
+  <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

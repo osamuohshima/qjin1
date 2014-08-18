@@ -1,0 +1,167 @@
+@charset "utf-8";
+
+/* ****************************************************************** 
+
+	@This stylesheet Information{
+		CSS File Name: common.css
+
+		Setting of: General pages
+			1: General setting
+			2: wrapper setting
+			3: container setting
+	}
+
+****************************************************************** */
+
+
+/*===================================================================
+	1: General setting
+===================================================================*/
+
+
+*{margin:0; padding:0;}
+
+body{
+	padding:0;
+	margin:0;
+	font-size:small;
+	_font-size:x-small;	/*IE*/
+	color:#333;
+	background:#fff;
+	line-height:1.4em;
+	font-family: 'MS PGothic',Verdana, Arial,'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro', Osaka, sans-serif;
+	text-align:center;
+	word-break:break-all;
+}
+
+div,p,span,a,input,select,textarea,form,ul,ol,li,dl,dt,dd,tr,td,table{font-size:100%;}
+
+
+/* Link Color*/
+
+a:link{color:#0099CC; text-decoration:underline;}
+a:visited{color:#660099; text-decoration:underline;}
+a:hover{color:#FF6600; text-decoration:none;}
+a:active{color:#800080; text-decoration:none;}
+
+
+img , a{border:0;}
+
+h1,h2,h3,h4,h5,h6{
+	margin:0;
+	padding:0;
+	font-size:1em;
+}
+
+strong , em{font-weight:bold; font-style:normal;}
+
+ul , ol{list-style:none;}
+
+hr{display:none;}
+
+address{font-style:normal;}
+
+
+.clear{clear:both;}
+
+.dispNone,
+.skipNav{
+	display: none;
+	/* Hides from IE5-Mac ¥*/ 
+	display: block;
+	position: absolute;
+	top: -500px;
+	left: -2500px;
+	font-size: 1px;
+	line-height: 100%;
+	/*end  Hides from IE5-Mac */
+}
+
+
+/* clearfix */
+
+.pkg:after{
+	content: "";
+	display: block;
+	clear: both;
+	height: 0.1px;
+}
+
+* html .pkg{ display: inline-block; }
+
+/* no ie mac ¥*/
+* html .pkg{ height: 1%; }
+.pkg{ display: block; }
+/* */
+
+
+/* padding */
+.noPdd{padding:0 !important;;}
+
+.pdd5{padding:5px !important;}
+.pddT5{padding-top:5px !important;}
+.pddR5{padding-right:5px !important;}
+.pddB5{padding-bottom:5px !important;}
+.pddL5{padding-left:5px !important;}
+
+.pdd10{padding:10px !important;}
+.pddT10{padding-top:10px !important;}
+.pddR10{padding-right:10px !important;}
+.pddB10{padding-bottom:10px !important;}
+.pddL10{padding-left:10px !important;}
+
+.pdd20{padding:20px !important;}
+.pddT20{padding-top:20px !important;}
+.pddR20{padding-right:20px !important;}
+.pddB20{padding-bottom:20px !important;}
+.pddL20{padding-left:20px !important;}
+
+/* margin */
+.noMrg{margin:0 !important;}
+
+.Mrg5{margin:5px !important;}
+.MrgT5{margin-top:5px !important;}
+.MrgR5{margin-right:5px !important;}
+.MrgB5{margin-bottom:5px !important;}
+.MrgL5{margin-left:5px !important;}
+
+.Mrg10{margin:10px !important;}
+.MrgT10{margin-top:10px !important;}
+.MrgR10{margin-right:10px !important;}
+.MrgB10{margin-bottom:10px !important;}
+.MrgL10{margin-left:10px !important;}
+
+.Mrg20{margin:20px !important;}
+.MrgT20{margin-top:20px !important;}
+.MrgR20{margin-right:20px !important;}
+.MrgB20{margin-bottom:20px !important;}
+.MrgL20{margin-left:20px !important;}
+
+
+/*===================================================================
+	2: wrapper setting
+===================================================================*/
+div#wrapper{
+	text-align:left;
+	min-width:900px;
+		background:#FFF;
+	/*¥*/ height:100%; /* */
+}
+
+
+/*===================================================================
+	3: container setting
+===================================================================*/
+
+div#container{
+	margin:0;
+	padding:0;
+	/*¥*/ width:100%; /* */
+	text-align:left;
+	background:#FFF;
+}
+
+#contents > #mainContainer{
+	height:auto; /*for IE5.0*/
+}
+

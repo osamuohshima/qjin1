@@ -1,0 +1,8 @@
+<h1>生徒の年次データの新規作成</h1>
+
+<% form_tag :action => 'create' do %>
+  <%= render :partial => 'form' %>
+  <%= submit_tag "新規登録" %>
+<% end %>
+
+<%= link_to '戻る', :action => 'list' %>

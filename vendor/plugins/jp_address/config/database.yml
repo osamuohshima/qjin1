@@ -1,0 +1,6 @@
+jp_address:
+  adapter: mysql
+  database: jp_address
+  username: root
+  password: 
+  host: localhost

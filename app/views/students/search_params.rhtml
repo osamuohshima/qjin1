@@ -1,0 +1,80 @@
+<head>
+  <%= javascript_include_tag :defaults %>
+</head>
+<%= error_messages_for 'search_params' %>
+<h1>希望する条件を入れて検索する</h1>
+<p>　必要な項目だけに入力する。(条件をたくさん入力するほど、表示される件数は少なくなる)</P>
+<form action="<%= url_for(:action => 'search_params') %>">
+   <input name="q" value="<%= h(@query)%>"  />
+  <br>以上の条件で   <input type="submit" value="検索" />
+</form>
+<!--form action="<%#= url_for(:action => 'search_from_kigyo_bango') %>">
+      <!--input name="q" value="<%#= h(@query)%>" size="40" />
+      <input type="submit" value="検索" />
+		</form>
+
+<table><table Class="TableStyl0">
+	<tr>
+		<td><label for="kyujin_uketsuke">あなたの科名</label>
+			<%= radio_button :kyujin_uketsuke, :kamei, 1, :checked=> true %>M
+		<%= radio_button :kyujin_uketsuke, :kamei, 2 %>E
+		<%= radio_button :kyujin_uketsuke, :kamei, 3 %>C
+		<%= radio_button :kyujin_uketsuke, :kamei, 4 %>A
+		<%= radio_button :kyujin_uketsuke, :kamei, 5 %>I&nbsp;&nbsp;  <font color="RED"><ここは必ずどれかを選ぶこと></font>
+	 </td><br></tr></table><br>
+
+<label for="kyujin_uketsuke_uketsuke_bango">求人票の受付番号</label>
+<%= text_field 'kyujin_uketsuke', 'uketsuke_bango',:size=>"10"  %>　わからなければ入力しなくてよい
+
+
+<table Class="TableStyl0">
+<tr><td><label for="kyujin_uketsuke_shokushu_mei">職種名の一部の単語</label>
+<%= text_field_with_auto_complete 'kyujin_uketsuke', 'shokushu_mei',:size=>"20" %></td>
+<td><label for="kyujin_uketsuke_shokugyo_code">職業コード</label>
+	<%= text_field 'kyujin_uketsuke', 'shokugyo_code',:size=>"5" %>わからなければ入力しなくてよい
+</td></tr>
+</table>
+<tr><label for="kyujin_uketsuke_tenkin">岡山県外への転勤が</label>
+		<%= radio_button :kyujin_uketsuke, :tenkin, 0 %>ない
+		<%= radio_button :kyujin_uketsuke,  :tenkin, 1 %>ある
+		<%= radio_button :kyujin_uketsuke,  :tenkin, 2, :checked=> true %>どちらでもよい
+		</tr><br><tr>	
+  <label for="kyujin_uketsuke_koutai">交替制が&nbsp;&nbsp; </label>
+	<%= radio_button :kyujin_uketsuke, :koutai, 0 %>ある
+	<%= radio_button :kyujin_uketsuke, :koutai, 1 %>ない
+	<%= radio_button :kyujin_uketsuke, :koutai, 2,  :checked=> true %>どちらでもよい
+</tr>
+<br>
+
+<label for="kyujin_uketsuke_kihonkyu">基　本　給</label>
+	<%= text_field 'kyujin_uketsuke', 'kihonkyu', :size=>"20"  %>円以上<br>
+<label for="kyujin_uketsuke_kijunnai_tingin">基準内賃金</label>
+<%= text_field 'kyujin_uketsuke', 'kijunnai_tingin', :size=>"20"  %>円以上
+<br>
+
+<table><tr><td>
+	<label for="kyujin_uketsuke_sintai">身体条件が</label>
+	<%= radio_button :kyujin_uketsuke, :sintai, 0  %>ない
+  <%= radio_button :kyujin_uketsuke, :sintai, 1 %>ある
+  <%= radio_button :kyujin_uketsuke, :sintai, 2, :checked=> true %>どちらでもよい
+</td></tr></table>
+
+    </td></tr>
+<table>
+	<tr>
+		<th width="100">企業番号</th>
+		<th width="80">求人票受付年</th>
+		<th width="80">求人票受付番号</th>
+		<th width="50">企業台帳ID</th>
+		<th width="50">求人票枚数</th>
+	</tr>
+ <tr Class="ListLine<%= odd_or_even %>">  
+  <%# for column in UketsukeRireki.content_columns %>
+    <td><%=h uketsuke_rireki.kigyo_bango %></td>
+    <td><%=h uketsuke_rireki.uketsuke_nen %></td>
+     <td><%=h uketsuke_rireki.uketsuke_bango %></td>
+     <td><%=h uketsuke_rireki.kigyo_daicho_id %></td>
+     <td><%=h uketsuke_rireki.kyujinhyo_maisu %></td>
+  </tr>
+<% end %>
+</table>

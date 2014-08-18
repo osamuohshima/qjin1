@@ -1,0 +1,8 @@
+<% for column in UketsukeRireki.content_columns %>
+<p>
+  <b><%= column.human_name %>:</b> <%=h @uketsuke_rireki.send(column.name) %>
+</p>
+<% end %>
+
+<%= link_to 'Edit', :action => 'edit', :id => @uketsuke_rireki %> |
+<%= link_to 'Back', :action => 'list' %>

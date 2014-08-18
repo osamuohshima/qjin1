@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja">
+<head>
+  <meta http-equiv="Content-Language" content="ja" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <%= stylesheet_link_tag("active_record_browser/import", :media=>"all") %>
+  <%= javascript_include_tag("active_record_browser/common") %>
+  <%= javascript_include_tag("prototype") %>
+  <title><%=h yield(:title) %></title>
+</head>
+<body class="special column2">
+  <p class="skipNav">
+    <a href="#mainContents">本文へジャンプします。</a>
+  </p>
+
+  <div id="wrapper">
+    <div id="container">
+      <div id="header">
+        <div id="headLogo">
+          <div>
+            <a href="http://www.nifty.com/"><%= arb_image_tag("niftylogo.gif", :size=>"88x31", :alt=>"アット・ニフティ　ロゴ") %></a>
+            <a href="<%= url_for :controller=>"active_record_browser/contents", :action => 'services' %>"><%= arb_image_tag("logo.gif", :alt=>"サイトロゴ") %></a>
+
+          </div>
+          <script type="text/javascript">setMinMaxWidth();</script>
+        </div>
+      <!--/ div#header-->
+      </div>
+      <hr />
+      <div id="headUserNav">
+        <ul>
+          <% unless @arb_top -%>
+            <li class="home">
+              <%= link_to("トップ", :controller=>"active_record_browser/contents", :action=>"services") %>
+            </li>
+          <% end -%>
+        </ul>
+      <!--/ div#headUserNav-->
+      </div>
+      <hr />
+      <div id="contentsTop">
+        <!--
+        <% unless @arb_top -%>
+        <! --footpath -- >
+        <p class="footpath">
+          <span class="dispNone">現在位置：</span>
+          <span><%= arb_link_to_top %> &gt;</span>
+          <span><strong>特集</strong></span>
+        </p>
+        <! --/.footpath -- >
+        <% end -%>
+        -->
+      <!--/ div#contentsTop-->
+      </div>
+      <hr />
+
+	<div id="pgTtl">
+    <h2><%= h(@content_for_title) %></h2>
+	</div>
+
+      <div id="contents">
+        <div id="contentsInner">
+          <div id="mainContents">
+
+            <!-- mainModule -->
+            <div id="mainModule" class="module">
+              <div class="moduleInner">
+                <p style="color: green" id="notice"><%= h(flash[:notice]) %></p>
+                <%= yield %>
+              </div>
+            </div>
+            <!--/ mainModule -->
+
+
+          <!--/ div#mainContents-->
+          </div>
+          <hr />
+        <!--/ div#contentsInner-->
+        </div>
+      <!--/ div#contents-->
+      </div>
+      <hr />
+
+      <div id="contentsBtm">
+        <p class="pgTopLink">
+          <a href="#header"><span>このページの先頭へ</span></a>
+        </p>
+        
+        <% unless @arb_top -%>
+          <% top_link_img = arb_image_tag("btn_backhome.gif", :size=>"166x22", :alt=>"トップへ戻る", :class=>"imgover") -%>
+        <div id="btmNav">
+          <p><%= link_to(top_link_img, :controller=>"active_record_browser/contents", :action=>"services") %></p>
+        </div>
+        <% end %>
+      <!--/ div#contentsBtm-->
+      </div>
+      <hr />
+
+      <div id="footer" class="pkg">
+
+        <p class="dispNone">
+          <a href="#header">このページの先頭へ戻る</a>
+          </p>
+          <div class="pkg">
+            <p id="nifty" style="width:45%;">
+            <a href="http://www.nifty.com/">
+              <%= arb_image_tag("gotop.gif", :size=>"88x17", :alt=>"アット・ニフティトップページへ") %>
+            </a>
+            </p>
+            <address>
+              Powered by <%= link_to 'NIFTY', 'http://www.nifty.com/' %>
+            </address>
+
+        </div>
+      <!--/ div#footer-->
+      </div>
+    <!--/ div#container-->
+    </div>
+  <!--/ div#wrapper-->
+  </div>
+</body>
+</html>

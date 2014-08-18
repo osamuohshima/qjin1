@@ -1,0 +1,18 @@
+<%= error_messages_for 'kigyo_info' %>
+
+<!--[form:kigyo]-->
+<p>企業番号<%= text_field  'kigyo_info', 'kigyo_number'  %></p>
+
+<p>産業コード<%= text_field  'kigyo_info',   'sangyo_code'  %></p>
+
+<p>従業員数<%= text_field  'kigyo_info',   'jugyoinsu'  %></p>
+
+<p>資本(億)<%= text_field  'kigyo_info',  'sihon_oku'  %></p>
+
+<p>資本(万)<%= text_field  'kigyo_info',  'sihon_senman'  %></p>
+
+<p>企業台帳id<%= text_field  'kigyo_info',  'kigyo_daicho_id'  %></p>
+
+<p>入力日付<%= datetime_select 'kigyo_info', 'input_date'  %></p>
+<!--[eoform:kigyo]-->
+

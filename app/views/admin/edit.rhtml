@@ -1,0 +1,9 @@
+<h1>Editing kyujin_daicho</h1>
+
+<% form_tag :action => 'update', :id => @kyujin_daicho do %>
+  <%= render :partial => 'form' %>
+  <%= submit_tag 'Edit' %>
+<% end %>
+
+<%= link_to 'Show', :action => 'show', :id => @kyujin_daicho %> |
+<%= link_to 'Back', :action => 'list' %>

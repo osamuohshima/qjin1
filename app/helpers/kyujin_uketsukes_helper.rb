@@ -1,0 +1,2 @@
+module KyujinUketsukesHelper
+end

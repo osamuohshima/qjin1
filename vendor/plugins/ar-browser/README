@@ -1,0 +1,131 @@
+= ActiveRecordBrowser
+
+テーブルの管理機能を提供するプラグインです。レコードの追加、 表示、更新、
+論理削除ができます。また、CSVでデータをインポート・エクスポートすることが
+可能です。
+
+
+== インストール方法
+
+以下のコマンドを実行すると、プラグインのインストールと同時に管理ページ用の
+スタイルシートと画像、JavaScriptがpublic/stylesheets, public/images, 
+public/javascripts以下にそれぞれ配置されます。
+
+  ./script/plugin install <plugin URL>
+
+<plugin URL>には公開されているリポジトリURLを指定します。
+
+
+== 設定
+
+=== パスの設定
+
+管理ページのパスは定数ACTIVE_RECORD_BROWSER_ROOTで指定します。
+指定しない場合は/adminになります。
+
+定数定義は以下のようにconfig/environment.rbのRails::Initializer.runの前に
+書いてください。
+
+  # Specifies gem version of Rails to use when vendor/rails is not present
+  RAILS_GEM_VERSION = '2.1.0' unless defined? RAILS_GEM_VERSION
+
+  ACTIVE_RECORD_BROWSER_ROOT = '/management'   # ここに追加
+  
+  # Bootstrap the Rails environment, frameworks, and default configuration
+  require File.join(File.dirname(__FILE__), 'boot')
+  
+  Rails::Initializer.run do |config|
+    # Settings in config/environments/* take precedence over those specified here.
+    # Application configuration should go into files in config/initializers
+    # -- all .rb files in that directory are automatically loaded.
+    # See Rails::Configuration for more options.
+ 
+
+=== 設定ファイル
+
+設定ファイルで表示や挙動をコントロールすることができます。
+
+config/initializers/active_record_browser.rbを作成し、
+以下のように記述します。
+
+  ActiveRecordBrowser.load_config(
+    :application_name => "sample app",
+    :models => [
+      {:model=>Book, :human_name=>"本", :importable=>true, :editable=>false},
+      {:model=>User, :human_name=>"ユーザ", :importable=>false, :editable=>true},
+    ])
+
+: application_name
+   アプリケーション名
+: models
+   モデルの設定をこの中に列挙します
+   : model
+      モデルのクラス
+   : human_name
+      モデル名の別名（日本語名など人が読みやすいもの）
+   : importable
+      モデルのレコードをCSVでインポート可能にするかどうか
+      (デフォルト: true)
+   : editable
+      そのモデルのレコードを編集可能にするかどうか
+      (デフォルト: true)
+
+
+== 機能
+
+=== トップページ
+
+モデルの一覧が表示され、モデルごとのページに飛ぶことができます。
+
+設定ファイルがあればmodelsで記載されたモデルが、なければ自動的に検出された
+モデルが一覧表示されます。
+
+
+=== モデルごとのページ
+
+モデルごとのページには、対応したテーブルのレコードが並びます。
+
+このページでできることは、
+
+* レコードの検索
+* レコードの詳細表示
+* レコードの編集
+* レコードの論理削除
+* カラムでのソート
+* CSVのインポート・エクスポート
+
+です。
+
+
+==== レコードの編集
+
+レコードの編集ができます。
+
+設定ファイルでeditableをfalseとすると編集を禁止することができます。
+
+
+==== レコードの論理削除
+
+deletedカラムがあるテーブルで有効になる機能です。削除を実行すると
+deletedが1になります。deleted_atカラムがあれば削除した時間も記録されます。
+
+
+==== CSVのインポート・エクスポート
+
+レコードをインポート（現テーブルを置き換え、または追加）、エクスポート
+できます。
+
+インポートするCSVのフォーマットは以下のとおりです。ファイルの拡張子は
+.csvである必要があります。
+
+  カラム名1,カラム名2,カラム名3,...
+  値1-1,値1-2,値1-3,...
+  値2-1,値2-2,値2-3,...
+  ...
+
+ActiveRecordを経由せずにINSERTするため、created_atなどのカラムに
+自動的に値がセットされるということはありません。
+
+設定ファイルでimportableをfalseとするとインポート・エクスポート
+できなくなります。
+

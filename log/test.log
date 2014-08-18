@@ -1,0 +1,1015 @@
+  [4;36;1mSQL (0.000132)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000158)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000119)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000110)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000098)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000113)[0m   [0mROLLBACK[0m
+  [4;35;1mSQL (0.000100)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000116)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000136)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000133)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000113)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000142)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000102)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000174)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000125)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000138)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000117)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000135)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000116)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000134)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000114)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000135)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000115)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000146)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000120)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000134)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000100)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000146)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000116)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000136)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000115)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000136)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000116)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000134)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000113)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000136)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000192)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000137)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000112)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000135)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000113)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000135)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000134)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000135)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000114)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000114)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000099)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000109)[0m   [0mROLLBACK[0m
+  [4;35;1mSQL (0.000101)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000108)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000139)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000137)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000109)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000204)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000098)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000139)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000112)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000134)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000115)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000134)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000114)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000135)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000115)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000137)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000115)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000135)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000114)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000135)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000106)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000146)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000115)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000134)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000116)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000134)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000113)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000135)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000145)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000157)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000116)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000133)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000115)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000134)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000115)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000144)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000127)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000175)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000107)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000109)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000131)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000139)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000114)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000141)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000099)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000135)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000116)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000136)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000117)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000147)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000116)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000135)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000116)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000134)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000115)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000135)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000116)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000133)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000253)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000143)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000112)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000117)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000099)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000113)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000100)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000114)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000100)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000112)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000113)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000113)[0m   [0mROLLBACK[0m
+  [4;35;1mSQL (0.000100)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000111)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000106)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000112)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000130)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000134)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000110)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000139)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000102)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000134)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000116)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000144)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000119)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000132)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000115)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000134)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000115)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000131)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000114)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000134)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000117)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000145)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000098)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000147)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000381)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000141)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000116)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000132)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000116)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000130)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000112)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000134)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000117)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000154)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000120)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000133)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000115)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000134)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000098)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000139)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000116)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000144)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000116)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000136)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000117)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000140)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000117)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000141)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000117)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000134)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000115)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000134)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000115)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000132)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000129)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000134)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000154)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000127)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000144)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000143)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000129)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000137)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000110)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000109)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000098)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000110)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000115)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000111)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000098)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000143)[0m   [0mROLLBACK[0m
+  [4;35;1mSQL (0.000098)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000108)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000098)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000109)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000129)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000135)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000111)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000138)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000099)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000133)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000113)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000132)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000129)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000135)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000110)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000134)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000114)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000132)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000113)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000133)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000114)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000194)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000098)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000143)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000114)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000143)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000113)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000133)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000111)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000134)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000112)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000133)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000114)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000129)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000176)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000152)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000116)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000134)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000130)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000136)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000158)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000127)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000135)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000151)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000127)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000131)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000145)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000129)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000137)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000150)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000128)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000136)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000147)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000125)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000200)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000150)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000126)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000134)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000146)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000126)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000138)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000145)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000125)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000135)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000143)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000126)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000135)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000146)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000135)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000133)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000144)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000127)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000133)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000150)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000130)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000128)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000148)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000130)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000138)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000147)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000129)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000139)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000149)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000141)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000104)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000050)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000058)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000047)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000054)[0m   [0mROLLBACK[0m
+  [4;35;1mSQL (0.000043)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000055)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000141)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000082)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000078)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000128)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000177)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000107)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000128)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000106)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000112)[0m   [0mROLLBACK[0m
+  [4;35;1mSQL (0.000112)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000114)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000100)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000115)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000111)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000112)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000100)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000115)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000112)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000114)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000130)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000156)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000153)[0m   [0mROLLBACK[0m
+  [4;35;1mSQL (0.000117)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000139)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000209)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000137)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000112)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000133)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000109)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000135)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000111)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000134)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000113)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000133)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000113)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000134)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000111)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000134)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000116)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000137)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000112)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000135)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000112)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000140)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000114)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000151)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000116)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000138)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000113)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000137)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000110)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000137)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000112)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000140)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000112)[0m   [0mBEGIN[0m
+  [4;36;1mUketsukePdf Columns (0.001233)[0m   [0;1mSHOW FIELDS FROM uketsuke_pdfs[0m
+  [4;35;1mUketsukePdf Load (0.038208)[0m   [0mSELECT * FROM uketsuke_pdfs WHERE (uketsuke_pdfs.`id` = 1) [0m
+  [4;36;1mSQL (0.000170)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000121)[0m   [0mBEGIN[0m
+  [4;36;1mUketsukePdf Load (0.000443)[0m   [0;1mSELECT * FROM uketsuke_pdfs WHERE (uketsuke_pdfs.`id` = 1) [0m
+  [4;35;1mSQL (0.000197)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000133)[0m   [0;1mBEGIN[0m
+  [4;35;1mUketsukePdf Load (0.000476)[0m   [0mSELECT * FROM uketsuke_pdfs WHERE (uketsuke_pdfs.`id` = 1) [0m
+
+
+Processing UketsukePdfsController#edit (for 0.0.0.0 at 2007-10-25 11:25:14) [GET]
+  Session ID: 
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"uketsuke_pdfs"}
+  [4;36;1mUketsukePdf Load (0.000499)[0m   [0;1mSELECT * FROM uketsuke_pdfs WHERE (uketsuke_pdfs.`id` = 1) [0m
+Rendering  within layouts/uketsuke_pdfs
+Rendering uketsuke_pdfs/edit
+Rendered uketsuke_pdfs/_form (0.00431)
+Completed in 0.02424 (41 reqs/sec) | Rendering: 0.02195 (90%) | DB: 0.04613 (190%) | 200 OK [http://test.host/uketsuke_pdfs/edit/1]
+  [4;35;1mSQL (0.000193)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000142)[0m   [0;1mBEGIN[0m
+  [4;35;1mUketsukePdf Load (0.000472)[0m   [0mSELECT * FROM uketsuke_pdfs WHERE (uketsuke_pdfs.`id` = 1) [0m
+
+
+Processing UketsukePdfsController#index (for 0.0.0.0 at 2007-10-25 11:25:14) [GET]
+  Session ID: 
+  Parameters: {"action"=>"index", "controller"=>"uketsuke_pdfs"}
+  [4;36;1mSQL (0.000449)[0m   [0;1mSELECT count(*) AS count_all FROM uketsuke_pdfs [0m
+  [4;35;1mUketsukePdf Load (0.000639)[0m   [0mSELECT * FROM uketsuke_pdfs LIMIT 0, 10[0m
+Rendering layoutfalseactionlist within layouts/uketsuke_pdfs
+Rendering uketsuke_pdfs/list
+Completed in 0.01937 (51 reqs/sec) | Rendering: 0.01658 (85%) | DB: 0.00189 (9%) | 200 OK [http://test.host/uketsuke_pdfs]
+  [4;36;1mSQL (0.000187)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000146)[0m   [0mBEGIN[0m
+  [4;36;1mUketsukePdf Load (0.000468)[0m   [0;1mSELECT * FROM uketsuke_pdfs WHERE (uketsuke_pdfs.`id` = 1) [0m
+
+
+Processing UketsukePdfsController#list (for 0.0.0.0 at 2007-10-25 11:25:14) [GET]
+  Session ID: 
+  Parameters: {"action"=>"list", "controller"=>"uketsuke_pdfs"}
+  [4;35;1mSQL (0.000266)[0m   [0mSELECT count(*) AS count_all FROM uketsuke_pdfs [0m
+  [4;36;1mUketsukePdf Load (0.000488)[0m   [0;1mSELECT * FROM uketsuke_pdfs LIMIT 0, 10[0m
+Rendering  within layouts/uketsuke_pdfs
+Rendering uketsuke_pdfs/list
+Completed in 0.07209 (13 reqs/sec) | Rendering: 0.06985 (96%) | DB: 0.00155 (2%) | 200 OK [http://test.host/uketsuke_pdfs/list]
+  [4;35;1mSQL (0.000287)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000142)[0m   [0;1mBEGIN[0m
+  [4;35;1mUketsukePdf Load (0.000491)[0m   [0mSELECT * FROM uketsuke_pdfs WHERE (uketsuke_pdfs.`id` = 1) [0m
+
+
+Processing UketsukePdfsController#new (for 0.0.0.0 at 2007-10-25 11:25:14) [GET]
+  Session ID: 
+  Parameters: {"action"=>"new", "controller"=>"uketsuke_pdfs"}
+Rendering  within layouts/uketsuke_pdfs
+Rendering uketsuke_pdfs/new
+Rendered uketsuke_pdfs/_form (0.00194)
+Completed in 0.00638 (156 reqs/sec) | Rendering: 0.00572 (89%) | DB: 0.00092 (14%) | 200 OK [http://test.host/uketsuke_pdfs/new]
+  [4;36;1mSQL (0.000194)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000150)[0m   [0mBEGIN[0m
+  [4;36;1mUketsukePdf Load (0.000499)[0m   [0;1mSELECT * FROM uketsuke_pdfs WHERE (uketsuke_pdfs.`id` = 1) [0m
+
+
+Processing UketsukePdfsController#show (for 0.0.0.0 at 2007-10-25 11:25:14) [GET]
+  Session ID: 
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"uketsuke_pdfs"}
+  [4;35;1mSQL (0.000184)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000136)[0m   [0;1mBEGIN[0m
+  [4;35;1mUketsukePdf Load (0.000498)[0m   [0mSELECT * FROM uketsuke_pdfs WHERE (uketsuke_pdfs.`id` = 1) [0m
+
+
+Processing UketsukePdfsController#update (for 0.0.0.0 at 2007-10-25 11:25:14) [POST]
+  Session ID: 
+  Parameters: {"action"=>"update", "id"=>"1", "controller"=>"uketsuke_pdfs"}
+  [4;36;1mUketsukePdf Load (0.000514)[0m   [0;1mSELECT * FROM uketsuke_pdfs WHERE (uketsuke_pdfs.`id` = 1) [0m
+  [4;35;1mUketsukePdf Update (0.012736)[0m   [0mUPDATE uketsuke_pdfs SET `uketsuke_nen` = 2007, `input_date` = '2007-08-28 12:00:00', `uketsuke_bango` = 1, `pdf_name` = '20070827180408_00001.pdf' WHERE `id` = 1[0m
+Redirected to http://test.host/uketsuke_pdfs/list/1
+Completed in 0.01621 (61 reqs/sec) | DB: 0.01491 (91%) | 302 Found [http://test.host/uketsuke_pdfs/update/1]
+  [4;36;1mSQL (0.000208)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000134)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000176)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000111)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000114)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000112)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000114)[0m   [0mROLLBACK[0m
+  [4;35;1mSQL (0.000118)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000118)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000132)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000116)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000119)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000116)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000103)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000120)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000110)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000115)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000134)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000138)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000152)[0m   [0mROLLBACK[0m
+  [4;35;1mSQL (0.000112)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000141)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000142)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000135)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000114)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000136)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000115)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000140)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000118)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000135)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000114)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000144)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000122)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000138)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000116)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000134)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000103)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000140)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000121)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000136)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000118)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000144)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000121)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000141)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000118)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000136)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000118)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000135)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000120)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000139)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000132)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000137)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000103)[0m   [0mBEGIN[0m
+  [4;36;1mUketsukePdf Columns (0.001301)[0m   [0;1mSHOW FIELDS FROM uketsuke_pdfs[0m
+  [4;35;1mUketsukePdf Load (0.000665)[0m   [0mSELECT * FROM uketsuke_pdfs WHERE (uketsuke_pdfs.`id` = 1) [0m
+  [4;36;1mSQL (0.000186)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000130)[0m   [0mBEGIN[0m
+  [4;36;1mUketsukePdf Load (0.000468)[0m   [0;1mSELECT * FROM uketsuke_pdfs WHERE (uketsuke_pdfs.`id` = 1) [0m
+  [4;35;1mSQL (0.000217)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000135)[0m   [0;1mBEGIN[0m
+  [4;35;1mUketsukePdf Load (0.000443)[0m   [0mSELECT * FROM uketsuke_pdfs WHERE (uketsuke_pdfs.`id` = 1) [0m
+
+
+Processing UketsukePdfsController#edit (for 0.0.0.0 at 2007-12-16 18:29:11) [GET]
+  Session ID: 
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"uketsuke_pdfs"}
+  [4;36;1mUketsukePdf Load (0.000506)[0m   [0;1mSELECT * FROM uketsuke_pdfs WHERE (uketsuke_pdfs.`id` = 1) [0m
+Rendering  within layouts/uketsuke_pdfs
+Rendering uketsuke_pdfs/edit
+Rendered uketsuke_pdfs/_form (0.00418)
+Completed in 0.02340 (42 reqs/sec) | Rendering: 0.02058 (87%) | DB: 0.00869 (37%) | 200 OK [http://test.host/uketsuke_pdfs/edit/1]
+  [4;35;1mSQL (0.000197)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000149)[0m   [0;1mBEGIN[0m
+  [4;35;1mUketsukePdf Load (0.000471)[0m   [0mSELECT * FROM uketsuke_pdfs WHERE (uketsuke_pdfs.`id` = 1) [0m
+
+
+Processing UketsukePdfsController#index (for 0.0.0.0 at 2007-12-16 18:29:11) [GET]
+  Session ID: 
+  Parameters: {"action"=>"index", "controller"=>"uketsuke_pdfs"}
+  [4;36;1mSQL (0.000437)[0m   [0;1mSELECT count(*) AS count_all FROM uketsuke_pdfs [0m
+  [4;35;1mUketsukePdf Load (0.000654)[0m   [0mSELECT * FROM uketsuke_pdfs LIMIT 0, 10[0m
+Rendering actionlistlayoutfalse within layouts/uketsuke_pdfs
+Rendering uketsuke_pdfs/list
+Completed in 0.01721 (58 reqs/sec) | Rendering: 0.01437 (83%) | DB: 0.00191 (11%) | 200 OK [http://test.host/uketsuke_pdfs]
+  [4;36;1mSQL (0.000689)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000141)[0m   [0mBEGIN[0m
+  [4;36;1mUketsukePdf Load (0.000443)[0m   [0;1mSELECT * FROM uketsuke_pdfs WHERE (uketsuke_pdfs.`id` = 1) [0m
+
+
+Processing UketsukePdfsController#list (for 0.0.0.0 at 2007-12-16 18:29:11) [GET]
+  Session ID: 
+  Parameters: {"action"=>"list", "controller"=>"uketsuke_pdfs"}
+  [4;35;1mSQL (0.000271)[0m   [0mSELECT count(*) AS count_all FROM uketsuke_pdfs [0m
+  [4;36;1mUketsukePdf Load (0.000498)[0m   [0;1mSELECT * FROM uketsuke_pdfs LIMIT 0, 10[0m
+Rendering  within layouts/uketsuke_pdfs
+Rendering uketsuke_pdfs/list
+Completed in 0.00659 (151 reqs/sec) | Rendering: 0.00418 (63%) | DB: 0.00204 (30%) | 200 OK [http://test.host/uketsuke_pdfs/list]
+  [4;35;1mSQL (0.000198)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000148)[0m   [0;1mBEGIN[0m
+  [4;35;1mUketsukePdf Load (0.000439)[0m   [0mSELECT * FROM uketsuke_pdfs WHERE (uketsuke_pdfs.`id` = 1) [0m
+
+
+Processing UketsukePdfsController#new (for 0.0.0.0 at 2007-12-16 18:29:11) [GET]
+  Session ID: 
+  Parameters: {"action"=>"new", "controller"=>"uketsuke_pdfs"}
+Rendering  within layouts/uketsuke_pdfs
+Rendering uketsuke_pdfs/new
+Rendered uketsuke_pdfs/_form (0.00187)
+Completed in 0.00623 (160 reqs/sec) | Rendering: 0.00548 (87%) | DB: 0.00078 (12%) | 200 OK [http://test.host/uketsuke_pdfs/new]
+  [4;36;1mSQL (0.000196)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000139)[0m   [0mBEGIN[0m
+  [4;36;1mUketsukePdf Load (0.000470)[0m   [0;1mSELECT * FROM uketsuke_pdfs WHERE (uketsuke_pdfs.`id` = 1) [0m
+
+
+Processing UketsukePdfsController#show (for 0.0.0.0 at 2007-12-16 18:29:11) [GET]
+  Session ID: 
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"uketsuke_pdfs"}
+  [4;35;1mSQL (0.000189)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000133)[0m   [0;1mBEGIN[0m
+  [4;35;1mUketsukePdf Load (0.000463)[0m   [0mSELECT * FROM uketsuke_pdfs WHERE (uketsuke_pdfs.`id` = 1) [0m
+
+
+Processing UketsukePdfsController#update (for 0.0.0.0 at 2007-12-16 18:29:11) [POST]
+  Session ID: 
+  Parameters: {"action"=>"update", "id"=>"1", "controller"=>"uketsuke_pdfs"}
+  [4;36;1mUketsukePdf Load (0.000489)[0m   [0;1mSELECT * FROM uketsuke_pdfs WHERE (uketsuke_pdfs.`id` = 1) [0m
+  [4;35;1mUketsukePdf Update (0.000340)[0m   [0mUPDATE uketsuke_pdfs SET `uketsuke_nen` = 2007, `input_date` = '2007-08-28 12:00:00', `uketsuke_bango` = 1, `pdf_name` = '20070827180408_00001.pdf' WHERE `id` = 1[0m
+Redirected to http://test.host/uketsuke_pdfs/list/1
+Completed in 0.00365 (273 reqs/sec) | DB: 0.00242 (66%) | 302 Found [http://test.host/uketsuke_pdfs/update/1]
+  [4;36;1mSQL (0.000195)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000128)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000179)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000108)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000113)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000110)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000115)[0m   [0mROLLBACK[0m
+  [4;35;1mSQL (0.000116)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000113)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000097)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000115)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000116)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000115)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000099)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000113)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000110)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000108)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000127)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000132)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000139)[0m   [0mROLLBACK[0m
+  [4;35;1mSQL (0.000115)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000133)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000113)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000134)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000118)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000139)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000113)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000142)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000117)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000139)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000115)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000133)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000115)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000134)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000117)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000141)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000100)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000155)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000116)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000132)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000118)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000137)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000113)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000134)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000113)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000136)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000113)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000143)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000115)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000132)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000117)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000132)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000102)[0m   [0mBEGIN[0m
+  [4;36;1mUketsukePdf Columns (0.001437)[0m   [0;1mSHOW FIELDS FROM uketsuke_pdfs[0m
+  [4;35;1mUketsukePdf Load (0.000645)[0m   [0mSELECT * FROM uketsuke_pdfs WHERE (uketsuke_pdfs.`id` = 1) [0m
+  [4;36;1mSQL (0.000183)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000145)[0m   [0mBEGIN[0m
+  [4;36;1mUketsukePdf Load (0.000445)[0m   [0;1mSELECT * FROM uketsuke_pdfs WHERE (uketsuke_pdfs.`id` = 1) [0m
+  [4;35;1mSQL (0.000201)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000128)[0m   [0;1mBEGIN[0m
+  [4;35;1mUketsukePdf Load (0.000451)[0m   [0mSELECT * FROM uketsuke_pdfs WHERE (uketsuke_pdfs.`id` = 1) [0m
+
+
+Processing UketsukePdfsController#edit (for 0.0.0.0 at 2007-12-25 17:38:06) [GET]
+  Session ID: 
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"uketsuke_pdfs"}
+  [4;36;1mUketsukePdf Load (0.000499)[0m   [0;1mSELECT * FROM uketsuke_pdfs WHERE (uketsuke_pdfs.`id` = 1) [0m
+Rendering  within layouts/uketsuke_pdfs
+Rendering uketsuke_pdfs/edit
+Rendered uketsuke_pdfs/_form (0.00430)
+Completed in 0.02596 (38 reqs/sec) | Rendering: 0.02323 (89%) | DB: 0.00866 (33%) | 200 OK [http://test.host/uketsuke_pdfs/edit/1]
+  [4;35;1mSQL (0.000190)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000140)[0m   [0;1mBEGIN[0m
+  [4;35;1mUketsukePdf Load (0.000457)[0m   [0mSELECT * FROM uketsuke_pdfs WHERE (uketsuke_pdfs.`id` = 1) [0m
+
+
+Processing UketsukePdfsController#index (for 0.0.0.0 at 2007-12-25 17:38:06) [GET]
+  Session ID: 
+  Parameters: {"action"=>"index", "controller"=>"uketsuke_pdfs"}
+  [4;36;1mSQL (0.000411)[0m   [0;1mSELECT count(*) AS count_all FROM uketsuke_pdfs [0m
+  [4;35;1mUketsukePdf Load (0.000620)[0m   [0mSELECT * FROM uketsuke_pdfs LIMIT 0, 10[0m
+Rendering layoutfalseactionlist within layouts/uketsuke_pdfs
+Rendering uketsuke_pdfs/list
+Completed in 0.01052 (95 reqs/sec) | Rendering: 0.00730 (69%) | DB: 0.00182 (17%) | 200 OK [http://test.host/uketsuke_pdfs]
+  [4;36;1mSQL (0.000192)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000136)[0m   [0mBEGIN[0m
+  [4;36;1mUketsukePdf Load (0.000447)[0m   [0;1mSELECT * FROM uketsuke_pdfs WHERE (uketsuke_pdfs.`id` = 1) [0m
+
+
+Processing UketsukePdfsController#list (for 0.0.0.0 at 2007-12-25 17:38:06) [GET]
+  Session ID: 
+  Parameters: {"action"=>"list", "controller"=>"uketsuke_pdfs"}
+  [4;35;1mSQL (0.000266)[0m   [0mSELECT count(*) AS count_all FROM uketsuke_pdfs [0m
+  [4;36;1mUketsukePdf Load (0.000461)[0m   [0;1mSELECT * FROM uketsuke_pdfs LIMIT 0, 10[0m
+Rendering  within layouts/uketsuke_pdfs
+Rendering uketsuke_pdfs/list
+Completed in 0.00642 (155 reqs/sec) | Rendering: 0.00411 (63%) | DB: 0.00150 (23%) | 200 OK [http://test.host/uketsuke_pdfs/list]
+  [4;35;1mSQL (0.000193)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000140)[0m   [0;1mBEGIN[0m
+  [4;35;1mUketsukePdf Load (0.000443)[0m   [0mSELECT * FROM uketsuke_pdfs WHERE (uketsuke_pdfs.`id` = 1) [0m
+
+
+Processing UketsukePdfsController#new (for 0.0.0.0 at 2007-12-25 17:38:06) [GET]
+  Session ID: 
+  Parameters: {"action"=>"new", "controller"=>"uketsuke_pdfs"}
+Rendering  within layouts/uketsuke_pdfs
+Rendering uketsuke_pdfs/new
+Rendered uketsuke_pdfs/_form (0.00186)
+Completed in 0.00692 (144 reqs/sec) | Rendering: 0.00618 (89%) | DB: 0.00078 (11%) | 200 OK [http://test.host/uketsuke_pdfs/new]
+  [4;36;1mSQL (0.000191)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000142)[0m   [0mBEGIN[0m
+  [4;36;1mUketsukePdf Load (0.000442)[0m   [0;1mSELECT * FROM uketsuke_pdfs WHERE (uketsuke_pdfs.`id` = 1) [0m
+
+
+Processing UketsukePdfsController#show (for 0.0.0.0 at 2007-12-25 17:38:06) [GET]
+  Session ID: 
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"uketsuke_pdfs"}
+  [4;35;1mSQL (0.000186)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000127)[0m   [0;1mBEGIN[0m
+  [4;35;1mUketsukePdf Load (0.000443)[0m   [0mSELECT * FROM uketsuke_pdfs WHERE (uketsuke_pdfs.`id` = 1) [0m
+
+
+Processing UketsukePdfsController#update (for 0.0.0.0 at 2007-12-25 17:38:06) [POST]
+  Session ID: 
+  Parameters: {"action"=>"update", "id"=>"1", "controller"=>"uketsuke_pdfs"}
+  [4;36;1mUketsukePdf Load (0.000468)[0m   [0;1mSELECT * FROM uketsuke_pdfs WHERE (uketsuke_pdfs.`id` = 1) [0m
+  [4;35;1mUketsukePdf Update (0.000339)[0m   [0mUPDATE uketsuke_pdfs SET `uketsuke_nen` = 2007, `input_date` = '2007-08-28 12:00:00', `uketsuke_bango` = 1, `pdf_name` = '20070827180408_00001.pdf' WHERE `id` = 1[0m
+Redirected to http://test.host/uketsuke_pdfs/list/1
+Completed in 0.00361 (276 reqs/sec) | DB: 0.00234 (64%) | 302 Found [http://test.host/uketsuke_pdfs/update/1]
+  [4;36;1mSQL (0.000195)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000125)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000169)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000113)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000116)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000106)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000115)[0m   [0mROLLBACK[0m
+  [4;35;1mSQL (0.000102)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000114)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000102)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000116)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000102)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000149)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000106)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000143)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000105)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000118)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000128)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000135)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000152)[0m   [0mROLLBACK[0m
+  [4;35;1mSQL (0.000118)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000139)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000120)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000133)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000125)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000134)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000117)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000134)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000117)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000138)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000117)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000132)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000115)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000221)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000126)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000136)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000105)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000146)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000117)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000132)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000121)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000136)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000115)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000132)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000120)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000136)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000116)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000134)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000116)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000134)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000119)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000135)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000102)[0m   [0mBEGIN[0m
+  [4;36;1mUketsukePdf Columns (0.001482)[0m   [0;1mSHOW FIELDS FROM uketsuke_pdfs[0m
+  [4;35;1mUketsukePdf Load (0.000635)[0m   [0mSELECT * FROM uketsuke_pdfs WHERE (uketsuke_pdfs.`id` = 1) [0m
+  [4;36;1mSQL (0.000180)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000125)[0m   [0mBEGIN[0m
+  [4;36;1mUketsukePdf Load (0.000445)[0m   [0;1mSELECT * FROM uketsuke_pdfs WHERE (uketsuke_pdfs.`id` = 1) [0m
+  [4;35;1mSQL (0.000198)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000130)[0m   [0;1mBEGIN[0m
+  [4;35;1mUketsukePdf Load (0.000459)[0m   [0mSELECT * FROM uketsuke_pdfs WHERE (uketsuke_pdfs.`id` = 1) [0m
+
+
+Processing UketsukePdfsController#edit (for 0.0.0.0 at 2007-12-25 17:45:00) [GET]
+  Session ID: 
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"uketsuke_pdfs"}
+  [4;36;1mUketsukePdf Load (0.000486)[0m   [0;1mSELECT * FROM uketsuke_pdfs WHERE (uketsuke_pdfs.`id` = 1) [0m
+Rendering  within layouts/uketsuke_pdfs
+Rendering uketsuke_pdfs/edit
+Rendered uketsuke_pdfs/_form (0.00410)
+Completed in 0.01161 (86 reqs/sec) | Rendering: 0.00894 (76%) | DB: 0.00879 (75%) | 200 OK [http://test.host/uketsuke_pdfs/edit/1]
+  [4;35;1mSQL (0.000188)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000138)[0m   [0;1mBEGIN[0m
+  [4;35;1mUketsukePdf Load (0.000454)[0m   [0mSELECT * FROM uketsuke_pdfs WHERE (uketsuke_pdfs.`id` = 1) [0m
+
+
+Processing UketsukePdfsController#index (for 0.0.0.0 at 2007-12-25 17:45:00) [GET]
+  Session ID: 
+  Parameters: {"action"=>"index", "controller"=>"uketsuke_pdfs"}
+  [4;36;1mSQL (0.000433)[0m   [0;1mSELECT count(*) AS count_all FROM uketsuke_pdfs [0m
+  [4;35;1mUketsukePdf Load (0.000632)[0m   [0mSELECT * FROM uketsuke_pdfs LIMIT 0, 10[0m
+Rendering layoutfalseactionlist within layouts/uketsuke_pdfs
+Rendering uketsuke_pdfs/list
+Completed in 0.01015 (98 reqs/sec) | Rendering: 0.00740 (72%) | DB: 0.00185 (18%) | 200 OK [http://test.host/uketsuke_pdfs]
+  [4;36;1mSQL (0.000186)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000134)[0m   [0mBEGIN[0m
+  [4;36;1mUketsukePdf Load (0.000455)[0m   [0;1mSELECT * FROM uketsuke_pdfs WHERE (uketsuke_pdfs.`id` = 1) [0m
+
+
+Processing UketsukePdfsController#list (for 0.0.0.0 at 2007-12-25 17:45:00) [GET]
+  Session ID: 
+  Parameters: {"action"=>"list", "controller"=>"uketsuke_pdfs"}
+  [4;35;1mSQL (0.000266)[0m   [0mSELECT count(*) AS count_all FROM uketsuke_pdfs [0m
+  [4;36;1mUketsukePdf Load (0.000465)[0m   [0;1mSELECT * FROM uketsuke_pdfs LIMIT 0, 10[0m
+Rendering  within layouts/uketsuke_pdfs
+Rendering uketsuke_pdfs/list
+Completed in 0.00678 (147 reqs/sec) | Rendering: 0.00434 (63%) | DB: 0.00151 (22%) | 200 OK [http://test.host/uketsuke_pdfs/list]
+  [4;35;1mSQL (0.000189)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000145)[0m   [0;1mBEGIN[0m
+  [4;35;1mUketsukePdf Load (0.000446)[0m   [0mSELECT * FROM uketsuke_pdfs WHERE (uketsuke_pdfs.`id` = 1) [0m
+
+
+Processing UketsukePdfsController#new (for 0.0.0.0 at 2007-12-25 17:45:00) [GET]
+  Session ID: 
+  Parameters: {"action"=>"new", "controller"=>"uketsuke_pdfs"}
+Rendering  within layouts/uketsuke_pdfs
+Rendering uketsuke_pdfs/new
+Rendered uketsuke_pdfs/_form (0.00232)
+Completed in 0.00661 (151 reqs/sec) | Rendering: 0.00578 (87%) | DB: 0.00078 (11%) | 200 OK [http://test.host/uketsuke_pdfs/new]
+  [4;36;1mSQL (0.000192)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000136)[0m   [0mBEGIN[0m
+  [4;36;1mUketsukePdf Load (0.000864)[0m   [0;1mSELECT * FROM uketsuke_pdfs WHERE (uketsuke_pdfs.`id` = 1) [0m
+
+
+Processing UketsukePdfsController#show (for 0.0.0.0 at 2007-12-25 17:45:00) [GET]
+  Session ID: 
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"uketsuke_pdfs"}
+  [4;35;1mSQL (0.000187)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000128)[0m   [0;1mBEGIN[0m
+  [4;35;1mUketsukePdf Load (0.000458)[0m   [0mSELECT * FROM uketsuke_pdfs WHERE (uketsuke_pdfs.`id` = 1) [0m
+
+
+Processing UketsukePdfsController#update (for 0.0.0.0 at 2007-12-25 17:45:00) [POST]
+  Session ID: 
+  Parameters: {"action"=>"update", "id"=>"1", "controller"=>"uketsuke_pdfs"}
+  [4;36;1mUketsukePdf Load (0.000470)[0m   [0;1mSELECT * FROM uketsuke_pdfs WHERE (uketsuke_pdfs.`id` = 1) [0m
+  [4;35;1mUketsukePdf Update (0.000335)[0m   [0mUPDATE uketsuke_pdfs SET `uketsuke_nen` = 2007, `input_date` = '2007-08-28 12:00:00', `uketsuke_bango` = 1, `pdf_name` = '20070827180408_00001.pdf' WHERE `id` = 1[0m
+Redirected to http://test.host/uketsuke_pdfs/list/1
+Completed in 0.00374 (267 reqs/sec) | DB: 0.00277 (73%) | 302 Found [http://test.host/uketsuke_pdfs/update/1]
+  [4;36;1mSQL (0.000191)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000130)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000163)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000114)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000116)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000114)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000119)[0m   [0mROLLBACK[0m
+  [4;35;1mSQL (0.000114)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000124)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000110)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000121)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000119)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000122)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000128)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000163)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000141)[0m   [0mROLLBACK[0m
+  [4;35;1mSQL (0.000118)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000148)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000143)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000141)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000123)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000164)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000172)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000143)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000124)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000141)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000122)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000144)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000123)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000139)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000139)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000143)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000128)[0m   [0mBEGIN[0m
+  [4;36;1mUketsukePdf Load (0.000651)[0m   [0;1mSELECT * FROM uketsuke_pdfs WHERE (uketsuke_pdfs.`id` = 1) [0m
+  [4;35;1mSQL (0.000185)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000126)[0m   [0;1mBEGIN[0m
+  [4;35;1mUketsukePdf Load (0.000525)[0m   [0mSELECT * FROM uketsuke_pdfs WHERE (uketsuke_pdfs.`id` = 1) [0m
+  [4;36;1mSQL (0.000204)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000128)[0m   [0mBEGIN[0m
+  [4;36;1mUketsukePdf Load (0.000449)[0m   [0;1mSELECT * FROM uketsuke_pdfs WHERE (uketsuke_pdfs.`id` = 1) [0m
+
+
+Processing UketsukePdfsController#edit (for 0.0.0.0 at 2008-01-07 09:18:32) [GET]
+  Session ID: 
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"uketsuke_pdfs"}
+  [4;35;1mUketsukePdf Load (0.000472)[0m   [0mSELECT * FROM uketsuke_pdfs WHERE (uketsuke_pdfs.`id` = 1) [0m
+Rendering  within layouts/uketsuke_pdfs
+Rendering uketsuke_pdfs/edit
+Rendered uketsuke_pdfs/_form (0.00395)
+Completed in 0.01169 (85 reqs/sec) | Rendering: 0.00890 (76%) | DB: 0.00553 (47%) | 200 OK [http://test.host/uketsuke_pdfs/edit/1]
+  [4;36;1mSQL (0.000190)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000137)[0m   [0mBEGIN[0m
+  [4;36;1mUketsukePdf Load (0.000449)[0m   [0;1mSELECT * FROM uketsuke_pdfs WHERE (uketsuke_pdfs.`id` = 1) [0m
+
+
+Processing UketsukePdfsController#index (for 0.0.0.0 at 2008-01-07 09:18:32) [GET]
+  Session ID: 
+  Parameters: {"action"=>"index", "controller"=>"uketsuke_pdfs"}
+  [4;35;1mSQL (0.000562)[0m   [0mSELECT count(*) AS count_all FROM uketsuke_pdfs [0m
+  [4;36;1mUketsukePdf Load (0.000631)[0m   [0;1mSELECT * FROM uketsuke_pdfs LIMIT 0, 10[0m
+Rendering layoutfalseactionlist within layouts/uketsuke_pdfs
+Rendering uketsuke_pdfs/list
+Completed in 0.01025 (97 reqs/sec) | Rendering: 0.00716 (69%) | DB: 0.00197 (19%) | 200 OK [http://test.host/uketsuke_pdfs]
+  [4;35;1mSQL (0.000194)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000135)[0m   [0;1mBEGIN[0m
+  [4;35;1mUketsukePdf Load (0.000445)[0m   [0mSELECT * FROM uketsuke_pdfs WHERE (uketsuke_pdfs.`id` = 1) [0m
+
+
+Processing UketsukePdfsController#list (for 0.0.0.0 at 2008-01-07 09:18:32) [GET]
+  Session ID: 
+  Parameters: {"action"=>"list", "controller"=>"uketsuke_pdfs"}
+  [4;36;1mSQL (0.000260)[0m   [0;1mSELECT count(*) AS count_all FROM uketsuke_pdfs [0m
+  [4;35;1mUketsukePdf Load (0.000472)[0m   [0mSELECT * FROM uketsuke_pdfs LIMIT 0, 10[0m
+Rendering  within layouts/uketsuke_pdfs
+Rendering uketsuke_pdfs/list
+Completed in 0.00673 (148 reqs/sec) | Rendering: 0.00413 (61%) | DB: 0.00151 (22%) | 200 OK [http://test.host/uketsuke_pdfs/list]
+  [4;36;1mSQL (0.000193)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000151)[0m   [0mBEGIN[0m
+  [4;36;1mUketsukePdf Load (0.000455)[0m   [0;1mSELECT * FROM uketsuke_pdfs WHERE (uketsuke_pdfs.`id` = 1) [0m
+
+
+Processing UketsukePdfsController#new (for 0.0.0.0 at 2008-01-07 09:18:32) [GET]
+  Session ID: 
+  Parameters: {"action"=>"new", "controller"=>"uketsuke_pdfs"}
+Rendering  within layouts/uketsuke_pdfs
+Rendering uketsuke_pdfs/new
+Rendered uketsuke_pdfs/_form (0.00175)
+Completed in 0.01351 (74 reqs/sec) | Rendering: 0.01279 (94%) | DB: 0.00080 (5%) | 200 OK [http://test.host/uketsuke_pdfs/new]
+  [4;35;1mSQL (0.000192)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000133)[0m   [0;1mBEGIN[0m
+  [4;35;1mUketsukePdf Load (0.000442)[0m   [0mSELECT * FROM uketsuke_pdfs WHERE (uketsuke_pdfs.`id` = 1) [0m
+
+
+Processing UketsukePdfsController#show (for 0.0.0.0 at 2008-01-07 09:18:32) [GET]
+  Session ID: 
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"uketsuke_pdfs"}
+  [4;36;1mSQL (0.000189)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000128)[0m   [0mBEGIN[0m
+  [4;36;1mUketsukePdf Load (0.000445)[0m   [0;1mSELECT * FROM uketsuke_pdfs WHERE (uketsuke_pdfs.`id` = 1) [0m
+
+
+Processing UketsukePdfsController#update (for 0.0.0.0 at 2008-01-07 09:18:32) [POST]
+  Session ID: 
+  Parameters: {"action"=>"update", "id"=>"1", "controller"=>"uketsuke_pdfs"}
+  [4;35;1mUketsukePdf Load (0.000467)[0m   [0mSELECT * FROM uketsuke_pdfs WHERE (uketsuke_pdfs.`id` = 1) [0m
+  [4;36;1mUketsukePdf Update (0.000368)[0m   [0;1mUPDATE uketsuke_pdfs SET `uketsuke_nen` = 2007, `input_date` = '2007-08-28 12:00:00', `uketsuke_bango` = 1, `pdf_name` = '20070827180408_00001.pdf' WHERE `id` = 1[0m
+Redirected to http://test.host/uketsuke_pdfs/list/1
+Completed in 0.00339 (294 reqs/sec) | DB: 0.00236 (69%) | 302 Found [http://test.host/uketsuke_pdfs/update/1]
+  [4;35;1mSQL (0.000194)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000134)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000177)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000115)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000116)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000116)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000119)[0m   [0mROLLBACK[0m
+  [4;35;1mSQL (0.000109)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000120)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000102)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000119)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000112)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000121)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000138)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000155)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000149)[0m   [0mROLLBACK[0m
+  [4;35;1mSQL (0.000120)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000146)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000128)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000145)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000128)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000142)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000133)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000139)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000126)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000144)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000126)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000142)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000126)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000142)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000127)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000151)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000105)[0m   [0mBEGIN[0m
+  [4;36;1mUketsukePdf Columns (0.001218)[0m   [0;1mSHOW FIELDS FROM uketsuke_pdfs[0m
+  [4;35;1mUketsukePdf Load (0.031282)[0m   [0mSELECT * FROM uketsuke_pdfs WHERE (uketsuke_pdfs.`id` = 1) [0m
+  [4;36;1mSQL (0.000215)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000133)[0m   [0mBEGIN[0m
+  [4;36;1mUketsukePdf Load (0.000436)[0m   [0;1mSELECT * FROM uketsuke_pdfs WHERE (uketsuke_pdfs.`id` = 1) [0m
+  [4;35;1mSQL (0.000205)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000138)[0m   [0;1mBEGIN[0m
+  [4;35;1mUketsukePdf Load (0.000444)[0m   [0mSELECT * FROM uketsuke_pdfs WHERE (uketsuke_pdfs.`id` = 1) [0m
+
+
+Processing UketsukePdfsController#edit (for 0.0.0.0 at 2008-04-16 10:28:59) [GET]
+  Session ID: 
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"uketsuke_pdfs"}
+  [4;36;1mUketsukePdf Load (0.000465)[0m   [0;1mSELECT * FROM uketsuke_pdfs WHERE (uketsuke_pdfs.`id` = 1) [0m
+Rendering  within layouts/uketsuke_pdfs
+Rendering uketsuke_pdfs/edit
+Rendered uketsuke_pdfs/_form (0.00452)
+Completed in 0.01229 (81 reqs/sec) | Rendering: 0.00934 (75%) | DB: 0.03725 (303%) | 200 OK [http://test.host/uketsuke_pdfs/edit/1]
+  [4;35;1mSQL (0.000197)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000144)[0m   [0;1mBEGIN[0m
+  [4;35;1mUketsukePdf Load (0.000451)[0m   [0mSELECT * FROM uketsuke_pdfs WHERE (uketsuke_pdfs.`id` = 1) [0m
+
+
+Processing UketsukePdfsController#index (for 0.0.0.0 at 2008-04-16 10:28:59) [GET]
+  Session ID: 
+  Parameters: {"action"=>"index", "controller"=>"uketsuke_pdfs"}
+  [4;36;1mSQL (0.013430)[0m   [0;1mSELECT count(*) AS count_all FROM uketsuke_pdfs [0m
+  [4;35;1mUketsukePdf Load (0.000617)[0m   [0mSELECT * FROM uketsuke_pdfs LIMIT 0, 10[0m
+Rendering layoutfalseactionlist within layouts/uketsuke_pdfs
+Rendering uketsuke_pdfs/list
+Completed in 0.02804 (35 reqs/sec) | Rendering: 0.01230 (43%) | DB: 0.01484 (52%) | 200 OK [http://test.host/uketsuke_pdfs]
+  [4;36;1mSQL (0.000198)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000139)[0m   [0mBEGIN[0m
+  [4;36;1mUketsukePdf Load (0.000433)[0m   [0;1mSELECT * FROM uketsuke_pdfs WHERE (uketsuke_pdfs.`id` = 1) [0m
+
+
+Processing UketsukePdfsController#list (for 0.0.0.0 at 2008-04-16 10:28:59) [GET]
+  Session ID: 
+  Parameters: {"action"=>"list", "controller"=>"uketsuke_pdfs"}
+  [4;35;1mSQL (0.000266)[0m   [0mSELECT count(*) AS count_all FROM uketsuke_pdfs [0m
+  [4;36;1mUketsukePdf Load (0.000465)[0m   [0;1mSELECT * FROM uketsuke_pdfs LIMIT 0, 10[0m
+Rendering  within layouts/uketsuke_pdfs
+Rendering uketsuke_pdfs/list
+Completed in 0.00649 (154 reqs/sec) | Rendering: 0.00413 (63%) | DB: 0.00150 (23%) | 200 OK [http://test.host/uketsuke_pdfs/list]
+  [4;35;1mSQL (0.000197)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000152)[0m   [0;1mBEGIN[0m
+  [4;35;1mUketsukePdf Load (0.000436)[0m   [0mSELECT * FROM uketsuke_pdfs WHERE (uketsuke_pdfs.`id` = 1) [0m
+
+
+Processing UketsukePdfsController#new (for 0.0.0.0 at 2008-04-16 10:28:59) [GET]
+  Session ID: 
+  Parameters: {"action"=>"new", "controller"=>"uketsuke_pdfs"}
+Rendering  within layouts/uketsuke_pdfs
+Rendering uketsuke_pdfs/new
+Rendered uketsuke_pdfs/_form (0.00171)
+Completed in 0.00586 (170 reqs/sec) | Rendering: 0.00513 (87%) | DB: 0.00079 (13%) | 200 OK [http://test.host/uketsuke_pdfs/new]
+  [4;36;1mSQL (0.000197)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000155)[0m   [0mBEGIN[0m
+  [4;36;1mUketsukePdf Load (0.000434)[0m   [0;1mSELECT * FROM uketsuke_pdfs WHERE (uketsuke_pdfs.`id` = 1) [0m
+
+
+Processing UketsukePdfsController#show (for 0.0.0.0 at 2008-04-16 10:28:59) [GET]
+  Session ID: 
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"uketsuke_pdfs"}
+  [4;35;1mSQL (0.000194)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000137)[0m   [0;1mBEGIN[0m
+  [4;35;1mUketsukePdf Load (0.000437)[0m   [0mSELECT * FROM uketsuke_pdfs WHERE (uketsuke_pdfs.`id` = 1) [0m
+
+
+Processing UketsukePdfsController#update (for 0.0.0.0 at 2008-04-16 10:28:59) [POST]
+  Session ID: 
+  Parameters: {"action"=>"update", "id"=>"1", "controller"=>"uketsuke_pdfs"}
+  [4;36;1mUketsukePdf Load (0.000633)[0m   [0;1mSELECT * FROM uketsuke_pdfs WHERE (uketsuke_pdfs.`id` = 1) [0m
+  [4;35;1mUketsukePdf Update (0.003330)[0m   [0mUPDATE uketsuke_pdfs SET `uketsuke_nen` = 2007, `input_date` = '2007-08-28 12:00:00', `uketsuke_bango` = 1, `pdf_name` = '20070827180408_00001.pdf' WHERE `id` = 1[0m
+Redirected to http://test.host/uketsuke_pdfs/list/1
+Completed in 0.00692 (144 reqs/sec) | DB: 0.00552 (79%) | 302 Found [http://test.host/uketsuke_pdfs/update/1]
+  [4;36;1mSQL (0.000201)[0m   [0;1mROLLBACK[0m

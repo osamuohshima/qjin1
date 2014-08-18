@@ -1,0 +1,46 @@
+<%= error_messages_for 'kigyo_daicho' %>
+
+<!--[form:kigyo_daicho]-->
+<p><label for="kigyo_daicho_kigyo_bango">Kigyo bango</label>
+<%= text_field 'kigyo_daicho', 'kigyo_bango'  %></p>
+
+<p><label for="kigyo_daicho_jigyosho_mei1">Jigyosho mei1</label><br/>
+<%= text_field 'kigyo_daicho', 'jigyosho_mei1'  %></p>
+
+<p><label for="kigyo_daicho_jigyosho_mei2">Jigyosho mei2</label><br/>
+<%= text_field 'kigyo_daicho', 'jigyosho_mei2'  %></p>
+
+<p><label for="kigyo_daicho_furikana">Furikana</label><br/>
+<%= text_field 'kigyo_daicho', 'furikana'  %></p>
+
+<p><label for="kigyo_daicho_shozaichi">Shozaichi</label><br/>
+<%= text_field 'kigyo_daicho', 'shozaichi'  %></p>
+
+<p><label for="kigyo_daicho_yubin_zip">Yubin zip</label><br/>
+<%= text_field 'kigyo_daicho', 'yubin_zip'  %></p>
+
+<p><label for="kigyo_daicho_shozaichi1">Shozaichi1</label><br/>
+<%= text_field 'kigyo_daicho', 'shozaichi1'  %></p>
+
+<p><label for="kigyo_daicho_shozaichi2">Shozaichi2</label><br/>
+<%= text_field 'kigyo_daicho', 'shozaichi2'  %></p>
+
+<p><label for="kigyo_daicho_tantou_yaku">Tantou yaku</label><br/>
+<%= text_field 'kigyo_daicho', 'tantou_yaku'  %></p>
+
+<p><label for="kigyo_daicho_tantou_mei">Tantou mei</label><br/>
+<%= text_field 'kigyo_daicho', 'tantou_mei'  %></p>
+
+<p><label for="kigyo_daicho_tele_number">Tele number</label><br/>
+<%= text_field 'kigyo_daicho', 'tele_number'  %></p>
+
+<p><label for="kigyo_daicho_sangyo_code">Sangyo code</label><br/>
+<%= text_field 'kigyo_daicho', 'sangyo_code'  %></p>
+
+<p><label for="kigyo_daicho_seisan_hinmoku">Seisan hinmoku</label><br/>
+<%= text_field 'kigyo_daicho', 'seisan_hinmoku'  %></p>
+
+<p><label for="kigyo_daicho_input_date">Input date</label><br/>
+<%= datetime_select 'kigyo_daicho', 'input_date'  %></p>
+<!--[eoform:kigyo_daicho]-->
+

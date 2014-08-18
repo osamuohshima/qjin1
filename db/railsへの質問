@@ -1,0 +1,65 @@
+
+大島と申します。
+ActiveRecordの使いかたというよりは、Rubyプログラミングの問題ですが
+どなたか教えてください。
+
+Excelから持ってきたtable1sを、データベースとして使い易いtable2sに変換する場合
+table1s
++-------------+---------+------+-----+---------+----------------+
+| Field       | Type    | Null | Key | Default | Extra          |
++-------------+---------+------+-----+---------+----------------+
+| id          | int(11) | NO   | PRI | NULL    | auto_increment |
+| kigyo_bango | int(11) | NO   |     |         |                |
+| uke1999     | int(11) | YES  |     | NULL    |                |
+| uke2000     | int(11) | YES  |     | NULL    |                |
+| uke2001     | int(11) | YES  |     | NULL    |                |
+| uke2002     | int(11) | YES  |     | NULL    |                |
+| uke2003     | int(11) | YES  |     | NULL    |                |
+| uke2004     | int(11) | YES  |     | NULL    |                |
+| uke2005     | int(11) | YES  |     | NULL    |                |
+| uke2006     | int(11) | YES  |     | NULL    |                |
+| uke2007     | int(11) | YES  |     | NULL    |                |
++-------------+---------+------+-----+---------+----------------+
+uke????には、その年の受付番号が入っている
+
+table2s
++----------------+---------+------+-----+---------+----------------+
+| Field          | Type    | Null | Key | Default | Extra          |
++----------------+---------+------+-----+---------+----------------+
+| id             | int(11) | NO   | PRI | NULL    | auto_increment |
+| kigyo_bango    | int(11) | NO   |     |         |                |
+| uketsuke_nen   | int(11) | NO   |     |         |                |
+| uketsuke_bango | int(11) | NO   |     |         |                |
++----------------+---------+------+-----+---------+----------------+
+
+次のようなプログラムを書きましたが、どう見ても長たらしくてDRYの原則に反しています。
+もっとスマートなコードにしたいのですが,どのような方法があるでしょうか。
+
+require	"rubygems"
+require_gem	"activerecord"
+ActiveRecord::Base.establish_connection(省略)
+class Table1 < ActiveRecord::Base
+end
+class Table2 < ActiveRecord::Base
+end
+
+uketsuke_moto=Table1.new
+i=1
+while uketsuke_moto= Table1.find(i)
+  if uketsuke_moto.uke1999!=0 then
+    uketsuke = Table2.new
+    uketsuke.kigyo_bango=uketsuke_moto.kigyo_bango
+    uketsuke.uketsuke_nen=1999
+    uketsuke.uketsuke_bango =uketsuke_moto.uke1999
+    uketsuke.save
+   end
+＃以下2000年から2007年までの同じルーチンが年数分だけ繰り返し入る
+  if uketsuke_moto.uke2007!=0 then
+    uketsuke = Table2.new
+    uketsuke.kigyo_bango=uketsuke_moto.kigyo_bango
+    uketsuke.uketsuke_nen=2007
+    uketsuke.uketsuke_bango =uketsuke_moto.uke2007
+    uketsuke.save
+   end
+  i=i+1
+end

@@ -1,0 +1,9 @@
+#
+.bundle
+./log/*.log
+temp/
+./doc/
+*.swp
+ruby_sess.*
+~*
+./public/attached/

@@ -1,0 +1,47 @@
+@charset "utf-8";
+
+/* ****************************************************************** 
+
+	@This stylesheet Information{
+		CSS File Name: footer.css
+
+		Setting of: Footer area
+			1: footer setting
+	}
+
+****************************************************************** */
+
+
+/*===================================================================
+	1: footer setting
+===================================================================*/
+
+
+div#footer{
+	padding:15px 0 3px;
+	width:100%;
+	margin:0;
+	text-align:center;
+	border-top:4px solid #971A20;
+}
+
+#footer div{text-align:left;}
+
+#footer .Unit{width:600px; margin:0 auto; padding:0 0 25px 0;}
+
+#footer dl{float:left; margin:0; padding:2px 0; border-bottom:1px solid #dedede; width:600px;}
+
+#footer dl#ftrHot{border:none;}
+
+#footer dt{display:block; float:left; width:80px; margin:2px 0; padding:0 3px; font-weight:bold;}
+
+#footer dd{float:left; margin:0; width:510px;}
+
+#footer dd p{float:left; white-space:nowrap; margin:2px 0; padding:0 5px; border-right:solid 1px #333;}
+
+#footer p#nifty{float:left; width:45%; text-align:left; padding:25px 0 0 10px;}
+
+#footer address{text-align:right; width:50%; float:right; padding:10px; font-style:normal;}
+
+
+

@@ -1,0 +1,17 @@
+<% @content_for_title = "#{@config.human_name}（#{@model.table_name}）の編集" %>
+<h3 class="sttl">データ編集はこのページから</h3>
+
+<%= error_messages_for(:record) %>
+
+<div align="right">
+  <%= link_to("詳細を表示する", :action=>"show", :id=>@record) %> |
+  <%= link_to("一覧へ戻る", :action=>"list") %>
+</div>
+
+<% form_tag(:action=>"update", :id=>@record) do -%>
+<%= arb_all_input_tags_with_columns(@record, "record") %>
+<div class="btnModuleM btnModuleLCenter">
+  <%= link_to_function "<span>#{h @config.human_name}を更新する</span>", 'document.forms[0].submit()', :class => 'create' %>
+</div>
+
+<% end -%>

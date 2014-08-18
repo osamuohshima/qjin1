@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+ 
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"> 
+<head> 
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" /> 
+  <title>Shinros: how to ftp</title> 
+</head> 
+<body> 
+ 
+<p style="color: green"></p> 
+ 
+<h1>求人票をpdfにしてサーバに転送する方法</h1> 
+<hr> 
+<h2>(0)準備　FTPソフトを作業用PCにインストールする</h2><br>
+　お勧めのフリーソフトは"FFFTP" http://sourceforge.jp/projects/ffftp/ です。
+<br> 
+<h2>（1）コピー機（Canon iR-ADV C2030）で求人票をPDF化し、作業用PCに転送する </h2><br> 
+　<FONT color="red">若い番号から順に、</font>求人票１セット（受付番号で20ごとが何かと便利）をコピー機にセットする。<br>
+　モードは送信/FAXモード（転送先は担当者のPC）<br>
+　「PDF」で「ページごとに分割」を指定する。<br>
+　「スタート」ボタンを押すと、コピーし転送が始まる。<br>
+　送り先PCに転送が完了するまでにはしばらく時間がかかる。<br>
+
+<h2>（2）受信した作業用PCからFTPソフトで"shinro-web"サーバーに転送する。</h2><br>
+　転送先のディレクトリは、shinro/qjin/public/attached/pdf/20xx/kyujin_hyo/
+<br>
+　とする。"20xx"のxxは、その年度を示す数字が入る。
+<br><br>
+　＜注＞なお、その年度に初めて転送する場合は、まず初めに年度ディレクトリ、例えば"2014"を作る。<br>さらにその下に"kyujin_hyo"ディレクトリを作らないといけない。
+<br>新しいディレクトリの作成はFFFTPで行える。（TeraTermのようなsshターミナルの方が使い勝手は良いが）<br>
+
+
+<br>
+　
+
+
+
+
+<a href="http://122.152.25.122:3000/shinros/">戻る
+<br>
+</body>
+
+

@@ -1,0 +1,12 @@
+drop table if exists kigyo_homons;
+create table kigyo_homons(
+	   id           	INT not null auto_increment,
+       kigyo_bango     	INT not null,
+	   senmon_kamei		varchar(8),
+       jigyosho_mei1   	varchar(128),
+       jigyosho_mei2   	varchar(128),
+       kyujin_jokyo  	varchar(1024),
+	   ob_yosu			varchar(1024),
+       visit_date		date,
+	   primary key (id)
+);

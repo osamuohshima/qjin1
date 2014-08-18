@@ -1,0 +1,16 @@
+<h1>求人票PDFファイルの入力情報の編集</h1>
+
+<% form_tag :action => 'update', :id => @uketsuke_pdfs do %>
+  <%= render :partial => 'form' %>
+	<%= submit_tag 'この内容で登録する' %>
+
+<% end %>
+
+<%= start_form_tag({:action=>'attach_file'}, :multipart => true) %>
+  <label>Attached File</label><br/>
+  <%= hidden_field "attached", "uketsuke_nen", :value => @uketsuke_pdfs.uketsuke_nen %>
+  <%= file_field "attached", "file" %>
+  <%= submit_tag 'Upload' %>
+<%= end_form_tag %>
+
+<%= link_to '戻る', :action => 'list' %>

@@ -1,0 +1,19 @@
+drop table if exists kigyos;create table kigyos (  id			int				not null auto_increment,
+  事業所名 		varchar(100)	not null,		
+  事業署名２	varchar(100)	,
+  企業番号 		int				not null,
+  フリガナ		varchar(100)	not null,
+  所在地		varchar(100)	not null,
+  郵便番号		int				not null,
+  住所１		varchar(100)	not null,
+  住所２		varchar(100)	not null,
+  採用担当役職	varchar(100)	not null,
+  採用担当氏名	varchar(100)	not null,
+  電話番号		varchar(20)		not null,
+  産業別		int				not null,
+  職業別		int				not null,
+  生産品目		varchar(100)	not null,
+  備考			text			,
+  入力日時		datetime		not null,
+  primary			key(id)
+);

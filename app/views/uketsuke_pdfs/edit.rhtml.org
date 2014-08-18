@@ -1,0 +1,24 @@
+<h1>求人票PDF受付の編集</h1>
+
+<Img Src="/attached/etc/uketsuke_bango.gif" align="right">
+<%= link_to('受付番号と職種番号入力のためにPDFを表示する' ,
+	 "/attached/"+@uketsuke_pdfs.uketsuke_nen.to_s << "/kyujin_hyo/" +
+	                  @uketsuke_pdfs.pdf_name.delete("\""),
+   :popup => true ) %>
+	 <br><br>
+編集の仕方：<br>
+
+(1)↑上のリンク行をクリックしPDFファイルを表示させる<br>
+(2)「受付番号」を入力する。(右図の例：丸いゴム印の中の手書き文字、この場合は「170」）<br>
+(3)職種番号は、ゴム印の外の手書き企業番号の後のハイフンの番号を入力する。
+　（右図の例：「19850449-1」なら職種番号は「1」）<br>
+(4)以上で良ければ、「この内容で登録する」ボタンを押す
+　
+<% form_tag :action => 'update', :id => @uketsuke_pdfs do %>
+  <%= render :partial => 'form' %>
+  <%= submit_tag 'この内容で登録する' %>
+<% end %>
+
+   <%= link_to '戻る', :action => 'list' %>
+
+

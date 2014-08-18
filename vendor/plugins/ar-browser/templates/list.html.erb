@@ -1,0 +1,151 @@
+<% @content_for_title = "#{@config.human_name}（#{@model.table_name}）の一覧" %>
+<h3 class="sttl">データ追加/編集/削除はこのページから</h3>
+
+<!--search -->
+<div class="searchModule pkg">
+  <div class="moduleInner">
+    <% form_tag({:action=>"list"}, :method=>"GET", :name=>"search_form") do -%>
+    <dl>
+      <dt><label for="search">検索を実行する</label></dt>
+      <dd><%= text_field_tag 'search_query_0', nil, :id => 'searchTxt' %></dd>
+      <dd>
+      <%= select_tag("search_column_0",
+      options_for_select(@select_column_items, params[:search_column_0]||@select_column_items.first[0])) %>
+      </dd>
+      <dd><%= submit_tag("検索", :name=>nil) %></dd>
+    </dl>
+    <% end -%>
+  </div>
+
+</div>
+<!--/search -->
+
+
+<!--slideModule -->
+<div class="slideModule">
+
+  <h4 class="moduleTtl">
+    <span class="slideModuleClose">
+      <%= link_to_function config.importable ? 'データのCSVアップロード/ダウンロード' : 'データのCSVダウンロード',
+      "$('csvContents').toggle();" + 
+      "var p = this.parentNode;" +
+      "p.className = 'slideModule' + (p.className.indexOf('Open') < 0 ? 'Open' : 'Close');" %>
+    </span>							
+  </h4>	
+
+  <!--csvContents -->
+  <div id="csvContents" style="display:none;" >
+    <% if config.importable -%>
+    <div class="slideModuleInner">
+      <h5>CSVアップロード</h5>
+      <% form_tag({:action=>"import"}, :multipart=>true, :name=>"upload_form") do -%>
+      <table>
+        <tr>
+          <th width="100"><label>ファイルの選択</label></th>
+          <td><%= content_tag(:input, "", :type=>"file", :id=>"load_file", :name=>"load_file") %></td>
+        </tr>
+        <tr>
+          <th>追加方法</th>
+          <td>
+            <%= radio_button_tag("save_method", "append", true) %>
+            <label for="save_method_append">
+              <%= "現在の#{@model.name}に追加する" %>
+            </label>
+            <br />
+            <%= radio_button_tag("save_method", "overwrite", false) %>
+            <label for="save_method_overwrite">
+              <%= "現在の#{@model.name}を全て削除した上で、追加する" %>
+            </label>
+          </td>
+        </tr>
+      </table>
+      <div class="btnModuleM">
+        <%= link_to_function '<span>データを読み込む</span>', 'document.forms[1].submit()', :class => 'up' %>
+      </div>
+      <% end -%>
+
+    </div>
+    <% end -%>
+
+    <div class="slideModuleInner">
+      <h5>CSVダウンロード</h5>
+      <div class="in">
+        <p><%= @model.name %>のデータをCSV形式で書き出します。</p>
+        <div class="btnModuleM">
+          <%= link_to '<span>データダウンロード</span>', {:action => 'export'}, :class => 'down' %>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+  <!--/csvContents -->
+
+</div>
+<!--/slideModule -->
+
+<% if config.editable -%>
+<!--addBtn -->
+<div class="btnModuleM MrgB20">
+  <%= link_to '<span>データを追加する</span>', {:action => 'new'}, :class => 'create' %>
+</div>
+<!--/addBtn -->
+<% end -%>
+
+<!--paging -->	
+<div id="pagingTop" class="paging">
+  <p class="viewNo"><span><%= "#{@total}件中 #{@from}〜#{@to}を表示" %></span></p>	
+  <p class="pageNo"><%= arb_paginate(@records, @page_params) %></p>
+</div>						
+<!--/paging -->	
+
+<% form_tag({:action=>"update_all"}, :name=>"list_form") do -%>
+<div style="margin:0;padding:0"><input name="authenticity_token" type="hidden" value="4b2d760f70bc79aa6659b6317b3abfea2fb46855" /></div>
+
+<table cellpadding="0" cellspacing="0" border="0" class="normalList">
+  <tr>
+    <% for column in @columns -%>
+    <th><%= arb_link_to_sort(column) %></th>
+    <% end -%>
+    <th colspan="1">関連データ</th>
+    <th colspan="<%= config.editable ? 2 : 1 %>">操作</th>
+    <% if arb_has_deleted_flag? %>
+    <th colspan="1">論理削除</th>
+    <% end %>
+  </tr>
+  <% for record in @records -%>
+  <tr>
+    <% for column in @columns -%>
+    <td><%= h(arb_display_column(column, record[column.name.to_sym], :truncate=>true)) %></td>
+    <% end -%>
+    <td><%= arb_association_links(record) %></td>
+    <td><%= link_to("詳細", :action=>"show", :id=>record) %></td>
+    <% if config.editable -%>
+    <td><%= link_to("編集", :action=>"edit", :id=>record) %></td>
+    <% end -%>
+    <% if arb_has_deleted_flag? %>
+    <td><%= arb_delete_check_box(record) %></td>
+    <% end %>
+  </tr>
+  <% end -%>
+
+</table>
+
+<!--paging -->	
+<div id="pagingBtm" class="paging">
+  <p class="viewNo"><span><%= "#{@total}件中 #{@from}〜#{@to}を表示" %></span></p>	
+  <p class="pageNo"><%= arb_paginate(@records, @page_params) %></p>
+</div>						
+<!--/paging -->	
+
+<!--delBtn (center) -->
+<% if !@records.empty? && arb_has_deleted_flag? %>
+<div class="btnModuleL btnModuleLCenter MrgB20">
+  <a href="javascript:void(document.list_form).submit();" class="del">
+    <span>チェックしたレコードを削除する</span></a>
+</div>
+<% end %>
+<!--/delBtn (center) -->
+
+
+<% end -%>

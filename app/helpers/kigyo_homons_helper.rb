@@ -1,0 +1,2 @@
+module KigyoHomonsHelper
+end

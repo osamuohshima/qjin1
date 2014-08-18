@@ -1,0 +1,88 @@
+<head>
+  <%= javascript_include_tag :defaults %>
+</head>
+<%= error_messages_for 'kyujin_uketsuke' %>
+<%= t=Time.now; year=t.year; year=year-1 if t.month<4  %>
+
+
+<!--[form:kyujin_uketsuke.search]-->
+<table Class="TableStyl0">
+<tr><p>
+<td><label for="kyujin_uketsuke_uketsuke_nen">受付　年</label>
+<%= text_field 'kyujin_uketsuke', 'uketsuke_nen', :size=>"3"  %></td>
+<tr>
+<td><label for="kyujin_uketsuke_uketsuke_bango">受付番号</label>
+<%= text_field 'kyujin_uketsuke', 'uketsuke_bango',:size=>"3"  %></td>
+<td><label for="kyujin_uketsuke_uketsuke_code">受付コード</label>
+<%= text_field 'kyujin_uketsuke', 'uketsuke_code',:size=>"4"  %></td></tr>
+</table>
+
+<table Class="TableStyl0">
+<tr><td><label for="kyujin_uketsuke_shokushu_mei">職種　名</label>
+<%= text_field_with_auto_complete 'kyujin_uketsuke', 'shokushu_mei',:size=>"10" %></td>
+<td><label for="kyujin_uketsuke_shokugyo_code">職業コード</label>
+<%= text_field 'kyujin_uketsuke', 'shokugyo_code',:size=>"1"  %></td></tr>
+</table>
+
+<table class="TableStyl0">
+	<tr><td><label for="kyujin_uketsuke_kigyo_bango">企業番号</label>
+			<%= text_field 'kyujin_uketsuke', 'kigyo_bango', :size=>"10"  %></td>
+		<td>[参考:] 事業所名 <%= @bango = @kyujin_uketsuke.kigyo_bango %>
+			<% @kigyo=KigyoDaicho.find(:first, :conditions => "kigyo_bango = @bango" )  %>
+			<%= @kigyo.jigyosho_mei1 if @kigyo %>
+      
+		</td>
+	      </tr>
+</table>
+
+
+<table>
+<tr><td><label for="kyujin_uketsuke_tenkin">転勤内外</label>
+<%= text_field 'kyujin_uketsuke', 'tenkin', :size=>"1"  %></td>
+<td><label for="kyujin_uketsuke_koutai">交替制</label>
+<%= text_field 'kyujin_uketsuke', 'koutai', :size=>"1"  %></td></tr>
+</table>
+
+<table>
+<tr><td><label for="kyujin_uketsuke_kihonkyu">基本　給</label>
+<%= text_field 'kyujin_uketsuke', 'kihonkyu', :size=>"6"  %></td>
+<td><label for="kyujin_uketsuke_kijunnai_tingin">基準内賃金</label>
+<%= text_field 'kyujin_uketsuke', 'kijunnai_tingin', :size=>"6"  %></td></tr>
+</table>
+
+<table>
+<tr><td><label for="kyujin_uketsuke_kikai">校内求人　M</label>
+<%= text_field 'kyujin_uketsuke', 'kikai',:size=>"1"  %></td>
+<td><label for="kyujin_uketsuke_denki">E</label>
+<%= text_field 'kyujin_uketsuke', 'denki',:size=>"1"  %></td>
+<td><label for="kyujin_uketsuke_joho">I</label>
+<%= text_field 'kyujin_uketsuke', 'joho',:size=>"1"  %></td>
+<td><label for="kyujin_uketsuke_kouka">C</label>
+<%= text_field 'kyujin_uketsuke', 'kouka',:size=>"1"  %></td>
+<td><label for="kyujin_uketsuke_kenchiku">A</label>
+<%= text_field 'kyujin_uketsuke', 'kenchiku',:size=>"1"  %></td>
+<td><label for="kyujin_uketsuke_kei">計</label>
+<%= text_field 'kyujin_uketsuke', 'kei',:size=>"1"  %></p></td>
+<td><label for="kyujin_uketsuke_kyujin_sosu">求人総数</label>
+<%= text_field 'kyujin_uketsuke', 'kyujin_sosu',:size=>"2"  %></td>
+</tr>
+</table>
+
+<table>
+<td><p><label for="kyujin_uketsuke_sintai">身体条件</label>
+<%= text_field 'kyujin_uketsuke', 'sintai',:size=>"1"  %></p></td>
+<td><p><label for="kyujin_uketsuke_kengaku">前見学</label>
+<%= text_field 'kyujin_uketsuke', 'kengaku',:size=>"1"  %></p></td>
+<td><p><label for="kyujin_uketsuke_heigan">併願可</label>
+<%= text_field 'kyujin_uketsuke', 'heigan',:size=>"1"  %></p></td>
+</table>
+
+<label for="kyujin_uketsuke_bikou">備　　考</label>
+<%= text_field 'kyujin_uketsuke', 'bikou'  %><br />
+<label for="kyujin_uketsuke_irai_jikou">依頼事項</label>
+<%= text_area 'kyujin_uketsuke', 'irai_jikou', :cols=>"40", :rows=>"3"  %>
+<p><label for="kyujin_uketsuke_input_date">入力日付</label>
+<%= datetime_select 'kyujin_uketsuke', 'input_date' %></p>
+
+<!--[eoform:kyujin_uketsuke]-->
+

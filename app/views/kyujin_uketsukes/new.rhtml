@@ -1,0 +1,13 @@
+<h2>新しい求人票の登録</h2>
+
+<% t=Time.now; year=t.year; year=year-1 if t.month<7  %>
+<% @kyujin_uketsuke.uketsuke_nen =year %>
+
+
+
+<% form_tag :action => 'create' do %>
+  <%= render :partial => 'form' %>
+  <%= submit_tag "以上を登録する" %>
+<% end %>
+
+<%= link_to '戻る', :action => 'list' %>

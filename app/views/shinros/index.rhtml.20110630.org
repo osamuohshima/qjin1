@@ -1,0 +1,39 @@
+<h1>水工進路システム 管理用画面</h1>
+<h6><div align="right">(C)o2@MTH,2007-2010</div></h6>
+
+<hr>
+<br><br>
+<h2>
+<a href="http://122.152.25.122:3000/kyujin_uketsukes/">求人票の受付</a>
+<br><br>
+<a href="http://122.152.25.122:3000/kigyo_daicho">企業番号を調べる（企業台帳から）</a>
+<br><br>
+<a href="http://122.152.25.122:3000/teachers/kigyo_search/">企業訪問のデータ入力はここから</a>
+<br><br>
+<a href="http://122.152.25.122:3000/kigyo_homons/list/">企業訪問の結果を見る（一覧表）</a>
+<br><br>
+<a href="http://122.152.25.122:3000/teachers/search2bango/">企業を検索する（求人票を見るため）</a>
+<br><br>
+<a href="http://122.152.25.122:3000/teachers/search_params/">条件で求人票を検索する（現在開発中）</a>
+<br><br>
+<hr>
+1．求人票の受付処理の手順<br>
+（1）求人票に受付印を押す（受付番号、企業番号、職種番号を記入）<br>
+（2）PDF化しサーバーへFTP送信する（rails_root/public/attached/2010(=nendo)/kyujin_hyo/）<br>
+（3）
+<a href="http://122.152.25.122:3000/uketsuke_pdfs/update_pdf_names">PDFファイル名を自動リストアップする(むやみに押すな！管理者専用)
+</a>
+<br>
+（4）/uketsuke_pdfs/list表示させ、未処理の一番若いページの一番若いPDFから順に、「編集」をクリックする<br>
+（5）編集ページの指示に従って、受付番号、職種番号（＝同一事業所の何枚めー1）、求人受付ID（若い方から順番、重複は許されない）を確認／変更し登録する<br>
+（6）uketsuke_rirekis でその企業の受付履歴に登録する<br>
+（7）企業名で検索が出きるようになる
+<hr>
+2．生徒配布用求人一覧表の作成<br>
+（1）上記１．（1）を実行する<br>
+（2）テーブル（kyujin_uketsukes,kigyo_daichos, kigyo_infos）を結合し、今年度のレコードだけを抜き出す<br>
+（3）帳票に加工する<br>
+　　＊（2）と（3）は未システム化につき手作業で行う（2010.07.07）<br>
+
+</h2>
+

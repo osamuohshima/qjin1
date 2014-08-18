@@ -1,0 +1,9 @@
+<h1>生徒の編集</h1>
+
+<% form_tag :action => 'update', :id => @student do %>
+  <%= render :partial => 'form' %>
+  <%= submit_tag '更新を登録' %>
+<% end %>
+
+<%= link_to 'Show', :action => 'show', :id => @student %> |
+<%= link_to 'Back', :action => 'list' %>

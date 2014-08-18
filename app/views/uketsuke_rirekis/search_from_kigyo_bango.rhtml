@@ -1,0 +1,42 @@
+<h1>求人票受付の履歴の検索結果</h1>
+
+
+<table>
+	<tr>
+		<th width="100">企業番号</th>
+		<th width="80">求人票受付年</th>
+		<th width="80">求人票受付番号</th>
+		<th width="50">求人票枚数</th>
+		<th width="80">企業台帳_id</th>
+		<th width="90">操作</th>
+	</tr>
+
+  </tr>
+	<% odd_or_even=1
+     for uketsuke_rireki in @uketsuke_rirekis
+        odd_or_even=1-odd_or_even %>
+		<tr Class="ListLine<%= odd_or_even %>"> 
+		<td><%= uketsuke_rireki.kigyo_bango %></td>
+		<td><%= uketsuke_rireki.uketsuke_nen %></td>
+		<td><%= uketsuke_rireki.uketsuke_bango %></td>
+		<td><%= uketsuke_rireki.kyujinhyo_maisu %></td>
+		<td><%= uketsuke_rireki.kigyo_daicho_id %></td>
+      <td><%= link_to '詳細', :action => 'show', :id => uketsuke_rireki %></td>
+    <td><%= link_to '編集', :action => 'edit', :id => uketsuke_rireki %></td>
+		<td><%= link_to '削除', { :action => 'destroy', :id => uketsuke_rireki },
+			:confirm => '本当に削除しますか?', :method => :post, :q => @kigyo_bango %></td>
+  </tr>
+<% end %>
+</table>
+<br />
+
+<%= link_to "この企業の新規の求人を受付ける",
+	     :action => 'new_this_kigyo',
+			 :id => @kigyo_bango,
+			 :kigyo_daicho_id => @uketsuke_rirekis[0].kigyo_daicho_id %>
+<br>
+<%#= link_to "受付履歴のリストへ戻る",:controller => 'uketsuke_rirekis',:action ='index' %>
+<br>
+<%= link_to "別の事業所の検索", :controller => 'kigyo_daicho',
+       :action => 'index' %>
+

@@ -1,0 +1,25 @@
+
+<h2>新規ユーザ登録画面</h2>
+
+<%= error_messages_for :user %>
+<% form_for :user do |f| -%>
+
+<p><label for="group_id">所属グループ名を選択</label><br/>
+<label><%= radio_button :user, :group_id, 2 %> 教員</label>
+<label><%= radio_button :user, :group_id, 3 %> 生徒</label>
+<label><%= radio_button :user, :group_id, 1 %> システム管理者</label>
+
+<p><label for="login">ユーザ名を入力</label><br/>
+<%= f.text_field :login %></p>
+
+<p><label for="email">連絡用にEmailアドレスを入力する</label><br/>
+<%= f.text_field :email %></p>
+
+<p><label for="password">パスワードを入力する</label><br/>
+<%= f.password_field :password %></p>
+
+<p><label for="password_confirmation">確認のためにもう一度パスワードを</label><br/>
+<%= f.password_field :password_confirmation %></p>
+
+<p><%= submit_tag '登録する' %></p>
+<% end -%>

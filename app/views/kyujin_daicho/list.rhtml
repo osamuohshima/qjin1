@@ -1,0 +1,46 @@
+<h1>求人台帳　一覧</h1>
+<!--%= javascript_include_tag :defaults %-->
+<!--%= active_scaffold_includes %-->
+
+<% for page in @kyujin_daichos_pages -%>
+    <%= link_to_unless(params[:page].to_i == page.number, page.number, 
+            {:params => params.merge('page' => page)}) %>&nbsp;
+<% end -%><br />
+<%= link_to '前のページへ', { :page => @kyujin_daicho_pages.current.previous } if @kyujin_daicho_pages.current.previous %>
+<%= link_to '次のページへ', { :page => @kyujin_daicho_pages.current.next } if @kyujin_daicho_pages.current.next %> 
+
+<br />
+
+<%= link_to 'New kyujin_daicho_t1s', :action => 'new' %>
+
+
+<table>
+  <tr>
+    <td>PDFファイル名</td>
+  <tr>
+     @kyujin_uketsuke.id
+		 <% for kyujin_daicho in @kyujin_daichos %>
+			 <% end %>
+  <% odd_or_even=1
+	  for kyujin_daicho in @kyujin_daichos 
+        odd_or_even=1-odd_or_even %>
+		<tr Class="ListLine<%= odd_or_even %>" >
+ 
+  <% for column in KyujinDaicho %>
+
+    <td><%=h uketsuke_pdfs_pdf_file_name %></td>
+  <% end %>
+
+    <td><%= link_to 'Show', :action => 'show', :id => kyujin_daicho %></td>
+    <td><%= link_to 'Edit', :action => 'edit', :id => kyujin_daicho %></td>
+    <td><%= link_to 'Destroy', { :action => 'destroy', :id => kyujin_daicho }, :confirm => 'Are you sure?', :method => :post %></td>
+  </tr>
+<% end %>
+</table>
+
+<%= link_to 'Previous page', { :page => @kyujin_daicho_pages.current.previous } if @kyujin_daicho_pages.current.previous %>
+<%= link_to 'Next page', { :page => @kyujin_daicho_pages.current.next } if @kyujin_daicho_pages.current.next %> 
+
+<br />
+
+<%= link_to 'New kyujin_daicho_t1s', :action => 'new' %>

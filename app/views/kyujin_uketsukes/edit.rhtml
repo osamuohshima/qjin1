@@ -1,0 +1,15 @@
+<h1>求人の編集</h1>
+
+<% form_tag :action => 'update', :id => @kyujin_uketsuke do %>
+	<tr>
+<td><label for="kyujin_uketsuke_uketsuke_nen">受付　年</label>
+<%= text_field 'kyujin_uketsuke', 'uketsuke_nen', :size=>"3"  %></td>
+<td><label for="kyujin_uketsuke_uketsuke_date">受付日付(月/日形式で入力)</label>
+<%= text_field 'kyujin_uketsuke', 'uketsuke_date', :size=>"4"  %></td></tr>
+
+
+	<%= render :partial => 'form' %>
+  <%= submit_tag '編集したものを登録する' %>
+<% end %>
+
+<%= link_to '戻る', :action => 'list' %>

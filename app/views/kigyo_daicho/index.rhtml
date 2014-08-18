@@ -1,0 +1,85 @@
+<% @page_title = '企業台帳の検索ー求人票に企業番号を付けるー' -%>
+<% @page_title = '企業台帳：'+@query + ' の検索結果 ' if @query -%>
+
+<h1><%= h(@page_title) %></h1>
+<hr>
+<h3><%= link_to 'なければ、新規に事業所を登録する', :action => 'new', :id=>@query %></h3>
+
+<table width="100%" cellpadding="3" class="command-box">
+  <tr>
+    <td width="130">
+    <% if params[:action] == 'search' -%>
+			<%= link_to '最初に戻る', :action => 'index' %><br>
+		<% else %>		
+      <%= link_to_unless_current '企業番号順',
+            :action => 'index' %> |
+          <%= link_to_unless_current '名前順',
+            :action => 'index', :sort => 'byname' -%>
+    <% end %></td>
+	　<td align="left">
+検索：企業名やふりがなの一部か、企業番号を入力して[検索]を押す
+    <form action="<%= url_for(:action => 'search') %>">
+      <input name="q" value="<%= h(@query)%>" size="40" />
+      <input type="submit" value="検索" />
+    </form>
+    </td>
+	</tr>
+
+	<% if@page_title == '企業台帳の検索ー求人票に企業番号を付けるー' %>
+    <h2>事業所の検索をどうぞ</h2>
+  <% else %>
+
+
+<% if @kigyo_daichos.size > 0 %>
+
+  <table Class="TableStyl0"　width="100%" class="listing" cellpadding="4" cellspacing="2">
+		<tr>
+		<th width="32">id</th>
+		<th width="60">企業番号</th>
+		<th width="180">事業所名1(クリックで詳細表示)</th>
+		<th width="100">事業所名2</th>
+		<th width="140">ふりかな</th>
+		<th width="50">所在地</th>
+		<th width="60">入力日付</th>
+		<th width="30">操作</th>
+	</tr>
+
+	<% odd_or_even=1 %>
+	<% @kigyo_daichos.each do |kigyo| -%>
+    <%  odd_or_even=1-odd_or_even %>
+	<tr Class="ListLine<%= odd_or_even %>" >
+		<td style="text-align: right"><%= kigyo.id %></td>
+		<td><%= kigyo.kigyo_bango %></td>
+		<td><%= link_to(h(kigyo.jigyosho_mei1),
+			        :action => 'show', :id => kigyo) %></td>
+		<td><%= kigyo.jigyosho_mei2 %></td>
+		<td><%= kigyo.furikana %></td>
+		<td><%= kigyo.shozaichi %></td>
+		<td><%#= kigyo.input_date.strftime("%Y-%m-%d") %></td>
+		<td><%= link_to '受付履歴', {:action => 'edit_uketsuke_rireki', 
+			:id => kigyo }%>
+		<%#= link_to '受付履歴', {:action => 'edit_uketsuke_rireki', 
+			:id => kigyo }%></td>
+
+	<td><%= link_to '削除', { :action => 'destroy', :id => kigyo },
+		                        	:confirm => '本当に削除しますか?', 
+                        			:method => :post %></td>
+ 
+  </tr>
+  <% end %> 
+
+  </table>
+<% else %>
+
+	<p>企業の情報がありません</P>
+<% end %>
+<h3><%= link_to '新規に企業を登録する', :action => 'new' %></h3>
+
+<% end %>
+
+
+
+
+
+
+

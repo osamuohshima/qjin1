@@ -1,0 +1,57 @@
+（１）企業台帳 Table kigyo_daichos
+企業番号    integer
+事業所名１	string 128
+事業所名２  string 64
+フリガナ	        string 128
+所在地コード	    intger
+郵便番号	  integer
+所在地１	  string 128
+所在地２	  string 64
+採用担当役職	string 64
+採用担当氏名	string 32
+企業電話番号	string 32
+産業別コード	integer
+生産品目		  string 256
+入力日付		  datetime
+																																																																																																																																																																																																																																														
+（２）求人受付 Table kyujin_uketsukes
+受付年     integer
+受付月日	string 16
+受付コード  string 8
+受付番号	  integer
+企業番号	  integer
+職種番号    integer
+職種名      string 128
+職業別コード	integer
+転勤内外	    integer
+交 替 制	    integeruse
+基本給	      integer
+基準内賃金	  integer
+M             string 4
+E             string 4
+I             string 4
+C             string 4
+A	             string 4
+計	          integer
+求人総数	    integer
+身体条件	    integer
+前見学	      integer
+併願	        integer
+備考            string 128
+依頼事項       string  256 
+入力日付    datetime
+
+（３）企業情報 kigyo_infos
+企業番号	    kigyo_bango                 integer
+産業別コード	sabgyo_code       integer
+従業員数	    jugyoinsuu        integer
+資本金(億)	  shihon_oku        integer
+資本金(千万)	shihon_senman     integer
+入力日付	
+
+
+（４）受付けた求人票とPDFファイル名　uketsuke_pdf
+受付年             integer
+受付番号	  string 8
+PDFファイル名　string 32
+入力日付

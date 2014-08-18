@@ -1,0 +1,24 @@
+<% @content_for_title = "#{@config.human_name}（#{@model.table_name}）の詳細" %>
+<h3 class="sttl">データの詳細</h3>
+
+<div align="right">
+  <%= link_to("編集する", :action=>"edit", :id=>@record) %> |
+  <%= link_to("一覧へ戻る", :action=>"list") %>
+</div>
+
+<table cellpadding="0" cellspacing="0" border="0" class="normalList">
+<% for column in @columns -%>
+  <tr>
+    <td class="ID"><%= column.name %></td>
+    <% if column.type == :text -%>
+      <td><%= simple_format(h(arb_display_column(column, @record.send(column.name)))) %></td>
+    <% else -%>
+      <td><%= h(arb_display_column(column, @record.send(column.name))) %></td>
+    <% end -%>
+  </tr>
+<% end -%>
+  <tr>
+    <td class="ID">関連データ</td>
+    <td><%= arb_association_links(@record) %></td>
+  </tr>
+</table>

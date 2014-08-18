@@ -1,0 +1,27 @@
+<h1>生徒年次データの一覧</h1>
+
+<table>
+  <tr>
+  <% for column in StudentNenji.content_columns %>
+    <th><%= column.human_name %></th>
+  <% end %>
+  </tr>
+  
+<% for student_nenjis in @student_nenjis %>
+  <tr>
+  <% for column in StudentNenji.content_columns %>
+    <td><%=h student_nenjis.send(column.name) %></td>
+  <% end %>
+    <td><%= link_to '詳細', :action => 'show', :id => student_nenjis %></td>
+    <td><%= link_to '編集', :action => 'edit', :id => student_nenjis %></td>
+    <td><%= link_to '削除', { :action => 'destroy', :id => student_nenjis }, :confirm => 'Are you sure?', :method => :post %></td>
+  </tr>
+<% end %>
+</table>
+
+<%= link_to '前のページに戻る', { :page => @student_nenjis_pages.current.previous } if @student_nenjis_pages.current.previous %>
+<%= link_to '次のページに進む', { :page => @student_nenjis_pages.current.next } if @student_nenjis_pages.current.next %> 
+
+<br />
+
+<%= link_to '生徒の新しい年次データ作成', :action => 'new' %>
