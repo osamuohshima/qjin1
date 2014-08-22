@@ -16,7 +16,7 @@ class KyujinUketsukesController < ApplicationController
       @kigyo_info=KigyoInfo.new(:kigyo_number=>@kyujin_uketsuke.kigyo_bango)
     end
     @kigyo_info.kigyo_daicho_id=@kigyo_daicho.id if @kigyo_info.kigyo_daicho_id==nil
-      @kigyo_info.save
+    @kigyo_info.save
   end
   # GETs should be safe (see http://www.w3.org/2001/tag/doc/whenToUseGet.html)
 #  verify :method => :post, :only => [ :destroy, :create, :update ],
@@ -171,9 +171,9 @@ private
       @ur=@urs.first
       @ur.kyujinhyo_maisu=@urs.count
     end
-      @ur.uketsuke_bango=@kyujin_uketsuke.uketsuke_bango
-      @ur.kigyo_daicho_id=@kigyo_daicho.id
-      @ur.update
+    @ur.uketsuke_bango=@kyujin_uketsuke.uketsuke_bango
+    @ur.kigyo_daicho_id=@kigyo_daicho.id
+    @ur.update
   end
 
   def num_zen2han(str)
