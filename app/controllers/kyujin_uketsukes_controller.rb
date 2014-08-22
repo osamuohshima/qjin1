@@ -12,8 +12,8 @@ class KyujinUketsukesController < ApplicationController
     @kigyo_daicho=KigyoDaicho.find_or_create_by_kigyo_bango(@kyujin_uketsuke.kigyo_bango)
     @kigyo_info=KigyoInfo.find_by_kigyo_number(
                     @kyujin_uketsuke.kigyo_bango, :order=>'input_date DESC')
-    if @kigyo_info==nil then @kigyo_info=KigyoInfo.new(
-		             	 :kigyo_number=>@kyujin_uketsuke.kigyo_bango)
+    if @kigyo_info==nil 
+      @kigyo_info=KigyoInfo.new(:kigyo_number=>@kyujin_uketsuke.kigyo_bango)
     end
     @kigyo_info.kigyo_daicho_id=@kigyo_daicho.id if @kigyo_info.kigyo_daicho_id==nil
       @kigyo_info.save
